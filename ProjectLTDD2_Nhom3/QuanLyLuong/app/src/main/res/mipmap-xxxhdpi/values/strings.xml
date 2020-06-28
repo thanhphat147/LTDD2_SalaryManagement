@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Danh sách Nhân viên</string>
+    <string name="luu">Lưu</string>
+    <string name="mo">Mở</string>
+    <string name="thoat">Thoát</string>
+    <string name="them">Thêm</string>
+    <string name="xoa">Xóa</string>
+    <string name="sua">Sửa</string>
+    <string name="clear">Clear</string>
+    <string name="manv">Mã Nhân viên</string>
+    <string name="tennv">Tên Nhân viên</string>
+    <string name="ngaysinh">Ngày Sinh</string>
+    <string name="mapb">Mã phòng ban</string>
+    <string name="luong">Mức lương</string>
+</resources>
