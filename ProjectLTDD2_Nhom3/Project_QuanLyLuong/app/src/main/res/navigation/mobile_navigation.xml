@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.quanlyluong.ui.home.HomeFragment"
+        android:name="com.example.quanlyluong.ui.home.DSNhanVienFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.quanlyluong.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_dschamcong"
+        android:name="com.example.quanlyluong.ui.quanlychamcong.DSChamCongFragment"
+        android:label="@string/menu_dschamcong"
+        tools:layout="@layout/fragment_dschamcong" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.quanlyluong.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:id="@+id/nav_tamung"
+        android:name="com.example.quanlyluong.ui.quanlytamung.DSTamUngFragment"
+        android:label="@string/menu_dstamung"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>
