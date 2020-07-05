@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Salary Management</string>
+    <string name="luu">Save</string>
+    <string name="mo">Load</string>
+    <string name="thoat">Close App</string>
+    <string name="them">Add</string>
+    <string name="xoa">Delete</string>
+    <string name="sua">Edit</string>
+    <string name="clear">Clear</string>
+    <string name="manv">Enter your ID</string>
+    <string name="tennv">Enter your Name</string>
+    <string name="ngaysinh">Enter your Date of Birth</string>
+    <string name="mapb">Enter your ID Room</string>
+    <string name="luong">Enter your Base Salary</string>
+    <string name="tieude_nv">Danh Sách Nhân Viên</string>
+    <string name="tieude_addnv">Thêm Nhân Viên</string>
+    <string name="tieude_update">Sửa Nhân Viên</string>
+    <string name="id">ID: </string>
+    <string name="name">Họ Tên: </string>
+    <string name="birth">Ngày Sinh: </string>
+    <string name="room_id">Mã Phòng: </string>
+    <string name="salary">Mức lương: </string>
+
+</resources>

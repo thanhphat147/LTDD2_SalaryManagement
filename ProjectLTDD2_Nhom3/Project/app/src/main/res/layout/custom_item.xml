@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/linear_h">
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvMaNV"
+            style="@style/tv_model"
+            android:text="@string/id" />
+
+        <TextView
+            android:id="@+id/tvTenNV"
+            style="@style/tv_model"
+            android:text="@string/name" />
+
+        <TextView
+            android:id="@+id/tvNgaySinh"
+            style="@style/tv_model"
+            android:text="@string/birth" />
+
+        <TextView
+            android:id="@+id/tvMaPB"
+            style="@style/tv_model"
+            android:text="@string/room_id" />
+
+        <TextView
+            android:id="@+id/tvLuong"
+            style="@style/tv_model"
+            android:text="@string/salary" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btnXoa"
+            style="@style/button_model"
+            android:drawableLeft="@drawable/ic_baseline_delete_24"
+            android:text="@string/xoa" />
+
+        <Button
+            android:id="@+id/btnSua"
+            style="@style/button_model"
+            android:drawableLeft="@drawable/ic_baseline_edit_24"
+            android:text="@string/sua" />
+    </LinearLayout>
+</LinearLayout>
