@@ -9,9 +9,20 @@
         app:showAsAction="ifRoom"
         />
     <item
+        android:id="@+id/lang_en"
+        android:title="@string/lang_en"
+        />
+    <item
+        android:id="@+id/lang_vi"
+        android:title="@string/lang_vi"
+        android:icon="@drawable/vietnam"
+        android:actionLayout=""
+        />
+    <item
         android:id="@+id/close"
         android:icon="@drawable/ic_baseline_exit_to_app_24"
         android:title="@string/thoat"
-        app:showAsAction="ifRoom"
+
         />
+
 </menu>

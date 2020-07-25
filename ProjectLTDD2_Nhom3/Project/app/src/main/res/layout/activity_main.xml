@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -18,26 +19,23 @@
 
     <LinearLayout
         style="@style/linear_h">
+
         <Button
             android:id="@+id/btnThem"
             style="@style/button"
-            android:background="@drawable/add"
-            android:layout_marginLeft="140dp"
+            android:layout_marginLeft="100dp"
+            android:background="@drawable/add" />
+
+
+        <Button
+            android:id="@+id/thoat"
+            style="@style/button_img"
+            android:layout_marginLeft="20dp"
+            android:text="@string/thoat"
+            android:background="@drawable/thoat"
             />
 
-<!--        <Button-->
-<!--            android:id="@+id/btnXoa"-->
-<!--            style="@style/button"-->
-<!--            android:background="@drawable/ic_baseline_delete_forever_24"-->
-<!--            android:layout_weight="1"-->
-<!--            />-->
 
-<!--        <Button-->
-<!--            android:id="@+id/btnSua"-->
-<!--            style="@style/button"-->
-<!--            android:background="@drawable/ic_baseline_edit_24"-->
-<!--            android:layout_weight="1"-->
-<!--            />-->
 
 
     </LinearLayout>
