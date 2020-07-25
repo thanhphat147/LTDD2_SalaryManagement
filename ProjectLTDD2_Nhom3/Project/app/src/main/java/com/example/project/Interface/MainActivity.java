@@ -1,20 +1,20 @@
 package com.example.project.Interface;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.project.Adapter.CustomAdapterNV;
 import com.example.project.Database.DBNhanVien;
@@ -22,25 +22,30 @@ import com.example.project.Model.NhanVien;
 import com.example.project.R;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnAdd, btnDelete, btnEdit;
+    Button btnAdd;
     ListView lvDanhSachNV;
     CustomAdapterNV adapterNV;
     ArrayList<NhanVien> dataNV = new ArrayList<>();
+    Locale myLocale;
 
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setControl();
         setEvent();
-
     }
 
     private void setEvent() {
         HienThiDL();
+
+
+
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -97,8 +102,40 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog alertDialog1 = builder.create();
                 alertDialog1.show();
                 break;
+
+            case R.id.lang_en:
+                myLocale = new Locale("en", "US");
+                onChangeLanguage(myLocale);
+                break;
+
+            case R.id.lang_vi:
+                myLocale = new Locale("vi", "VN");
+                onChangeLanguage(myLocale);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
+
+    private void onChangeLanguage(Locale locale) {
+        DisplayMetrics displayMetrics = getBaseContext().getResources().getDisplayMetrics();
+
+        //cấu hình phiên bản có thể áp dụng
+        Configuration config = new Configuration();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            config.setLocale(locale);
+        } else {
+            config.locale = locale;
+        }
+
+        //cài đặt ngôn ngữ
+        getBaseContext().getResources().updateConfiguration(config, displayMetrics);
+
+        //refresh Activity
+        Intent refresh = new Intent(MainActivity.this, MainActivity.class);
+        startActivity(refresh);
+        finish();
+    }
+
+
 
 }

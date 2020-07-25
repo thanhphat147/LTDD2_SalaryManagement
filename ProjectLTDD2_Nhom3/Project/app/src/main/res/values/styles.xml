@@ -57,7 +57,7 @@
         <item name="android:divider">@color/colorPrimary</item>
         <item name="android:dividerHeight">5dp</item>
         <item name="android:listSelector">@color/colorAccent</item>
-        <item name="android:layout_marginLeft">10dp</item>
+
     </style>
 
     <style name="tv_model">
@@ -65,5 +65,10 @@
         <item name="android:layout_height">20dp</item>
     </style>
 
+    <style name="button_img">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center</item>
+    </style>
 
 </resources>
