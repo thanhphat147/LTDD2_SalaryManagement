@@ -3,6 +3,7 @@ package com.example.project.Interface;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -47,6 +48,8 @@ public class UpdateNhanVien extends AppCompatActivity {
             public void onClick(View v) {
                 UpdateDL();
                 Toast.makeText(UpdateNhanVien.this, "Sửa thành công", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(UpdateNhanVien.this, MainActivityNhanVien.class);
+                startActivity(intent);
             }
         });
     }

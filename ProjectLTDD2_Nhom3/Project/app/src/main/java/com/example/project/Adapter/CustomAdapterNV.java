@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.project.Database.DBNhanVien;
+import com.example.project.Interface.MainActivityNhanVien;
 import com.example.project.Interface.UpdateNhanVien;
 import com.example.project.Model.NhanVien;
 import com.example.project.R;
@@ -90,6 +91,8 @@ public class CustomAdapterNV extends ArrayAdapter {
             public void onClick(View v) {
                 XoaDL(nhanVien);
                 notifyDataSetChanged();
+                Intent intent = new Intent(context, MainActivityNhanVien.class);
+                context.startActivity(intent);
             }
         });
 

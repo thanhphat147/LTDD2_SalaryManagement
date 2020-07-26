@@ -45,9 +45,6 @@ public class MainActivityNhanVien extends AppCompatActivity {
 
     private void setEvent() {
         HienThiDL();
-
-
-
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

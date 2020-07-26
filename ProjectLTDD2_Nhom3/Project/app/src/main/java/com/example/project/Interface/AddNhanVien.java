@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -38,13 +39,15 @@ public class AddNhanVien extends AppCompatActivity {
             public void onClick(View v) {
                 ThemDL();
                 Toast.makeText(AddNhanVien.this, "Thêm thành công", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(AddNhanVien.this, MainActivityNhanVien.class);
+                startActivity(intent);
             }
         });
 
     }
 
     private void setControl() {
-        edtMaNV = findViewById(R.id.txtTenNV);
+        edtMaNV = findViewById(R.id.txtMaNV);
         edtTenNV = findViewById(R.id.txtTenNV);
         edtNgaySinh = findViewById(R.id.txtNgaySinh);
         edtMaPB = findViewById(R.id.txtMaPB);
@@ -54,7 +57,7 @@ public class AddNhanVien extends AppCompatActivity {
 
     private void ThemDL() {
         NhanVien nhanVien = new NhanVien();
-        nhanVien.setMaNV("Mã Nhân Viên: " + edtMaNV.getText().toString());
+        nhanVien.setMaNV(edtMaNV.getText().toString());
         nhanVien.setTenNV(edtTenNV.getText().toString());
         nhanVien.setNgaySinh(edtNgaySinh.getText().toString());
         nhanVien.setMaPhong(edtMaPB.getText().toString());
