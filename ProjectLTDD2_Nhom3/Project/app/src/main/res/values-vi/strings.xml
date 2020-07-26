@@ -13,7 +13,7 @@
     <string name="ngaysinh">Nhập ngày sinh</string>
     <string name="mapb">Nhập phòng làm việc</string>
     <string name="luong">Nhập Hệ số lương</string>
-    <string name="tieude_nv">Danh Sách Sinh Viên</string>
+    <string name="tieude_nv">Danh Sách Nhân Viên</string>
     <string name="tieude_addnv">Thêm Sinh Viên</string>
     <string name="tieude_update">Sửa thông tin Sinh Viên</string>
     <string name="id">Mã NV:</string>
@@ -23,4 +23,12 @@
     <string name="salary">Lương:</string>
     <string name="lang_en" translatable="false">English</string>
     <string name="lang_vi" translatable="false">Tiếng Việt</string>
+    <string name="danhsachPB">Danh sách phòng ban</string>
+    <string name="themPB">Thêm phòng ban</string>
+    <string name="suaPB">Sửa phòng ban</string>
+    <string name="nhapMP">Nhập mã phòng</string>
+    <string name="nhapTP">Nhập tên phòng</string>
+    <string name="danhsachCC">Danh sách chấm công</string>
+    <string name="danhsachTU">Danh sách tạm ứng</string>
+    <string name="chucnang">Chức năng</string>
 </resources>

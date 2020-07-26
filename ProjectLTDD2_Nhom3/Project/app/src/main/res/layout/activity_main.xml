@@ -18,14 +18,11 @@
 
     <LinearLayout
         style="@style/linear_h">
-
         <Button
             android:id="@+id/btnThem"
             style="@style/button"
             android:layout_marginLeft="100dp"
             android:background="@drawable/add" />
-
-
         <Button
             android:id="@+id/thoat"
             style="@style/button_img"
@@ -33,9 +30,5 @@
             android:text="@string/thoat"
             android:background="@drawable/thoat"
             />
-
-
-
-
     </LinearLayout>
 </LinearLayout>
