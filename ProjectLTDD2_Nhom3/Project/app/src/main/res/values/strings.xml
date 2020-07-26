@@ -21,15 +21,17 @@
     <string name="birth">Date of birth: </string>
     <string name="room_id">ID Room: </string>
     <string name="salary">Salary: </string>
+    <string name="employee_list">Employee</string>
+    <string name="checkout">Checkout</string>
+    <string name="advance_payment">Advance Payment</string>
+    <string name="summary">Summary</string>
+    <string name="aboutus">About Us</string>
     <string name="lang_en" translatable="false">English</string>
     <string name="lang_vi" translatable="false">Tiếng Việt</string>
-    <string name="danhsachPB">List of departments</string>
     <string name="themPB">Add departments</string>
     <string name="suaPB">Update departments</string>
     <string name="nhapMP">Enter the room code</string>
     <string name="nhapTP">Enter the room name</string>
-    <string name="danhsachCC">Timekeeping list</string>
-    <string name="danhsachTU">Advance list</string>
-    <string name="chucnang">Functions</string>
+    <string name="danhsachPB">Departments</string>
 
 </resources>

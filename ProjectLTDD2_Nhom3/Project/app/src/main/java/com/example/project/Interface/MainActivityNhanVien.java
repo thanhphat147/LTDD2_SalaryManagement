@@ -1,6 +1,5 @@
 package com.example.project.Interface;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,7 +24,7 @@ import com.example.project.R;
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivityNhanVien extends AppCompatActivity {
     Button btnAdd;
     ListView lvDanhSachNV;
     CustomAdapterNV adapterNV;
@@ -52,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AddNhanVien.class);
+                Intent intent = new Intent(MainActivityNhanVien.this, AddNhanVien.class);
                 startActivity(intent);
 
             }
@@ -68,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     private void HienThiDL() {
         DBNhanVien dbNhanVien = new DBNhanVien(this);
         dataNV = dbNhanVien.LayDL();
-        adapterNV = new CustomAdapterNV(MainActivity.this, R.layout.custom_item, dataNV);
+        adapterNV = new CustomAdapterNV(MainActivityNhanVien.this, R.layout.custom_item, dataNV);
         adapterNV.notifyDataSetChanged();
         lvDanhSachNV.setAdapter(adapterNV);
     }
@@ -87,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.close:
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivityNhanVien.this);
                 builder.setTitle("Thông báo");
                 builder.setMessage("Bạn có muốn thoát không ?");
                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -137,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
         getBaseContext().getResources().updateConfiguration(config, displayMetrics);
 
         //refresh Activity
-        Intent refresh = new Intent(MainActivity.this, MainActivity.class);
+        Intent refresh = new Intent(MainActivityNhanVien.this, MainActivityNhanVien.class);
         startActivity(refresh);
         finish();
     }

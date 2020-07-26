@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Interface.MainActivityNhanVien">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/banner"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btnDSNhanVien"
+            style="@style/button_img"
+            android:drawableTop="@drawable/salary"
+            android:text="@string/employee_list"
+            />
+        <Button
+            android:id="@+id/btnDSChamCong"
+            style="@style/button_img"
+            android:drawableTop="@drawable/pay"
+            android:text="@string/checkout"
+            />
+        <Button
+            android:id="@+id/btnDSTamUng"
+            style="@style/button_img"
+            android:drawableTop="@drawable/money"
+            android:text="@string/advance_payment"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btnThongKe"
+            style="@style/button_img"
+            android:drawableTop="@drawable/budget"
+            android:text="@string/summary" />
+
+        <Button
+            android:id="@+id/btnDepartment"
+            style="@style/button_img"
+            android:drawableTop="@drawable/desk"
+            android:text="@string/danhsachPB"
+            />
+
+        <Button
+            android:id="@+id/btnAboutUs"
+            style="@style/button_img"
+            android:drawableTop="@drawable/aboutus"
+            android:text="@string/aboutus"
+             />
+
+    </LinearLayout>
+</LinearLayout>

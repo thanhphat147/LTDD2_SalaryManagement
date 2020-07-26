@@ -11,11 +11,11 @@ import com.example.project.R;
 
 public class MainActivityChucNang extends AppCompatActivity {
 
-    Button btnDanhSachNV, btnDanhSachPB, btnDanhSachCC, btnDanhSachTU;
+    Button btnDanhSachNV, btnDanhSachPB, btnDanhSachCC, btnDanhSachTU, btnAboutUs, btnThongKe;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_chuc_nang);
+        setContentView(R.layout.activity_home);
         setControl();
         setEvent();
     }
@@ -24,7 +24,7 @@ public class MainActivityChucNang extends AppCompatActivity {
         btnDanhSachNV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivityChucNang.this, MainActivity.class);
+                Intent intent = new Intent(MainActivityChucNang.this, MainActivityNhanVien.class);
                 startActivity(intent);
             }
         });
@@ -38,9 +38,11 @@ public class MainActivityChucNang extends AppCompatActivity {
     }
 
     private void setControl() {
-        btnDanhSachNV = findViewById(R.id.btnDanhSachNV);
-        btnDanhSachPB = findViewById(R.id.btnDanhSachPB);
-        btnDanhSachCC = findViewById(R.id.btnDanhSachCC);
-        btnDanhSachTU = findViewById(R.id.btnDanhSachTU);
+        btnDanhSachNV = findViewById(R.id.btnDSNhanVien);
+        btnDanhSachPB = findViewById(R.id.btnDepartment);
+        btnDanhSachCC = findViewById(R.id.btnDSChamCong);
+        btnDanhSachTU = findViewById(R.id.btnDSTamUng);
+        btnThongKe = findViewById(R.id.btnThongKe);
+        btnAboutUs = findViewById(R.id.btnAboutUs);
     }
 }
