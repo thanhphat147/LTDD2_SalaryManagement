@@ -19,7 +19,7 @@
     <string name="id">ID: </string>
     <string name="name">Name: </string>
     <string name="birth">Date of birth: </string>
-    <string name="room_id">ID Room: </string>
+    <string name="room">Room: </string>
     <string name="salary">Salary: </string>
     <string name="employee_list">Employee</string>
     <string name="checkout">Checkout</string>
