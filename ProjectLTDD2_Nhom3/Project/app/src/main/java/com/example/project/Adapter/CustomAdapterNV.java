@@ -9,10 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.project.Database.DBNhanVien;
+import com.example.project.Interface.MainActivityChamCong;
 import com.example.project.Interface.MainActivityNhanVien;
+import com.example.project.Interface.MainActivityTamUng;
 import com.example.project.Interface.UpdateNhanVien;
 import com.example.project.Model.NhanVien;
 import com.example.project.R;
@@ -45,8 +48,10 @@ public class CustomAdapterNV extends ArrayAdapter {
         TextView tvNgaySinh;
         TextView tvMaPB;
         TextView tvLuong;
-        Button btnXoa;
-        Button btnSua;
+        ImageButton btnXoa;
+        ImageButton btnSua;
+        ImageButton btnChamCong;
+        ImageButton btnTamUng;
     }
 
     @Override
@@ -63,7 +68,8 @@ public class CustomAdapterNV extends ArrayAdapter {
             holder.tvLuong = view.findViewById(R.id.tvLuong);
             holder.btnXoa = view.findViewById(R.id.btnXoa);
             holder.btnSua = view.findViewById(R.id.btnSua);
-
+            holder.btnChamCong = view.findViewById(R.id.btnChamCong);
+            holder.btnTamUng = view.findViewById(R.id.btnTamUng);
             view.setTag(holder);
         }
         else
@@ -95,7 +101,26 @@ public class CustomAdapterNV extends ArrayAdapter {
                 context.startActivity(intent);
             }
         });
-
+        holder.btnChamCong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, MainActivityChamCong.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("ma",nhanVien.getMaNV());
+                intent.putExtras(bundle);
+                context.startActivity(intent);
+            }
+        });
+        holder.btnTamUng.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, MainActivityTamUng.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("ma",nhanVien.getMaNV());
+                intent.putExtras(bundle);
+                context.startActivity(intent);
+            }
+        });
         return view;
     }
 

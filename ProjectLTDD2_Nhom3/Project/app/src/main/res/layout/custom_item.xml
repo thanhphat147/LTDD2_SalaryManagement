@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/linear_h">
+    style="@style/linear_v">
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/men"/>
+        style="@style/img_model"
+        android:layout_gravity="center"
+        android:src="@drawable/men" />
     <LinearLayout
-        android:layout_width="240dp"
+        style="@style/linear_v"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        >
 
         <TextView
             android:id="@+id/tvMaNV"
@@ -37,21 +37,36 @@
             android:text="@string/salary" />
 
     </LinearLayout>
-
     <LinearLayout
+        style="@style/linear_h"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginTop="5dp">
         <ImageButton
             android:id="@+id/btnXoa"
             style="@style/button_model"
+            android:background="@drawable/button_del"
             android:src="@drawable/ic_baseline_delete_24"
-             />
+            />
 
         <ImageButton
             android:id="@+id/btnSua"
             style="@style/button_model"
+            android:background="@drawable/button_del"
             android:src="@drawable/ic_baseline_edit_24"
-             />
+            />
+        <ImageButton
+            android:id="@+id/btnChamCong"
+            style="@style/button_model"
+            android:background="@drawable/img_button"
+            android:src="@drawable/checkout"
+
+            />
+        <ImageButton
+            android:id="@+id/btnTamUng"
+            style="@style/button_model"
+            android:background="@drawable/img_button"
+            android:src="@drawable/advpayment1"
+            />
     </LinearLayout>
+
 </LinearLayout>

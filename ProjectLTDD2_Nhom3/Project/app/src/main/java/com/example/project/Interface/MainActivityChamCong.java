@@ -31,8 +31,8 @@ public class MainActivityChamCong extends AppCompatActivity {
         setContentView(R.layout.activity_main_cham_cong);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        setControl();
-        setEvent();
+//        setControl();
+//        setEvent();
     }
 
     private void setEvent() {
@@ -70,6 +70,11 @@ public class MainActivityChamCong extends AppCompatActivity {
             case android.R.id.home:
                 onBackPressed();
                 return true;
+
+            case R.id.btnHome:
+                Intent intent = new Intent(MainActivityChamCong.this, MainActivityChucNang.class);
+                startActivity(intent);
+                break;
         }
         return true;
     }

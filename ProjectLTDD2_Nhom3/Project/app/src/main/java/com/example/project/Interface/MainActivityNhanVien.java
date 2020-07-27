@@ -78,8 +78,9 @@ public class MainActivityNhanVien extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.update:
-                HienThiDL();
+            case R.id.btnHome:
+                Intent intent = new Intent(MainActivityNhanVien.this, MainActivityChucNang.class);
+                startActivity(intent);
                 break;
 
             case R.id.close:

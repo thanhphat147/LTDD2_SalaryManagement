@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -82,6 +83,11 @@ public class MainActivityThongKe extends AppCompatActivity {
             case android.R.id.home:
                 onBackPressed();
                 return true;
+
+            case R.id.btnHome:
+                Intent intent = new Intent(MainActivityThongKe.this, MainActivityChucNang.class);
+                startActivity(intent);
+                break;
         }
         return true;
     }

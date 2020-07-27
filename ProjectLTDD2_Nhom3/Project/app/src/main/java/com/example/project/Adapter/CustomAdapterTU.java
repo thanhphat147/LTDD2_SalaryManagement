@@ -39,14 +39,14 @@ public class CustomAdapterTU extends ArrayAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = LayoutInflater.from(context).inflate(resource, null);
         TextView tvMaNV= view.findViewById(R.id.tvMaNV);
-        TextView tvSoPhieu = view.findViewById(R.id.tvSoPhieu);
+        TextView tvTenNV = view.findViewById(R.id.tvTenNV);
         TextView tvNgay = view.findViewById(R.id.tvNgay);
         TextView tvSoTien = view.findViewById(R.id.tvSoTien);
         Button btnSua = view.findViewById(R.id.btnSua);
         Button btnXoa = view.findViewById(R.id.btnXoa);
         TamUng tamUng = data.get(position);
         tvMaNV.setText(tamUng.getMaNV());
-        tvSoPhieu.setText(tamUng.getSoPhieu() + "");
+        tvTenNV.setText(tamUng.getSoPhieu() + "");
         tvNgay.setText(tamUng.getNgay());
         tvSoTien.setText(tamUng.getSoTien() + "");
         btnSua.setOnClickListener(new View.OnClickListener() {

@@ -41,7 +41,6 @@ public class CustomAdapterTK extends ArrayAdapter {
         ImageView imgGioiTinh = view.findViewById(R.id.imgGioiTinh);
         TextView tvMaNV= view.findViewById(R.id.tvMaNV);
         TextView tvHoTen = view.findViewById(R.id.tvHoTen);
-        TextView tvGioiTinh = view.findViewById(R.id.tvGioiTinh);
         TextView tvSoNgayCong = view.findViewById(R.id.tvSoNgayCong);
         TextView tvTienTamUng = view.findViewById(R.id.tvTienTamUng);
         TextView tvTienLuong = view.findViewById(R.id.tvTienLuong);

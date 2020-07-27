@@ -46,11 +46,18 @@
     </style>
 
     <style name="button_model">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">10dp</item>
+
+    </style>
+
+    <style name="button_model_view">
         <item name="android:layout_width">70dp</item>
         <item name="android:layout_height">50dp</item>
         <item name="android:gravity">center</item>
     </style>
-
     <style name="lv">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>

@@ -38,5 +38,7 @@
     <string name="danhsachTU">Advance Payment</string>
     <string name="suaTU">Update Advance Payment</string>
     <string name="thongke">Summary</string>
+    <string name="tv_manv">Mã Nhân Viên</string>
+
 
 </resources>

@@ -68,8 +68,9 @@ public class MainActivityPhongBan extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.update:
-                HienThiDL();
+            case R.id.btnHome:
+                Intent intent = new Intent(MainActivityPhongBan.this, MainActivityChucNang.class);
+                startActivity(intent);
                 break;
             case R.id.close:
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivityPhongBan.this);

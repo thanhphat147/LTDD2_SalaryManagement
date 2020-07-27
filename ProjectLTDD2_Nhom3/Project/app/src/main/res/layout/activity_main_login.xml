@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/linear_v"
+    tools:context=".Interface.MainActivityLogin">
+
+    <ImageView
+        style="@style/img_model"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/login" />
+
+    <LinearLayout
+        style="@style/linear_h">
+
+    </LinearLayout>
+</LinearLayout>

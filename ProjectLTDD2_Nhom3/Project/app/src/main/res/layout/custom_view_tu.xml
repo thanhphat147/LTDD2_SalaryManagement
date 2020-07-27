@@ -4,30 +4,28 @@
     style="@style/linear_h">
 
     <LinearLayout
-        android:layout_width="303dp"
-        android:layout_height="98dp"
-        android:orientation="vertical">
-
+        style="@style/linear_v"
+        android:layout_width="330dp">
         <TextView
             android:id="@+id/tvMaNV"
             style="@style/tv_model"
             android:layout_height="25dp"
-            android:text="Mã nhân viên: " />
+            />
         <TextView
-            android:id="@+id/tvSoPhieu"
+            android:id="@+id/tvTenNV"
             style="@style/tv_model"
             android:layout_height="25dp"
-            android:text="Số phiếu: " />
+            android:text="@string/name" />
         <TextView
             android:id="@+id/tvNgay"
             style="@style/tv_model"
             android:layout_height="25dp"
-            android:text="Ngày: " />
+            android:text="@string/birth" />
         <TextView
             android:id="@+id/tvSoTien"
             style="@style/tv_model"
             android:layout_height="25dp"
-            android:text="Số tiền: " />
+            android:text="Tiền tạm ứng" />
     </LinearLayout>
     <LinearLayout
         android:layout_height="match_parent"
@@ -35,13 +33,18 @@
         android:orientation="vertical">
         <ImageButton
             android:id="@+id/btnXoa"
-            style="@style/button_model"
+            style="@style/button_model_view"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_del"
             android:src="@drawable/ic_baseline_delete_24"
-             />
+            />
         <ImageButton
             android:id="@+id/btnSua"
-            style="@style/button_model"
+            style="@style/button_model_view"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_del"
             android:src="@drawable/ic_baseline_edit_24"
-             />
+            />
     </LinearLayout>
 </LinearLayout>
