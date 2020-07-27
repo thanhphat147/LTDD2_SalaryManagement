@@ -2,8 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/linear_h">
 
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/men"/>
     <LinearLayout
-        android:layout_width="250dp"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
@@ -25,7 +29,7 @@
         <TextView
             android:id="@+id/tvMaPB"
             style="@style/tv_model"
-            android:text="@string/room_id" />
+            android:text="@string/room" />
 
         <TextView
             android:id="@+id/tvLuong"
@@ -38,16 +42,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <Button
+        <ImageButton
             android:id="@+id/btnXoa"
             style="@style/button_model"
-            android:drawableLeft="@drawable/ic_baseline_delete_24"
-            android:text="@string/xoa" />
+            android:src="@drawable/ic_baseline_delete_24"
+             />
 
-        <Button
+        <ImageButton
             android:id="@+id/btnSua"
             style="@style/button_model"
-            android:drawableLeft="@drawable/ic_baseline_edit_24"
-            android:text="@string/sua" />
+            android:src="@drawable/ic_baseline_edit_24"
+             />
     </LinearLayout>
 </LinearLayout>

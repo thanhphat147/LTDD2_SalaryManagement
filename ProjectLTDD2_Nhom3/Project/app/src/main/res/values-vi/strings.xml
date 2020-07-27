@@ -19,7 +19,7 @@
     <string name="id">Mã NV:</string>
     <string name="name">Họ tên:</string>
     <string name="birth">Ngày sinh:</string>
-    <string name="room_id">Mã phòng</string>
+    <string name="room">Phòng ban</string>
     <string name="salary">Lương:</string>
     <string name="employee_list">Nhân Viên</string>
     <string name="checkout">Chấm Công</string>

@@ -17,18 +17,11 @@
         />
 
     <LinearLayout
-        style="@style/linear_h">
+        style="@style/linear_h"
+        android:gravity="center">
         <Button
             android:id="@+id/btnThem"
             style="@style/button"
-            android:layout_marginLeft="100dp"
             android:background="@drawable/add" />
-        <Button
-            android:id="@+id/thoat"
-            style="@style/button"
-            android:layout_marginLeft="20dp"
-            android:text="@string/thoat"
-            android:background="@drawable/thoat"
-            />
     </LinearLayout>
 </LinearLayout>
