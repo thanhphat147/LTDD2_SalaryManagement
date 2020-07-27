@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/linear_h">
+
+    <ImageView
+        android:id="@+id/imgGioiTinh"
+        android:layout_width="84dp"
+        android:layout_height="120dp"
+        android:src="@drawable/men"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvMaNV"
+            style="@style/tv_model"
+            android:text="Mã nhân viên: " />
+        <TextView
+            android:id="@+id/tvHoTen"
+            style="@style/tv_model"
+            android:text="Họ tên: " />
+        <TextView
+            android:id="@+id/tvGioiTinh"
+            style="@style/tv_model"
+            android:text="Giới tính: " />
+        <TextView
+            android:id="@+id/tvSoNgayCong"
+            style="@style/tv_model"
+            android:text="Số ngày công: " />
+        <TextView
+            android:id="@+id/tvTienTamUng"
+            style="@style/tv_model"
+            android:text="Tiền tạm ứng: " />
+        <TextView
+            android:id="@+id/tvTienLuong"
+            style="@style/tv_model"
+            android:text="Tiền lương: " />
+    </LinearLayout>
+</LinearLayout>
