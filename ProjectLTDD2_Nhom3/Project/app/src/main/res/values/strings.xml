@@ -33,5 +33,9 @@
     <string name="nhapMP">Enter the room code</string>
     <string name="nhapTP">Enter the room name</string>
     <string name="danhsachPB">Departments</string>
+    <string name="danhsachCC">Checkout</string>
+    <string name="suaCC">Update Checkout</string>
+    <string name="danhsachTU">Advance Payment</string>
+    <string name="suaTU">Update Advance Payment</string>
 
 </resources>

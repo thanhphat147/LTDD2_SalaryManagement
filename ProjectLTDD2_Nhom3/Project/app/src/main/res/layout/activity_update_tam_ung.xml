@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/linear_v"
+    tools:context=".Interface.UpdateTamUng">
+
+    <TextView
+        style="@style/tv_title"
+        android:text="@string/suaTU"/>
+    <TextView
+        style="@style/tv_noidung"
+        android:id="@+id/tvMaNV"
+        android:textSize="19dp"
+        android:text="NV001"/>
+    <EditText
+        style="@style/edttext"
+        android:id="@+id/txtSoPhieu"
+        android:text="1"/>
+    <EditText
+        style="@style/edttext"
+        android:id="@+id/txtNgay"
+        android:text="12/03/2020"/>
+    <EditText
+        style="@style/edttext"
+        android:id="@+id/txtSoTien"
+        android:text="500000"/>
+    <Button
+        android:id="@+id/btnSuaPB"
+        style="@style/button"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:drawableLeft="@drawable/ic_baseline_edit_24"
+        android:text="@string/sua"/>
+</LinearLayout>

@@ -35,6 +35,20 @@ public class MainActivityChucNang extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btnDanhSachCC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivityChucNang.this, MainActivityChamCong.class);
+                startActivity(intent);
+            }
+        });
+        btnDanhSachTU.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivityChucNang.this, MainActivityTamUng.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void setControl() {
