@@ -33,15 +33,15 @@
         android:layout_height="match_parent"
         android:layout_width="wrap_content"
         android:orientation="vertical">
-        <Button
+        <ImageButton
             android:id="@+id/btnXoa"
             style="@style/button_model"
-            android:drawableLeft="@drawable/ic_baseline_delete_24"
-            android:text="@string/xoa" />
-        <Button
+            android:src="@drawable/ic_baseline_delete_24"
+             />
+        <ImageButton
             android:id="@+id/btnSua"
             style="@style/button_model"
-            android:drawableLeft="@drawable/ic_baseline_edit_24"
-            android:text="@string/sua" />
+            android:src="@drawable/ic_baseline_edit_24"
+             />
     </LinearLayout>
 </LinearLayout>
