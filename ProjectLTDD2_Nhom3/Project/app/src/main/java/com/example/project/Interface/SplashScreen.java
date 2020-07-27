@@ -17,7 +17,7 @@ public class SplashScreen extends AppCompatActivity {
     ImageView employerJumb, dongXuLMax, dongXuLMin, dongXuRMax, dongXuRMin, dongXuLMin2, dongXuRMin2;
     boolean jumb = true;
     Animation animDongXuL, animDongXuN, animDongXuN2;
-    final long SPLASH_TIME_OUT = 10000;
+    final long SPLASH_TIME_OUT = 5000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

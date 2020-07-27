@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Interface.UpdateTamUng"></activity>
+        <activity android:name=".Interface.MainActivityTamUng" />
+        <activity android:name=".Interface.UpdateChamCong" />
+        <activity android:name=".Interface.MainActivityChamCong" />
         <activity android:name=".Interface.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,12 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Interface.MainActivityChucNang">
-
-        </activity>
+        <activity android:name=".Interface.MainActivityChucNang" />
         <activity android:name=".Interface.AddPhongBan" />
         <activity android:name=".Interface.UpdatePhongBan" />
-        <activity android:name=".Interface.MainActivityPhongBan"></activity>
+        <activity android:name=".Interface.MainActivityPhongBan" />
         <activity android:name=".Interface.UpdateNhanVien" />
         <activity android:name=".Interface.AddNhanVien" />
         <activity android:name=".Interface.MainActivityNhanVien" />

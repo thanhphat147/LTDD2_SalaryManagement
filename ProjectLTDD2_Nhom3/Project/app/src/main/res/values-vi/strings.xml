@@ -13,9 +13,9 @@
     <string name="ngaysinh">Nhập ngày sinh</string>
     <string name="mapb">Nhập phòng làm việc</string>
     <string name="luong">Nhập Hệ số lương</string>
-    <string name="tieude_nv">Danh Sách Sinh Viên</string>
-    <string name="tieude_addnv">Thêm Sinh Viên</string>
-    <string name="tieude_update">Sửa thông tin Sinh Viên</string>
+    <string name="tieude_nv">Danh Sách Nhân Viên</string>
+    <string name="tieude_addnv">Thêm Nhân Viên</string>
+    <string name="tieude_update">Sửa thông tin Nhân Viên</string>
     <string name="id">Mã NV:</string>
     <string name="name">Họ tên:</string>
     <string name="birth">Ngày sinh:</string>
@@ -33,4 +33,8 @@
     <string name="nhapMP">Nhập mã phòng</string>
     <string name="nhapTP">Nhập tên phòng</string>
     <string name="danhsachPB">Danh sách phòng ban</string>
+    <string name="danhsachCC">Danh sách chấm công</string>
+    <string name="suaCC">Sửa chấm công</string>
+    <string name="danhsachTU">Danh sách tạm ứng</string>
+    <string name="suaTU">Sửa tạm ứng</string>
 </resources>

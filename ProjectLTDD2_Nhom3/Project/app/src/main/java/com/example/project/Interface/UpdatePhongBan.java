@@ -3,6 +3,7 @@ package com.example.project.Interface;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -45,6 +46,8 @@ public class UpdatePhongBan extends AppCompatActivity {
             public void onClick(View v) {
                 SuaDL();
                 Toast.makeText(UpdatePhongBan.this, "Sửa thành công", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(UpdatePhongBan.this, MainActivityPhongBan.class);
+                startActivity(intent);
             }
         });
     }
