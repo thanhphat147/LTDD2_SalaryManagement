@@ -37,5 +37,6 @@
     <string name="suaCC">Update Checkout</string>
     <string name="danhsachTU">Advance Payment</string>
     <string name="suaTU">Update Advance Payment</string>
+    <string name="thongke">Summary</string>
 
 </resources>
