@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
@@ -41,8 +42,8 @@ public class CustomAdapterPB extends ArrayAdapter {
     }
 
     private static class Holder {
-        Button btnXoa;
-        Button btnSua;
+        ImageButton btnXoa;
+        ImageButton btnSua;
         TextView tvMaPB;
         TextView tvTenPB;
     }

@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -44,8 +45,8 @@ public class CustomAdapterCC extends ArrayAdapter {
         TextView tvMaNV= view.findViewById(R.id.tvMaNV);
         TextView tvNgayGhiSo = view.findViewById(R.id.tvNgayGhiSo);
         TextView tvSoNgayCong = view.findViewById(R.id.tvSoNgayCong);
-        Button btnSua = view.findViewById(R.id.btnSua);
-        Button btnXoa = view.findViewById(R.id.btnXoa);
+        ImageButton btnSua = view.findViewById(R.id.btnSua);
+        ImageButton btnXoa = view.findViewById(R.id.btnXoa);
         ChamCong chamCong = data.get(position);
         tvMaNV.setText(chamCong.getMaNV());
         tvNgayGhiSo.setText(chamCong.getNgayGhiSo());

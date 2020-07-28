@@ -30,33 +30,33 @@ public class MainActivityTamUng extends AppCompatActivity {
         setContentView(R.layout.activity_main_tam_ung);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-//        setControl();
-//        setEvent();
+        setControl();
+        setEvent();
     }
 
-//    private void setEvent() {
-////        KhoiTao();
-//        adapter_TU = new CustomAdapterTU(MainActivityTamUng.this, R.layout.custom_view_tu, data_TU);
-//        lvTamUng.setAdapter(adapter_TU);
-//    }
+    private void setEvent() {
+        KhoiTao();
+        adapter_TU = new CustomAdapterTU(MainActivityTamUng.this, R.layout.custom_view_tu, data_TU);
+        lvTamUng.setAdapter(adapter_TU);
+    }
 
-//    private void KhoiTao(){
-//        data_TU = new ArrayList<TamUng>();
-//        data_TU.add(GetTamUng());
-//    }
-//
-//    private TamUng GetTamUng() {
-//        TamUng tamUng = new TamUng();
-//        tamUng.setMaNV("NV001");
-//        tamUng.setSoPhieu(1);
-//        tamUng.setNgay("12/03/2020");
-//        tamUng.setSoTien(500000);
-//        return tamUng;
-//    }
+    private void KhoiTao(){
+        data_TU = new ArrayList<TamUng>();
+        data_TU.add(GetTamUng());
+    }
 
-//    private void setControl() {
-//        lvTamUng = findViewById(R.id.lvTamUng);
-//    }
+    private TamUng GetTamUng() {
+        TamUng tamUng = new TamUng();
+        tamUng.setMaNV("NV001");
+        tamUng.setSoPhieu(1);
+        tamUng.setNgay("12/03/2020");
+        tamUng.setSoTien(500000);
+        return tamUng;
+    }
+
+    private void setControl() {
+        lvTamUng = findViewById(R.id.lvTamUng);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

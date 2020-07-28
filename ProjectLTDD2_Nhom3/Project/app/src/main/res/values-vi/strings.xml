@@ -38,4 +38,11 @@
     <string name="danhsachTU">Danh sách tạm ứng</string>
     <string name="suaTU">Sửa tạm ứng</string>
     <string name="thongke">Thống kê</string>
+    <string name="themCC">Thêm chấm công</string>
+    <string name="themTU">Thêm tạm ứng</string>
+    <string name="nhapNGS">Nhập ngày ghi số</string>
+    <string name="nhapSNC">Nhập số ngày công</string>
+    <string name="nhapNgay">Nhập ngày</string>
+    <string name="nhapSP">Nhập số phiếu</string>
+    <string name="nhapST">Nhập số tiền</string>
 </resources>

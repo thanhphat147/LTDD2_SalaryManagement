@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/linear_v"
+    android:background="@drawable/backgrounding"
+    tools:context=".Interface.AddChamCong">
+
+    <TextView
+        style="@style/tv_title"
+        android:text="@string/themCC"/>
+    <TextView
+        style="@style/edttext"
+        android:id="@+id/txtMaNV"
+        android:text="@string/manv"
+        android:textSize="20dp"/>
+    <EditText
+        style="@style/edttext"
+        android:id="@+id/txtNgayGhiSo"
+        android:hint="@string/nhapNGS"/>
+    <EditText
+        style="@style/edttext"
+        android:id="@+id/txtSoNgayCong"
+        android:hint="@string/nhapSNC"/>
+    <Button
+        android:id="@+id/btnthemCC"
+        style="@style/button"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:drawableLeft="@drawable/ic_baseline_room_24"
+        android:text="@string/them"/>
+</LinearLayout>

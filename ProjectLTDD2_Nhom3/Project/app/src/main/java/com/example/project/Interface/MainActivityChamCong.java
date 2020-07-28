@@ -31,8 +31,8 @@ public class MainActivityChamCong extends AppCompatActivity {
         setContentView(R.layout.activity_main_cham_cong);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-//        setControl();
-//        setEvent();
+        setControl();
+        setEvent();
     }
 
     private void setEvent() {

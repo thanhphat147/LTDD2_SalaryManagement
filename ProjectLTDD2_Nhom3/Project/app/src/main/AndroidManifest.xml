@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Interface.MainActivityLogin"></activity>
+        <activity android:name=".Interface.AddTamUng"></activity>
+        <activity android:name=".Interface.AddChamCong" />
+        <activity android:name=".Interface.MainActivityLogin" />
         <activity android:name=".Interface.MainActivityThongKe" />
         <activity android:name=".Interface.UpdateTamUng" />
         <activity android:name=".Interface.MainActivityTamUng" />

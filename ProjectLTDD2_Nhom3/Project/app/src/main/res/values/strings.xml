@@ -39,6 +39,13 @@
     <string name="suaTU">Update Advance Payment</string>
     <string name="thongke">Summary</string>
     <string name="tv_manv">Mã Nhân Viên</string>
+    <string name="themCC">Add Checkout</string>
+    <string name="themTU">Add Advance Payment</string>
+    <string name="nhapNGS">Enter the date entered</string>
+    <string name="nhapSNC">Enter the number of workdays</string>
+    <string name="nhapNgay">Enter the date</string>
+    <string name="nhapSP">Enter the number of votes</string>
+    <string name="nhapST">Enter the amount</string>
 
 
 </resources>

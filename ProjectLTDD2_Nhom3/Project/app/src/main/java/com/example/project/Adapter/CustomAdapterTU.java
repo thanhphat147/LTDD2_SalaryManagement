@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.project.Interface.UpdateChamCong;
@@ -42,8 +43,8 @@ public class CustomAdapterTU extends ArrayAdapter {
         TextView tvTenNV = view.findViewById(R.id.tvTenNV);
         TextView tvNgay = view.findViewById(R.id.tvNgay);
         TextView tvSoTien = view.findViewById(R.id.tvSoTien);
-        Button btnSua = view.findViewById(R.id.btnSua);
-        Button btnXoa = view.findViewById(R.id.btnXoa);
+        ImageButton btnSua = view.findViewById(R.id.btnSua);
+        ImageButton btnXoa = view.findViewById(R.id.btnXoa);
         TamUng tamUng = data.get(position);
         tvMaNV.setText(tamUng.getMaNV());
         tvTenNV.setText(tamUng.getSoPhieu() + "");
