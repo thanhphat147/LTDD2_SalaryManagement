@@ -13,6 +13,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.project.Database.DBNhanVien;
+import com.example.project.Interface.AddChamCong;
+import com.example.project.Interface.AddTamUng;
 import com.example.project.Interface.MainActivityChamCong;
 import com.example.project.Interface.MainActivityNhanVien;
 import com.example.project.Interface.MainActivityTamUng;
@@ -104,7 +106,7 @@ public class CustomAdapterNV extends ArrayAdapter {
         holder.btnChamCong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, MainActivityChamCong.class);
+                Intent intent = new Intent(context, AddChamCong.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("ma",nhanVien.getMaNV());
                 intent.putExtras(bundle);
@@ -114,7 +116,7 @@ public class CustomAdapterNV extends ArrayAdapter {
         holder.btnTamUng.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, MainActivityTamUng.class);
+                Intent intent = new Intent(context, AddTamUng.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("ma",nhanVien.getMaNV());
                 intent.putExtras(bundle);

@@ -45,4 +45,9 @@
     <string name="nhapNgay">Nhập ngày</string>
     <string name="nhapSP">Nhập số phiếu</string>
     <string name="nhapST">Nhập số tiền</string>
+    <string name="tv_manv">Mã Nhân Viên</string>
+    <string name="logo_name">EMSAMA</string>
+    <string name="user">Tên Đăng Nhập</string>
+    <string name="pw">Mật khẩu</string>
+    <string name="login">Đăng Nhập</string>
 </resources>

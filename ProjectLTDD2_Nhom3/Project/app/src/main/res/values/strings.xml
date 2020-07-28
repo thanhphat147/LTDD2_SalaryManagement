@@ -23,7 +23,7 @@
     <string name="salary">Salary: </string>
     <string name="employee_list">Employee</string>
     <string name="checkout">Checkout</string>
-    <string name="advance_payment">Advance Payment</string>
+    <string name="advance_payment">Payment</string>
     <string name="summary">Summary</string>
     <string name="aboutus">About Us</string>
     <string name="lang_en" translatable="false">English</string>
@@ -38,7 +38,7 @@
     <string name="danhsachTU">Advance Payment</string>
     <string name="suaTU">Update Advance Payment</string>
     <string name="thongke">Summary</string>
-    <string name="tv_manv">Mã Nhân Viên</string>
+    <string name="tv_manv">ID</string>
     <string name="themCC">Add Checkout</string>
     <string name="themTU">Add Advance Payment</string>
     <string name="nhapNGS">Enter the date entered</string>
@@ -46,6 +46,10 @@
     <string name="nhapNgay">Enter the date</string>
     <string name="nhapSP">Enter the number of votes</string>
     <string name="nhapST">Enter the amount</string>
+    <string name="logo_name">EMSAMA</string>
+    <string name="user">User</string>
+    <string name="pw">Password</string>
+    <string name="login">Login</string>
 
 
 </resources>

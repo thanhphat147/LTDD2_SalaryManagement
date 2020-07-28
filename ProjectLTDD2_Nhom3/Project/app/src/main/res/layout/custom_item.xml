@@ -40,7 +40,9 @@
     <LinearLayout
         style="@style/linear_h"
         android:layout_width="match_parent"
-        android:layout_marginTop="5dp">
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        >
         <ImageButton
             android:id="@+id/btnXoa"
             style="@style/button_model"

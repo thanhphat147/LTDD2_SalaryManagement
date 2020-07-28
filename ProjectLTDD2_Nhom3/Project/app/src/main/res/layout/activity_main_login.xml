@@ -3,16 +3,47 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/linear_v"
+    android:background="@drawable/backgrounding"
     tools:context=".Interface.MainActivityLogin">
 
     <ImageView
         style="@style/img_model"
         android:layout_gravity="center"
         android:layout_marginTop="150dp"
-        android:src="@drawable/login" />
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/logo" />
 
     <LinearLayout
-        style="@style/linear_h">
-
+        style="@style/linear_v"
+        android:gravity="center_horizontal">
+        <EditText
+            android:id="@+id/edtUsername"
+            android:background="@drawable/tv_login1"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:hint="Enter Username"
+            />
+        <EditText
+            android:id="@+id/edtPass"
+            android:background="@drawable/tv_login1"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:hint="Enter Password"
+            />
+        <LinearLayout
+            style="@style/linear_h"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal">
+            <Button
+                android:id="@+id/btnLogin"
+                style="@style/button_login"
+                android:background="@drawable/tv_login"
+                android:text="@string/login"/>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
