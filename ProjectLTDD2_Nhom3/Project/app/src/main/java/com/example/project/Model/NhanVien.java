@@ -1,7 +1,8 @@
 package com.example.project.Model;
 
 public class NhanVien {
-    String maNV, tenNV, ngaySinh, maPhong, bacLuong;
+    String maNV, tenNV, ngaySinh, gioiTinh, tenPhong, imageNV;
+    int bacLuong;
 
     public String getMaNV() {
         return maNV;
@@ -27,19 +28,35 @@ public class NhanVien {
         this.ngaySinh = ngaySinh;
     }
 
-    public String getMaPhong() {
-        return maPhong;
+    public String getGioiTinh() {
+        return gioiTinh;
     }
 
-    public void setMaPhong(String maPhong) {
-        this.maPhong = maPhong;
+    public void setGioiTinh(String gioiTinh) {
+        this.gioiTinh = gioiTinh;
     }
 
-    public String getBacLuong() {
+    public String getTenPhong() {
+        return tenPhong;
+    }
+
+    public void setTenPhong(String tenPhong) {
+        this.tenPhong = tenPhong;
+    }
+
+    public String getImageNV() {
+        return imageNV;
+    }
+
+    public void setImageNV(String imageNV) {
+        this.imageNV = imageNV;
+    }
+
+    public int getBacLuong() {
         return bacLuong;
     }
 
-    public void setBacLuong(String bacLuong) {
+    public void setBacLuong(int bacLuong) {
         this.bacLuong = bacLuong;
     }
 
@@ -49,8 +66,10 @@ public class NhanVien {
                 "maNV='" + maNV + '\'' +
                 ", tenNV='" + tenNV + '\'' +
                 ", ngaySinh='" + ngaySinh + '\'' +
-                ", maPhong='" + maPhong + '\'' +
-                ", bacLuong='" + bacLuong + '\'' +
+                ", gioiTinh='" + gioiTinh + '\'' +
+                ", tenPhong='" + tenPhong + '\'' +
+                ", imageNV='" + imageNV + '\'' +
+                ", bacLuong=" + bacLuong +
                 '}';
     }
 }

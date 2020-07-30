@@ -12,6 +12,7 @@
     <string name="tennv">Nhập họ tên</string>
     <string name="ngaysinh">Nhập ngày sinh</string>
     <string name="mapb">Nhập phòng làm việc</string>
+    <string name="tenpb">Phòng ban</string>
     <string name="luong">Nhập Hệ số lương</string>
     <string name="tieude_nv">Danh Sách Nhân Viên</string>
     <string name="tieude_addnv">Thêm Nhân Viên</string>

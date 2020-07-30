@@ -11,7 +11,13 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "Create table NhanVien (manv text, tennv text , ngaysinh date, maphong text, tienluong int)";
+        String sql = "Create table NhanVien (manv text primary key unique, " +
+                "tennv text " +
+                ", ngaysinh date" +
+                ", gioitinh text" +
+                ", tenphong text" +
+                ", tienluong int" +
+                ", imagenv text)";
         db.execSQL(sql);
     }
 

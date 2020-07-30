@@ -12,6 +12,7 @@
     <string name="tennv">Enter your Name</string>
     <string name="ngaysinh">Enter your Date of Birth</string>
     <string name="mapb">Enter your ID Room</string>
+    <string name="tenpb">Department</string>
     <string name="luong">Enter your Base Salary</string>
     <string name="tieude_nv">Employee List</string>
     <string name="tieude_addnv">Add Employee</string>

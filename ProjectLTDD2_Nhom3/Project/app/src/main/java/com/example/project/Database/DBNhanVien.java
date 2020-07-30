@@ -22,8 +22,10 @@ public class DBNhanVien {
         values.put("manv", nhanVien.getMaNV());
         values.put("tennv", nhanVien.getTenNV());
         values.put("ngaysinh", nhanVien.getNgaySinh());
-        values.put("maphong", nhanVien.getMaPhong());
+        values.put("gioitinh", nhanVien.getGioiTinh());
+        values.put("tenphong", nhanVien.getTenPhong());
         values.put("tienluong", nhanVien.getBacLuong());
+        values.put("imagenv", nhanVien.getImageNV());
         db.insert("NhanVien", null, values);
         db.close();
     }
@@ -35,8 +37,10 @@ public class DBNhanVien {
         values.put("manv", nhanVien.getMaNV());
         values.put("tennv", nhanVien.getTenNV());
         values.put("ngaysinh", nhanVien.getNgaySinh());
-        values.put("maphong", nhanVien.getMaPhong());
+        values.put("gioitinh", nhanVien.getGioiTinh());
+        values.put("tenphong", nhanVien.getTenPhong());
         values.put("tienluong", nhanVien.getBacLuong());
+        values.put("imagenv", nhanVien.getImageNV());
         db.update("NhanVien", values, "manv ='" + nhanVien.getMaNV() + "'", null);
         db.close();
     }
@@ -61,8 +65,10 @@ public class DBNhanVien {
                 nhanVien.setMaNV(cursor.getString(0));
                 nhanVien.setTenNV(cursor.getString(1));
                 nhanVien.setNgaySinh(cursor.getString(2));
-                nhanVien.setMaPhong(cursor.getString(3));
-                nhanVien.setBacLuong(cursor.getString(4));
+                nhanVien.setGioiTinh(cursor.getString(3));
+                nhanVien.setTenPhong(cursor.getString(4));
+                nhanVien.setBacLuong(cursor.getInt(5));
+                nhanVien.setImageNV(cursor.getString(6));
                 data.add(nhanVien);
             }
             while (cursor.moveToNext());
@@ -86,8 +92,10 @@ public class DBNhanVien {
                 nhanVien.setMaNV(cursor.getString(0));
                 nhanVien.setTenNV(cursor.getString(1));
                 nhanVien.setNgaySinh(cursor.getString(2));
-                nhanVien.setMaPhong(cursor.getString(3));
-                nhanVien.setBacLuong(cursor.getString(4));
+                nhanVien.setGioiTinh(cursor.getString(3));
+                nhanVien.setTenPhong(cursor.getString(4));
+                nhanVien.setBacLuong(cursor.getInt(5));
+                nhanVien.setImageNV(cursor.getString(6));
                 data.add(nhanVien);
             }
             while (cursor.moveToNext());

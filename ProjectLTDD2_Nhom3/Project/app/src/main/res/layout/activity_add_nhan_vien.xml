@@ -22,17 +22,38 @@
         android:hint="@string/tennv"
         android:inputType="text" />
 
-    <EditText
-        android:id="@+id/txtNgaySinh"
-        style="@style/edttext"
-        android:hint="@string/ngaysinh"
-        android:inputType="date" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/txtMaPB"
-        style="@style/edttext"
-        android:hint="@string/mapb"
-        android:inputType="text" />
+        <EditText
+            android:id="@+id/txtNgaySinh"
+            style="@style/edttext"
+            android:layout_width="300dp"
+            android:hint="@string/birth"
+            android:inputType="date" />
+
+        <ImageButton
+            style="@style/button_model_view"
+            android:src="@drawable/date"
+            android:layout_marginLeft="10dp"
+            />
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            style="@style/btn_radio"
+            android:text="Nam"
+            />
+        <RadioButton
+            style="@style/btn_radio"
+            android:text="Nữ"
+            />
+    </RadioGroup>
 
     <EditText
         android:id="@+id/txtLuong"
