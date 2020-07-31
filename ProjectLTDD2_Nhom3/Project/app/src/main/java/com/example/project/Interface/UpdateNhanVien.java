@@ -68,7 +68,7 @@ public class UpdateNhanVien extends AppCompatActivity {
             radNu.isChecked();
         }
         phongBan = dataNV.get(0).getTenPhong();
-        
+
         edtMaPB.setText(dataNV.get(0).getTenPhong());
         edtLuong.setText(dataNV.get(0).getBacLuong());
 
