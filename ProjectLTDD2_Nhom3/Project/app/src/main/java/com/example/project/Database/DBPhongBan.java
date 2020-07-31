@@ -77,4 +77,21 @@ public class DBPhongBan {
         }
         return data;
     }
+    public ArrayList<PhongBan> LayDSPhong() {
+        ArrayList<PhongBan> data = new ArrayList<>();
+        String sql = "select tenpb from PhongBan";
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery(sql, null);
+        try {
+            cursor.moveToFirst();
+            do {
+                PhongBan phongBan = new PhongBan();
+                phongBan.setTenPhong(cursor.getString(0));
+                data.add(phongBan);
+            } while (cursor.moveToNext());
+        } catch (Exception ex){
+
+        }
+        return data;
+    }
 }

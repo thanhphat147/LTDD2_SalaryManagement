@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.example.project.Database.DBNhanVien;
@@ -48,7 +49,8 @@ public class CustomAdapterNV extends ArrayAdapter {
         TextView tvMaNV;
         TextView tvTenNV;
         TextView tvNgaySinh;
-        TextView tvMaPB;
+        TextView tvGioiTinh;
+        TextView tvPhongBan;
         TextView tvLuong;
         ImageButton btnXoa;
         ImageButton btnSua;
@@ -66,7 +68,8 @@ public class CustomAdapterNV extends ArrayAdapter {
             holder.tvMaNV = view.findViewById(R.id.tvMaNV);
             holder.tvTenNV = view.findViewById(R.id.tvTenNV);
             holder.tvNgaySinh = view.findViewById(R.id.tvNgaySinh);
-            holder.tvMaPB = view.findViewById(R.id.tvMaPB);
+            holder.tvGioiTinh = view.findViewById(R.id.tvGioiTinh);
+            holder.tvPhongBan = view.findViewById(R.id.tvPhongBan);
             holder.tvLuong = view.findViewById(R.id.tvLuong);
             holder.btnXoa = view.findViewById(R.id.btnXoa);
             holder.btnSua = view.findViewById(R.id.btnSua);
@@ -82,7 +85,8 @@ public class CustomAdapterNV extends ArrayAdapter {
         holder.tvMaNV.setText(nhanVien.getMaNV());
         holder.tvTenNV.setText(nhanVien.getTenNV());
         holder.tvNgaySinh.setText(nhanVien.getNgaySinh());
-        holder.tvMaPB.setText(nhanVien.getMaPhong());
+        holder.tvGioiTinh.setText(nhanVien.getGioiTinh());
+        holder.tvPhongBan.setText(nhanVien.getTenPhong());
         holder.tvLuong.setText(nhanVien.getBacLuong());
         holder.btnSua.setOnClickListener(new View.OnClickListener() {
             @Override

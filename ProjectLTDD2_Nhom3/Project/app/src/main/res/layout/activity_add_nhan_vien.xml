@@ -20,11 +20,13 @@
         android:id="@+id/txtTenNV"
         style="@style/edttext"
         android:hint="@string/tennv"
-        android:inputType="text" />
+        android:inputType="text"
+        android:layout_marginTop="10dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
 
         <EditText
             android:id="@+id/txtNgaySinh"
@@ -34,6 +36,7 @@
             android:inputType="date" />
 
         <ImageButton
+            android:id="@+id/btnDatePicker"
             style="@style/button_model_view"
             android:src="@drawable/date"
             android:layout_marginLeft="10dp"
@@ -41,25 +44,51 @@
     </LinearLayout>
 
     <RadioGroup
+        android:id="@+id/rdiGioiTinh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         >
         <RadioButton
+            android:id="@+id/radNam"
             style="@style/btn_radio"
             android:text="Nam"
+            android:checked="true"
             />
+
         <RadioButton
+            android:id="@+id/radNu"
             style="@style/btn_radio"
             android:text="Nữ"
+            android:layout_marginLeft="50dp"
             />
     </RadioGroup>
 
+    <LinearLayout
+        style="@style/linear_h"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/room"
+            android:layout_marginLeft="5dp"
+            android:textSize="18sp"/>
+
+        <Spinner
+            android:id="@+id/spTenPB"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
     <EditText
-        android:id="@+id/txtLuong"
+        android:id="@+id/edtLuong"
         style="@style/edttext"
         android:hint="@string/luong"
-        android:inputType="number" />
+        android:inputType="number"
+        android:layout_marginTop="10dp"/>
 
 
     <Button
@@ -67,6 +96,7 @@
         style="@style/button"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
+        android:paddingLeft="10dp"
         android:background="@drawable/add12"
         android:drawableLeft="@drawable/ic_baseline_person_add_24"
         android:text="@string/them"/>

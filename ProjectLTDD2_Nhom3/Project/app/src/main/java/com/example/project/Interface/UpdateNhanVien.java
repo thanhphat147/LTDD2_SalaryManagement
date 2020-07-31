@@ -7,22 +7,36 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.project.Database.DBNhanVien;
+import com.example.project.Database.DBPhongBan;
 import com.example.project.Model.NhanVien;
+import com.example.project.Model.PhongBan;
 import com.example.project.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class UpdateNhanVien extends AppCompatActivity {
     EditText edtTenNV, edtNgaySinh, edtMaPB, edtLuong;
     TextView tvMa;
     Button btnUpdate;
+    RadioGroup rdiGioiTinh;
+    RadioButton radNam, radNu;
+    Spinner spPhongBan;
+    ImageButton btnDatePicker;
     ArrayList<NhanVien> dataNV = new ArrayList<>();
+    DBPhongBan dbPhongBan;
+    ArrayAdapter<PhongBan> adapterPB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,13 +48,28 @@ public class UpdateNhanVien extends AppCompatActivity {
     }
 
     private void setEvent() {
+        String gioiTinh, phongBan;
+        dbPhongBan = new DBPhongBan(getApplicationContext());
+        List<PhongBan> dsPhong= dbPhongBan.LayDSPhong();
+        adapterPB = new ArrayAdapter<PhongBan>(this, R.layout.support_simple_spinner_dropdown_item, dsPhong);
+        adapterPB.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spPhongBan.setAdapter(adapterPB);
         String masv = getIntent().getExtras().getString("ma");
         DBNhanVien dbNhanVien  =new DBNhanVien(this);
         dataNV =dbNhanVien.LayDL(masv);
         tvMa.setText(dataNV.get(0).getMaNV());
         edtTenNV.setText(dataNV.get(0).getTenNV());
         edtNgaySinh.setText(dataNV.get(0).getNgaySinh());
-        edtMaPB.setText(dataNV.get(0).getMaPhong());
+        gioiTinh = dataNV.get(0).getGioiTinh();
+        if (gioiTinh == radNam.getText().toString()) {
+            radNam.isChecked();
+        }
+        if (gioiTinh == radNam.getText().toString()){
+            radNu.isChecked();
+        }
+        phongBan = dataNV.get(0).getTenPhong();
+        
+        edtMaPB.setText(dataNV.get(0).getTenPhong());
         edtLuong.setText(dataNV.get(0).getBacLuong());
 
         btnUpdate.setOnClickListener(new View.OnClickListener() {
@@ -58,9 +87,12 @@ public class UpdateNhanVien extends AppCompatActivity {
         tvMa = findViewById(R.id.txtMaNV);
         edtTenNV = findViewById(R.id.txtTenNV);
         edtNgaySinh = findViewById(R.id.txtNgaySinh);
-        edtMaPB = findViewById(R.id.txtMaPB);
+        rdiGioiTinh = findViewById(R.id.rdiGioiTinh);
+        radNam = findViewById(R.id.radNam);
+        radNu = findViewById(R.id.radNu);
+        spPhongBan = findViewById(R.id.spTenPB);
         edtLuong = findViewById(R.id.txtLuong);
-        tvMa = findViewById(R.id.tvMa);
+        btnDatePicker = findViewById(R.id.btnDatePicker);
         btnUpdate = findViewById(R.id.btnUpdate);
     }
 
@@ -69,7 +101,13 @@ public class UpdateNhanVien extends AppCompatActivity {
         nhanVien.setMaNV(tvMa.getText().toString());
         nhanVien.setTenNV(edtTenNV.getText().toString());
         nhanVien.setNgaySinh(edtNgaySinh.getText().toString());
-        nhanVien.setMaPhong(edtMaPB.getText().toString());
+        if(radNam.isChecked()) {
+            nhanVien.setGioiTinh(radNam.getText().toString());
+        }
+        else{
+            nhanVien.setGioiTinh(radNu.getText().toString());
+        }
+        nhanVien.setTenPhong(spPhongBan.getSelectedItem().toString());
         nhanVien.setBacLuong(edtLuong.getText().toString());
         DBNhanVien dbNhanVien = new DBNhanVien(this);
         dbNhanVien.Sua(nhanVien);

@@ -1,8 +1,8 @@
 package com.example.project.Model;
 
 public class NhanVien {
-    String maNV, tenNV, ngaySinh, gioiTinh, tenPhong, imageNV;
-    int bacLuong;
+    String maNV, tenNV, ngaySinh, gioiTinh, tenPhong, imageNV, bacLuong;
+
 
     public String getMaNV() {
         return maNV;
@@ -52,11 +52,11 @@ public class NhanVien {
         this.imageNV = imageNV;
     }
 
-    public int getBacLuong() {
+    public String getBacLuong() {
         return bacLuong;
     }
 
-    public void setBacLuong(int bacLuong) {
+    public void setBacLuong(String bacLuong) {
         this.bacLuong = bacLuong;
     }
 

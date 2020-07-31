@@ -16,8 +16,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 ", ngaysinh date" +
                 ", gioitinh text" +
                 ", tenphong text" +
-                ", tienluong int" +
-                ", imagenv text)";
+                ", tienluong int)";
         db.execSQL(sql);
     }
 

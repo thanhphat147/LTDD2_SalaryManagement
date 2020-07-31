@@ -13,7 +13,7 @@
     <string name="ngaysinh">Enter your Date of Birth</string>
     <string name="mapb">Enter your ID Room</string>
     <string name="tenpb">Department</string>
-    <string name="luong">Enter your Base Salary</string>
+    <string name="luong">Enter your level of salary</string>
     <string name="tieude_nv">Employee List</string>
     <string name="tieude_addnv">Add Employee</string>
     <string name="tieude_update">Edit Employee</string>
@@ -51,6 +51,7 @@
     <string name="user">User</string>
     <string name="pw">Password</string>
     <string name="login">Login</string>
+    <string name="gioitinh">"Sex: "</string>
 
 
 </resources>
