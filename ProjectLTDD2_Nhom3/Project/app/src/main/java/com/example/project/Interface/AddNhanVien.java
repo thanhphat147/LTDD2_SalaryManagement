@@ -38,8 +38,8 @@ public class AddNhanVien extends AppCompatActivity {
     Spinner spPhongBan;
     Button btnAdd;
     ImageButton btnDatePicker;
-    ArrayList<PhongBan> dataPB = new ArrayList<>();
     DBPhongBan dbPhongBan;
+    ArrayList<PhongBan> dsPhong;
     CustomAdapterPB adapterPB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +53,8 @@ public class AddNhanVien extends AppCompatActivity {
 
     private void setEvent() {
         dbPhongBan = new DBPhongBan(getApplicationContext());
-        dataPB = dbPhongBan.LayDSPhong();
-        adapterPB = new CustomAdapterPB(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, dataPB);
+        dsPhong = dbPhongBan.LayDSPhong();
+        adapterPB = new CustomAdapterPB(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, dsPhong);
         spPhongBan.setAdapter(adapterPB);
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override

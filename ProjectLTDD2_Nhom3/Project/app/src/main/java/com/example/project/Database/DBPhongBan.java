@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.project.Model.PhongBan;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DBPhongBan {
     DBHelperPB dbHelper;
@@ -78,20 +79,20 @@ public class DBPhongBan {
         return data;
     }
     public ArrayList<PhongBan> LayDSPhong() {
-        ArrayList<PhongBan> data = new ArrayList<>();
-        String sql = "select tenPB from PhongBan";
+        ArrayList<PhongBan> ds = new ArrayList<PhongBan>();
+        String sql = "select tenpb from PhongBan";
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery(sql, null);
         try {
             cursor.moveToFirst();
             do {
-                PhongBan phongBan1 = new PhongBan();
-                phongBan1.setTenPhong(cursor.getString(1));
-                data.add(phongBan1);
+                PhongBan data = new PhongBan();
+                data.setTenPhong(cursor.getString(1));
+                ds.add(data);
             } while (cursor.moveToNext());
         } catch (Exception ex){
 
         }
-        return data;
+        return ds;
     }
 }

@@ -11,7 +11,7 @@ public class DBHelperPB extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "create table PhongBan(maPB text primary key, tenPB text)";
+        String sql = "create table PhongBan(mapb text primary key, tenpb text)";
         db.execSQL(sql);
     }
 
