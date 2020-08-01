@@ -79,15 +79,15 @@ public class DBPhongBan {
     }
     public ArrayList<PhongBan> LayDSPhong() {
         ArrayList<PhongBan> data = new ArrayList<>();
-        String sql = "select tenpb from PhongBan";
+        String sql = "select tenPB from PhongBan";
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery(sql, null);
         try {
             cursor.moveToFirst();
             do {
-                PhongBan phongBan = new PhongBan();
-                phongBan.setTenPhong(cursor.getString(0));
-                data.add(phongBan);
+                PhongBan phongBan1 = new PhongBan();
+                phongBan1.setTenPhong(cursor.getString(1));
+                data.add(phongBan1);
             } while (cursor.moveToNext());
         } catch (Exception ex){
 

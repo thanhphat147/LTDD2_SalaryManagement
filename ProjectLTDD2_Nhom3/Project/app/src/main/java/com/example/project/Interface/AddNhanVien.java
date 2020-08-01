@@ -20,24 +20,27 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.project.Adapter.CustomAdapterNV;
+import com.example.project.Adapter.CustomAdapterPB;
 import com.example.project.Database.DBNhanVien;
 import com.example.project.Database.DBPhongBan;
 import com.example.project.Model.NhanVien;
 import com.example.project.Model.PhongBan;
 import com.example.project.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AddNhanVien extends AppCompatActivity {
 
     EditText edtMaNV, edtTenNV, edtNgaySinh, edtLuong;
-    RadioGroup rdiGioiTinh;
     RadioButton radNam, radNu;
     Spinner spPhongBan;
     Button btnAdd;
     ImageButton btnDatePicker;
+    ArrayList<PhongBan> dataPB = new ArrayList<>();
     DBPhongBan dbPhongBan;
-    ArrayAdapter<PhongBan> adapterPB;
+    CustomAdapterPB adapterPB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,9 +53,8 @@ public class AddNhanVien extends AppCompatActivity {
 
     private void setEvent() {
         dbPhongBan = new DBPhongBan(getApplicationContext());
-        List<PhongBan> dsPhong= dbPhongBan.LayDSPhong();
-        adapterPB = new ArrayAdapter<PhongBan>(this, R.layout.support_simple_spinner_dropdown_item, dsPhong);
-        adapterPB.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        dataPB = dbPhongBan.LayDSPhong();
+        adapterPB = new CustomAdapterPB(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, dataPB);
         spPhongBan.setAdapter(adapterPB);
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,7 +88,7 @@ public class AddNhanVien extends AppCompatActivity {
         if(radNam.isChecked()) {
             nhanVien.setGioiTinh(radNam.getText().toString());
         }
-        else{
+        if (radNu.isChecked()){
             nhanVien.setGioiTinh(radNu.getText().toString());
         }
         nhanVien.setTenPhong(spPhongBan.getSelectedItem().toString());

@@ -25,7 +25,7 @@ public class DBNhanVien {
         values.put("gioitinh", nhanVien.getGioiTinh());
         values.put("tenphong", nhanVien.getTenPhong());
         values.put("tienluong", nhanVien.getBacLuong());
-        values.put("imagenv", nhanVien.getImageNV());
+//        values.put("imagenv", nhanVien.getImageNV());
         db.insert("NhanVien", null, values);
         db.close();
     }

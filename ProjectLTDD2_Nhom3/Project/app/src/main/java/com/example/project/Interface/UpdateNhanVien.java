@@ -48,10 +48,11 @@ public class UpdateNhanVien extends AppCompatActivity {
     }
 
     private void setEvent() {
+        int position;
         String gioiTinh, phongBan;
         dbPhongBan = new DBPhongBan(getApplicationContext());
         List<PhongBan> dsPhong= dbPhongBan.LayDSPhong();
-        adapterPB = new ArrayAdapter<PhongBan>(this, R.layout.support_simple_spinner_dropdown_item, dsPhong);
+        adapterPB = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, dsPhong);
         adapterPB.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spPhongBan.setAdapter(adapterPB);
         String masv = getIntent().getExtras().getString("ma");
@@ -67,9 +68,12 @@ public class UpdateNhanVien extends AppCompatActivity {
         if (gioiTinh == radNam.getText().toString()){
             radNu.isChecked();
         }
-        phongBan = dataNV.get(0).getTenPhong();
 
-        edtMaPB.setText(dataNV.get(0).getTenPhong());
+        phongBan = dataNV.get(0).getTenPhong();
+        if(phongBan != null) {
+            spPhongBan.setSelection(getIndex(spPhongBan, phongBan));
+        }
+
         edtLuong.setText(dataNV.get(0).getBacLuong());
 
         btnUpdate.setOnClickListener(new View.OnClickListener() {
@@ -122,5 +126,15 @@ public class UpdateNhanVien extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private int getIndex(Spinner spinner, String key){
+        for (int i = 0; i < spinner.getCount(); i++){
+            if (spinner.getItemAtPosition(i).toString().equalsIgnoreCase(key)){
+                return i;
+            }
+        }
+
+        return 0;
     }
 }

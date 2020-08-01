@@ -44,7 +44,6 @@
     </LinearLayout>
 
     <RadioGroup
-        android:id="@+id/rdiGioiTinh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -62,7 +61,7 @@
             android:id="@+id/radNu"
             style="@style/btn_radio"
             android:text="Nữ"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="40dp"
             />
     </RadioGroup>
 

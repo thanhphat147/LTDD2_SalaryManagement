@@ -1,7 +1,7 @@
 package com.example.project.Model;
 
 public class NhanVien {
-    String maNV, tenNV, ngaySinh, gioiTinh, tenPhong, imageNV, bacLuong;
+    String maNV, tenNV, ngaySinh, gioiTinh, tenPhong, bacLuong;
 
 
     public String getMaNV() {
@@ -44,13 +44,13 @@ public class NhanVien {
         this.tenPhong = tenPhong;
     }
 
-    public String getImageNV() {
-        return imageNV;
-    }
-
-    public void setImageNV(String imageNV) {
-        this.imageNV = imageNV;
-    }
+//    public String getImageNV() {
+//        return imageNV;
+//    }
+//
+//    public void setImageNV(String imageNV) {
+//        this.imageNV = imageNV;
+//    }
 
     public String getBacLuong() {
         return bacLuong;
@@ -68,7 +68,6 @@ public class NhanVien {
                 ", ngaySinh='" + ngaySinh + '\'' +
                 ", gioiTinh='" + gioiTinh + '\'' +
                 ", tenPhong='" + tenPhong + '\'' +
-                ", imageNV='" + imageNV + '\'' +
                 ", bacLuong=" + bacLuong +
                 '}';
     }

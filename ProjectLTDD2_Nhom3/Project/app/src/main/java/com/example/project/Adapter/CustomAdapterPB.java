@@ -107,4 +107,6 @@ public class CustomAdapterPB extends ArrayAdapter {
         dbPhongBan.Xoa(phongBan);
         dbPhongBan.LayDL();
     }
+
+
 }
