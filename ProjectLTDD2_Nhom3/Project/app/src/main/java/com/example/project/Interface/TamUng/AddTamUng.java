@@ -1,16 +1,15 @@
-package com.example.project.Interface;
+package com.example.project.Interface.TamUng;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.project.Interface.MainActivityChucNang;
 import com.example.project.R;
 
 public class AddTamUng extends AppCompatActivity {

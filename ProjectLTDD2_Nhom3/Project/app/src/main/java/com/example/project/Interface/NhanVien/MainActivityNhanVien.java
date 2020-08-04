@@ -1,4 +1,4 @@
-package com.example.project.Interface;
+package com.example.project.Interface.NhanVien;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
@@ -18,6 +18,7 @@ import android.widget.ListView;
 
 import com.example.project.Adapter.CustomAdapterNV;
 import com.example.project.Database.DBNhanVien;
+import com.example.project.Interface.MainActivityChucNang;
 import com.example.project.Model.NhanVien;
 import com.example.project.R;
 
@@ -44,7 +45,7 @@ public class MainActivityNhanVien extends AppCompatActivity {
     }
 
     private void setEvent() {
-//        HienThiDL();
+        HienThiDL();
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,7 +64,7 @@ public class MainActivityNhanVien extends AppCompatActivity {
 
     private void HienThiDL() {
         DBNhanVien dbNhanVien = new DBNhanVien(this);
-        dataNV = dbNhanVien.LayDL();
+        dataNV = dbNhanVien.LayDSNhanVien();
         adapterNV = new CustomAdapterNV(MainActivityNhanVien.this, R.layout.custom_item, dataNV);
         adapterNV.notifyDataSetChanged();
         lvDanhSachNV.setAdapter(adapterNV);

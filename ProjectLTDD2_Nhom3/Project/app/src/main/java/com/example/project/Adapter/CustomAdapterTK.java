@@ -1,18 +1,13 @@
 package com.example.project.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.project.Interface.UpdateTamUng;
-import com.example.project.Model.TamUng;
 import com.example.project.Model.ThongKe;
 import com.example.project.R;
 

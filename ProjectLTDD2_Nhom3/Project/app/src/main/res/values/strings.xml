@@ -8,12 +8,12 @@
     <string name="xoa">Delete</string>
     <string name="sua">Edit</string>
     <string name="clear">Clear</string>
-    <string name="manv">Enter your ID</string>
-    <string name="tennv">Enter your Name</string>
-    <string name="ngaysinh">Enter your Date of Birth</string>
-    <string name="mapb">Enter your ID Room</string>
+    <string name="manv">ID</string>
+    <string name="tennv">Full Name</string>
+    <string name="ngaysinh">Date of Birth</string>
+    <string name="mapb">ID Room</string>
     <string name="tenpb">Department</string>
-    <string name="luong">Enter your level of salary</string>
+    <string name="luong">Level of salary</string>
     <string name="tieude_nv">Employee List</string>
     <string name="tieude_addnv">Add Employee</string>
     <string name="tieude_update">Edit Employee</string>
@@ -23,8 +23,8 @@
     <string name="room">Room: </string>
     <string name="salary">Salary: </string>
     <string name="employee_list">Employee</string>
-    <string name="checkout">Checkout</string>
-    <string name="advance_payment">Payment</string>
+    <string name="checkout">Chấm công</string>
+    <string name="advance_payment">Tạm ứng</string>
     <string name="summary">Summary</string>
     <string name="aboutus">About Us</string>
     <string name="lang_en" translatable="false">English</string>

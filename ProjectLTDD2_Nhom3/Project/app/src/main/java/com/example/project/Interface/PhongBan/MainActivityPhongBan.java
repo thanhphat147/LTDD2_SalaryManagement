@@ -1,4 +1,4 @@
-package com.example.project.Interface;
+package com.example.project.Interface.PhongBan;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -16,6 +16,7 @@ import android.widget.ListView;
 
 import com.example.project.Adapter.CustomAdapterPB;
 import com.example.project.Database.DBPhongBan;
+import com.example.project.Interface.MainActivityChucNang;
 import com.example.project.Model.PhongBan;
 import com.example.project.R;
 

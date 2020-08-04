@@ -7,13 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.example.project.Interface.UpdateChamCong;
-import com.example.project.Interface.UpdateTamUng;
-import com.example.project.Model.ChamCong;
+import com.example.project.Interface.TamUng.UpdateTamUng;
 import com.example.project.Model.TamUng;
 import com.example.project.R;
 

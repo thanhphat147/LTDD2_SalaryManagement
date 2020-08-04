@@ -2,24 +2,19 @@ package com.example.project.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.example.project.Database.DBNhanVien;
-import com.example.project.Interface.AddChamCong;
-import com.example.project.Interface.AddTamUng;
-import com.example.project.Interface.MainActivityChamCong;
-import com.example.project.Interface.MainActivityNhanVien;
-import com.example.project.Interface.MainActivityTamUng;
-import com.example.project.Interface.UpdateNhanVien;
+import com.example.project.Interface.ChamCong.AddChamCong;
+import com.example.project.Interface.TamUng.AddTamUng;
+import com.example.project.Interface.NhanVien.MainActivityNhanVien;
+import com.example.project.Interface.NhanVien.UpdateNhanVien;
 import com.example.project.Model.NhanVien;
 import com.example.project.R;
 import java.util.ArrayList;
@@ -93,7 +88,7 @@ public class CustomAdapterNV extends ArrayAdapter {
             public void onClick(View v) {
                 Intent intent = new Intent(context, UpdateNhanVien.class);
                 Bundle bundle = new Bundle();
-                bundle.putString("ma",nhanVien.getMaNV());
+                bundle.putString("manv",nhanVien.getMaNV());
                 intent.putExtras(bundle);
                 context.startActivity(intent);
             }
@@ -150,6 +145,6 @@ public class CustomAdapterNV extends ArrayAdapter {
     public void XoaDL(NhanVien nhanVien) {
         DBNhanVien dbNhanVien = new DBNhanVien(context);
         dbNhanVien.Xoa(nhanVien);
-        dbNhanVien.LayDL();
+        dbNhanVien.LayDSNhanVien();
     }
 }

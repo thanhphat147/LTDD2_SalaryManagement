@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Interface.AddTamUng"></activity>
-        <activity android:name=".Interface.AddChamCong" />
+        <activity android:name=".Interface.TamUng.AddTamUng"></activity>
+        <activity android:name=".Interface.ChamCong.AddChamCong" />
         <activity android:name=".Interface.MainActivityLogin" />
         <activity android:name=".Interface.MainActivityThongKe" />
-        <activity android:name=".Interface.UpdateTamUng" />
-        <activity android:name=".Interface.MainActivityTamUng" />
-        <activity android:name=".Interface.UpdateChamCong" />
-        <activity android:name=".Interface.MainActivityChamCong" />
+        <activity android:name=".Interface.TamUng.UpdateTamUng" />
+        <activity android:name=".Interface.TamUng.MainActivityTamUng" />
+        <activity android:name=".Interface.ChamCong.UpdateChamCong" />
+        <activity android:name=".Interface.ChamCong.MainActivityChamCong" />
         <activity android:name=".Interface.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,12 +25,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".Interface.MainActivityChucNang" />
-        <activity android:name=".Interface.AddPhongBan" />
-        <activity android:name=".Interface.UpdatePhongBan" />
-        <activity android:name=".Interface.MainActivityPhongBan" />
-        <activity android:name=".Interface.UpdateNhanVien" />
-        <activity android:name=".Interface.AddNhanVien" />
-        <activity android:name=".Interface.MainActivityNhanVien" />
+        <activity android:name=".Interface.PhongBan.AddPhongBan" />
+        <activity android:name=".Interface.PhongBan.UpdatePhongBan" />
+        <activity android:name=".Interface.PhongBan.MainActivityPhongBan" />
+        <activity android:name=".Interface.NhanVien.UpdateNhanVien" />
+        <activity android:name=".Interface.NhanVien.AddNhanVien" />
+        <activity android:name=".Interface.NhanVien.MainActivityNhanVien" />
     </application>
 
 </manifest>

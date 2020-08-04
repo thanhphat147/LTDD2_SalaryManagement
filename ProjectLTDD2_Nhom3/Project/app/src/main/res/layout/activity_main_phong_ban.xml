@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/linear_v"
     android:background="@drawable/backgrounding"
-    tools:context=".Interface.MainActivityPhongBan">
+    tools:context=".Interface.PhongBan.MainActivityPhongBan">
 
     <TextView
         android:text="@string/danhsachPB"

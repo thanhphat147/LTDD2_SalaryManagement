@@ -8,14 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 
 import com.example.project.Database.DBPhongBan;
-import com.example.project.Interface.UpdatePhongBan;
+import com.example.project.Interface.PhongBan.UpdatePhongBan;
 import com.example.project.Model.PhongBan;
 import com.example.project.R;
 

@@ -2,44 +2,48 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/linear_v">
 
-    <ImageView
-        style="@style/img_model"
-        android:layout_gravity="center"
-        android:src="@drawable/men" />
+
     <LinearLayout
-        style="@style/linear_v"
+        style="@style/linear_h"
         android:layout_height="wrap_content"
         >
+        <ImageView
+            style="@style/img_model"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:src="@drawable/men" />
+        <LinearLayout
+            style="@style/linear_v">
+            <TextView
+                android:id="@+id/tvMaNV"
+                style="@style/tv_model"
+                android:text="@string/id" />
 
-        <TextView
-            android:id="@+id/tvMaNV"
-            style="@style/tv_model"
-            android:text="@string/id" />
+            <TextView
+                android:id="@+id/tvTenNV"
+                style="@style/tv_model"
+                android:text="@string/name" />
 
-        <TextView
-            android:id="@+id/tvTenNV"
-            style="@style/tv_model"
-            android:text="@string/name" />
+            <TextView
+                android:id="@+id/tvNgaySinh"
+                style="@style/tv_model"
+                android:text="@string/birth" />
 
-        <TextView
-            android:id="@+id/tvNgaySinh"
-            style="@style/tv_model"
-            android:text="@string/birth" />
+            <TextView
+                android:id="@+id/tvGioiTinh"
+                style="@style/tv_model"
+                android:text="@string/gioitinh" />
 
-        <TextView
-            android:id="@+id/tvGioiTinh"
-            style="@style/tv_model"
-            android:text="@string/gioitinh" />
+            <TextView
+                android:id="@+id/tvPhongBan"
+                style="@style/tv_model"
+                android:text="@string/room" />
 
-        <TextView
-            android:id="@+id/tvPhongBan"
-            style="@style/tv_model"
-            android:text="@string/room" />
-
-        <TextView
-            android:id="@+id/tvLuong"
-            style="@style/tv_model"
-            android:text="@string/salary" />
+            <TextView
+                android:id="@+id/tvLuong"
+                style="@style/tv_model"
+                android:text="@string/salary" />
+        </LinearLayout>
 
     </LinearLayout>
     <LinearLayout
@@ -61,18 +65,17 @@
             android:background="@drawable/button_del"
             android:src="@drawable/ic_baseline_edit_24"
             />
-        <ImageButton
+        <Button
             android:id="@+id/btnChamCong"
             style="@style/button_model"
             android:background="@drawable/img_button"
-            android:src="@drawable/checkout"
-
+            android:text="@string/checkout"
             />
-        <ImageButton
+        <Button
             android:id="@+id/btnTamUng"
             style="@style/button_model"
             android:background="@drawable/img_button"
-            android:src="@drawable/advpayment1"
+            android:text="@string/advance_payment"
             />
     </LinearLayout>
 

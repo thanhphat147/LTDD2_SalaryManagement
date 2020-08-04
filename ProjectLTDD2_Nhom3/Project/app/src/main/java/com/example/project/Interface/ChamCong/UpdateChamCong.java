@@ -1,4 +1,4 @@
-package com.example.project.Interface;
+package com.example.project.Interface.ChamCong;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -10,12 +10,12 @@ import android.view.MenuItem;
 
 import com.example.project.R;
 
-public class UpdateTamUng extends AppCompatActivity {
+public class UpdateChamCong extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_tam_ung);
+        setContentView(R.layout.activity_update_cham_cong);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
     }

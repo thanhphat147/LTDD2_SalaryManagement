@@ -1,28 +1,24 @@
-package com.example.project.Interface;
+package com.example.project.Interface.TamUng;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.project.R;
 
-public class AddChamCong extends AppCompatActivity {
+public class UpdateTamUng extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_cham_cong);
+        setContentView(R.layout.activity_update_tam_ung);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_actionbar, menu);
@@ -31,11 +27,7 @@ public class AddChamCong extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.btnHome:
-                Intent intent = new Intent(AddChamCong.this, MainActivityChucNang.class);
-                startActivity(intent);
-                break;
+        switch (item.getItemId()){
             case android.R.id.home:
                 onBackPressed();
                 return true;

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/linear_v"
     android:background="@drawable/backgrounding"
-    tools:context=".Interface.MainActivityChamCong">
+    tools:context=".Interface.ChamCong.MainActivityChamCong">
 
     <TextView
         android:text="@string/danhsachCC"

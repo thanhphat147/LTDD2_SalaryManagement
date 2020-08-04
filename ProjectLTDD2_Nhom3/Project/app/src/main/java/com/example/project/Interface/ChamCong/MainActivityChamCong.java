@@ -1,4 +1,4 @@
-package com.example.project.Interface;
+package com.example.project.Interface.ChamCong;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -11,23 +11,22 @@ import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.example.project.Adapter.CustomAdapterCC;
-import com.example.project.Adapter.CustomAdapterTU;
+import com.example.project.Interface.MainActivityChucNang;
 import com.example.project.Model.ChamCong;
-import com.example.project.Model.TamUng;
 import com.example.project.R;
 
 import java.util.ArrayList;
 
-public class MainActivityTamUng extends AppCompatActivity {
+public class MainActivityChamCong extends AppCompatActivity {
 
-    ListView lvTamUng;
-    ArrayList<TamUng> data_TU;
-    CustomAdapterTU adapter_TU;
+    ListView lvChamCong;
+    ArrayList<ChamCong> data_CC = new ArrayList<>();
+    CustomAdapterCC adapter_CC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_tam_ung);
+        setContentView(R.layout.activity_main_cham_cong);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         setControl();
@@ -36,26 +35,25 @@ public class MainActivityTamUng extends AppCompatActivity {
 
     private void setEvent() {
         KhoiTao();
-        adapter_TU = new CustomAdapterTU(MainActivityTamUng.this, R.layout.custom_view_tu, data_TU);
-        lvTamUng.setAdapter(adapter_TU);
+        adapter_CC = new CustomAdapterCC(MainActivityChamCong.this, R.layout.custom_view_cc, data_CC);
+        lvChamCong.setAdapter(adapter_CC);
     }
 
     private void KhoiTao(){
-        data_TU = new ArrayList<TamUng>();
-        data_TU.add(GetTamUng());
+        data_CC = new ArrayList<ChamCong>();
+        data_CC.add(GetChamCong());
     }
 
-    private TamUng GetTamUng() {
-        TamUng tamUng = new TamUng();
-        tamUng.setMaNV("NV001");
-        tamUng.setSoPhieu(1);
-        tamUng.setNgay("12/03/2020");
-        tamUng.setSoTien(500000);
-        return tamUng;
+    private ChamCong GetChamCong() {
+        ChamCong chamCong = new ChamCong();
+        chamCong.setMaNV("NV001");
+        chamCong.setNgayGhiSo("20/02/2019");
+        chamCong.setSoNgayCong(29);
+        return chamCong;
     }
 
     private void setControl() {
-        lvTamUng = findViewById(R.id.lvTamUng);
+        lvChamCong = findViewById(R.id.lvChamCong);
     }
 
     @Override
@@ -70,8 +68,9 @@ public class MainActivityTamUng extends AppCompatActivity {
             case android.R.id.home:
                 onBackPressed();
                 return true;
+
             case R.id.btnHome:
-                Intent intent = new Intent(MainActivityTamUng.this, MainActivityChucNang.class);
+                Intent intent = new Intent(MainActivityChamCong.this, MainActivityChucNang.class);
                 startActivity(intent);
                 break;
         }

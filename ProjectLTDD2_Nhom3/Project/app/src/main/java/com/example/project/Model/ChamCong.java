@@ -1,8 +1,7 @@
 package com.example.project.Model;
 
 public class ChamCong {
-    String maNV, ngayGhiSo;
-    int soNgayCong;
+    String maNV, thangChamCong, soNgayCong;
 
     public String getMaNV() {
         return maNV;
@@ -12,19 +11,19 @@ public class ChamCong {
         this.maNV = maNV;
     }
 
-    public String getNgayGhiSo() {
-        return ngayGhiSo;
+    public String getThangChamCong() {
+        return thangChamCong;
     }
 
-    public void setNgayGhiSo(String ngayGhiSo) {
-        this.ngayGhiSo = ngayGhiSo;
+    public void setThangChamCong(String thangChamCong) {
+        this.thangChamCong = thangChamCong;
     }
 
-    public int getSoNgayCong() {
+    public String getSoNgayCong() {
         return soNgayCong;
     }
 
-    public void setSoNgayCong(int soNgayCong) {
+    public void setSoNgayCong(String soNgayCong) {
         this.soNgayCong = soNgayCong;
     }
 
@@ -32,8 +31,8 @@ public class ChamCong {
     public String toString() {
         return "ChamCong{" +
                 "maNV='" + maNV + '\'' +
-                ", ngayGhiSo='" + ngayGhiSo + '\'' +
-                ", soNgayCong=" + soNgayCong +
+                ", thangChamCong='" + thangChamCong + '\'' +
+                ", soNgayCong='" + soNgayCong + '\'' +
                 '}';
     }
 }

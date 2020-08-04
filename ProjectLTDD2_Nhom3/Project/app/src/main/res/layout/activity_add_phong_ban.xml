@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/linear_v"
     android:background="@drawable/backgrounding"
-    tools:context=".Interface.AddPhongBan">
+    tools:context=".Interface.PhongBan.AddPhongBan">
 
     <TextView
         style="@style/tv_title"

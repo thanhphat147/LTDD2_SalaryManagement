@@ -13,10 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DBPhongBan {
-    DBHelperPB dbHelper;
+    DBHelper dbHelper;
 
     public DBPhongBan(Context context) {
-        dbHelper = new DBHelperPB(context);
+        dbHelper = new DBHelper(context);
     }
 
     public void Them(PhongBan phongBan) {
@@ -78,8 +78,8 @@ public class DBPhongBan {
         }
         return data;
     }
-    public ArrayList<PhongBan> LayDSPhong() {
-        ArrayList<PhongBan> ds = new ArrayList<PhongBan>();
+    public ArrayList<String> LayDSPhong() {
+        ArrayList<String> ds = new ArrayList<>();
         String sql = "select tenpb from PhongBan";
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery(sql, null);
@@ -87,8 +87,10 @@ public class DBPhongBan {
             cursor.moveToFirst();
             do {
                 PhongBan data = new PhongBan();
-                data.setTenPhong(cursor.getString(1));
-                ds.add(data);
+                String phong = "";
+                data.setTenPhong(cursor.getString(0));
+                phong = data.getTenPhong().toString();
+                ds.add(phong);
             } while (cursor.moveToNext());
         } catch (Exception ex){
 

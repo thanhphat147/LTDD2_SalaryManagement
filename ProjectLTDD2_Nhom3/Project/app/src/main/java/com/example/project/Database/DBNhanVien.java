@@ -52,7 +52,7 @@ public class DBNhanVien {
         db.close();
     }
 
-    public ArrayList<NhanVien> LayDL() {
+    public ArrayList<NhanVien> LayDSNhanVien() {
         ArrayList<NhanVien> data = new ArrayList<>();
         String sql = "select * from NhanVien";
         SQLiteDatabase db = dbHelper.getReadableDatabase();
@@ -74,12 +74,13 @@ public class DBNhanVien {
             while (cursor.moveToNext());
             db.close();
         } catch (Exception ex) {
+            ex.printStackTrace();
         }
 
         return data;
     }
 
-    public ArrayList<NhanVien> LayDL(String manv) {
+    public ArrayList<NhanVien> LayNhanVien(String manv) {
         ArrayList<NhanVien> data = new ArrayList<>();
         String sql = "select * from NhanVien where manv ='" + manv + "'";
         SQLiteDatabase db = dbHelper.getReadableDatabase();
@@ -101,6 +102,7 @@ public class DBNhanVien {
             while (cursor.moveToNext());
             db.close();
         } catch (Exception ex) {
+            ex.printStackTrace();
         }
 
 

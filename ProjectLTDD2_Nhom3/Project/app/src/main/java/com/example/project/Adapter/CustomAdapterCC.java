@@ -1,23 +1,18 @@
 package com.example.project.Adapter;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AlertDialog;
-
-import com.example.project.Interface.UpdateChamCong;
-import com.example.project.Interface.UpdatePhongBan;
+import com.example.project.Interface.ChamCong.UpdateChamCong;
 import com.example.project.Model.ChamCong;
+import com.example.project.Model.NhanVien;
 import com.example.project.R;
 
 import java.util.ArrayList;
@@ -26,6 +21,7 @@ public class CustomAdapterCC extends ArrayAdapter {
     Context context;
     int resource;
     ArrayList<ChamCong> data;
+    ArrayList<NhanVien> dataNV = new ArrayList<>();
 
     public CustomAdapterCC(Context context, int resource, ArrayList<ChamCong> data) {
         super(context, resource);
