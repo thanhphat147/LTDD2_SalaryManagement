@@ -6,22 +6,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.project.Adapter.CustomAdapterCC;
+import com.example.project.Database.DBChamCong;
 import com.example.project.Interface.MainActivityChucNang;
+import com.example.project.Library.LoadingDialog;
 import com.example.project.Model.ChamCong;
 import com.example.project.R;
 
 import java.util.ArrayList;
 
 public class MainActivityChamCong extends AppCompatActivity {
-
     ListView lvChamCong;
-    ArrayList<ChamCong> data_CC = new ArrayList<>();
-    CustomAdapterCC adapter_CC;
+    CustomAdapterCC adapter_chamcong;
+    ArrayList<ChamCong> data_chamcong = new ArrayList<>();
+    LoadingDialog loadingDialog = new LoadingDialog(MainActivityChamCong.this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,28 +38,30 @@ public class MainActivityChamCong extends AppCompatActivity {
     }
 
     private void setEvent() {
-        KhoiTao();
-        adapter_CC = new CustomAdapterCC(MainActivityChamCong.this, R.layout.custom_view_cc, data_CC);
-        lvChamCong.setAdapter(adapter_CC);
+        loadingDialog.startLoadingDialog();
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                loadingDialog.dismissDialog();
+                HienThiDL();
+            }
+
+        }, 1000);
     }
 
-    private void KhoiTao(){
-        data_CC = new ArrayList<ChamCong>();
-        data_CC.add(GetChamCong());
-    }
-
-    private ChamCong GetChamCong() {
-        ChamCong chamCong = new ChamCong();
-        chamCong.setMaNV("NV001");
-        chamCong.setNgayGhiSo("20/02/2019");
-        chamCong.setSoNgayCong(29);
-        return chamCong;
-    }
 
     private void setControl() {
         lvChamCong = findViewById(R.id.lvChamCong);
     }
 
+    private void HienThiDL() {
+        DBChamCong dbChamCong = new DBChamCong(getApplicationContext());
+        data_chamcong = dbChamCong.layDuLieuCC();
+        adapter_chamcong = new CustomAdapterCC(MainActivityChamCong.this, R.layout.custom_view_cc, data_chamcong);
+        adapter_chamcong.notifyDataSetChanged();
+        lvChamCong.setAdapter(adapter_chamcong);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_actionbar, menu);

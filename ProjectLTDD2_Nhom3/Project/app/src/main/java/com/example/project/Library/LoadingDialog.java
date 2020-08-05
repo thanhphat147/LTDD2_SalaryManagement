@@ -4,8 +4,8 @@ package com.example.project.Library;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.view.LayoutInflater;
+import com.example.project.R;
 
-import com.example.quanlyluong.R;
 
 public class LoadingDialog {
     private Activity activity;

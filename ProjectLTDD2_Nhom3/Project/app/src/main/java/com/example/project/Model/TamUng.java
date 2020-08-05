@@ -1,8 +1,15 @@
 package com.example.project.Model;
 
 public class TamUng {
-    String maNV, ngay;
-    int soPhieu, soTien;
+    String soPhieu, maNV, ngayTamUng, soTienUng;
+
+    public String getSoPhieu() {
+        return soPhieu;
+    }
+
+    public void setSoPhieu(String soPhieu) {
+        this.soPhieu = soPhieu;
+    }
 
     public String getMaNV() {
         return maNV;
@@ -12,37 +19,29 @@ public class TamUng {
         this.maNV = maNV;
     }
 
-    public String getNgay() {
-        return ngay;
+    public String getNgayTamUng() {
+        return ngayTamUng;
     }
 
-    public void setNgay(String ngay) {
-        this.ngay = ngay;
+    public void setNgayTamUng(String ngayTamUng) {
+        this.ngayTamUng = ngayTamUng;
     }
 
-    public int getSoPhieu() {
-        return soPhieu;
+    public String getSoTienUng() {
+        return soTienUng;
     }
 
-    public void setSoPhieu(int soPhieu) {
-        this.soPhieu = soPhieu;
-    }
-
-    public int getSoTien() {
-        return soTien;
-    }
-
-    public void setSoTien(int soTien) {
-        this.soTien = soTien;
+    public void setSoTienUng(String soTienUng) {
+        this.soTienUng = soTienUng;
     }
 
     @Override
     public String toString() {
         return "TamUng{" +
-                "maNV='" + maNV + '\'' +
-                ", ngay='" + ngay + '\'' +
-                ", soPhieu=" + soPhieu +
-                ", soTien=" + soTien +
+                "soPhieu='" + soPhieu + '\'' +
+                ", maNV='" + maNV + '\'' +
+                ", ngayTamUng='" + ngayTamUng + '\'' +
+                ", soTienUng='" + soTienUng + '\'' +
                 '}';
     }
 }

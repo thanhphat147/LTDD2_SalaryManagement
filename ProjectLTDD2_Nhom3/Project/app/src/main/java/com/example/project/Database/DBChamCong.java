@@ -34,7 +34,7 @@ public class DBChamCong {
         db.close();
     }
 
-    public ArrayList<ChamCong> layDuLieu() {
+    public ArrayList<ChamCong> layDuLieuCC() {
         ArrayList<ChamCong> data = new ArrayList<>();
         String sql = "Select * from ChamCong ";
         SQLiteDatabase db = dbHelper.getReadableDatabase();
@@ -61,7 +61,7 @@ public class DBChamCong {
         db.close();
     }
 
-    public ArrayList<ChamCong> layDSChamCong(String manv) {
+    public ArrayList<ChamCong> layChamCong(String manv) {
         ArrayList<ChamCong> data = new ArrayList<>();
         String sql = "select * from ChamCong where manv ='" + manv + "'";
         SQLiteDatabase db = dbHelper.getReadableDatabase();

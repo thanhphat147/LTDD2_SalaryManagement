@@ -6,12 +6,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.example.project.Adapter.CustomAdapterTU;
+import com.example.project.Database.DBTamUng;
 import com.example.project.Interface.MainActivityChucNang;
+import com.example.project.Library.LoadingDialog;
 import com.example.project.Model.TamUng;
 import com.example.project.R;
 
@@ -22,6 +25,7 @@ public class MainActivityTamUng extends AppCompatActivity {
     ListView lvTamUng;
     ArrayList<TamUng> data_TU;
     CustomAdapterTU adapter_TU;
+    LoadingDialog loadingDialog = new LoadingDialog(MainActivityTamUng.this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,23 +38,16 @@ public class MainActivityTamUng extends AppCompatActivity {
     }
 
     private void setEvent() {
-        KhoiTao();
-        adapter_TU = new CustomAdapterTU(MainActivityTamUng.this, R.layout.custom_view_tu, data_TU);
-        lvTamUng.setAdapter(adapter_TU);
-    }
+        loadingDialog.startLoadingDialog();
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                loadingDialog.dismissDialog();
+                HienThiDL();
+            }
 
-    private void KhoiTao(){
-        data_TU = new ArrayList<TamUng>();
-        data_TU.add(GetTamUng());
-    }
-
-    private TamUng GetTamUng() {
-        TamUng tamUng = new TamUng();
-        tamUng.setMaNV("NV001");
-        tamUng.setSoPhieu(1);
-        tamUng.setNgay("12/03/2020");
-        tamUng.setSoTien(500000);
-        return tamUng;
+        }, 3000);
     }
 
     private void setControl() {
@@ -61,6 +58,14 @@ public class MainActivityTamUng extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_actionbar, menu);
         return super.onCreateOptionsMenu(menu);
+    }
+
+    private void HienThiDL() {
+        DBTamUng dbTamUng = new DBTamUng(getApplicationContext());
+        data_TU = dbTamUng.layDuLieu();
+        adapter_TU = new CustomAdapterTU(MainActivityTamUng.this, R.layout.custom_view_tu, data_TU);
+        adapter_TU.notifyDataSetChanged();
+        lvTamUng.setAdapter(adapter_TU);
     }
 
     @Override

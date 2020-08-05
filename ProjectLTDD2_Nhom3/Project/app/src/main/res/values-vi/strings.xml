@@ -51,4 +51,10 @@
     <string name="user">Tên Đăng Nhập</string>
     <string name="pw">Mật khẩu</string>
     <string name="login">Đăng Nhập</string>
+    <string name="ngaychamcong">Ngày chấm công</string>
+    <string name="ngaytamung">Ngày tạm ứng</string>
+    <string name="sotienung">Số tiền ứng</string>
+    <string name="gioitinh">"Giới tính "</string>
+    <string name="songaycong">Số ngày công</string>
+    <string name="sophieu">ID Payment</string>
 </resources>

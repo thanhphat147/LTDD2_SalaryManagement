@@ -9,23 +9,92 @@
     <TextView
         style="@style/tv_title"
         android:text="@string/themTU"/>
-    <TextView
-        style="@style/edttext"
-        android:id="@+id/txtMaNV"
-        android:text="@string/manv"
-        android:textSize="20dp"/>
-    <EditText
-        style="@style/edttext"
-        android:id="@+id/txtSoPhieu"
-        android:hint="@string/nhapSP"/>
-    <EditText
-        style="@style/edttext"
-        android:id="@+id/txtNgay"
-        android:hint="@string/nhapNgay"/>
-    <EditText
-        style="@style/edttext"
-        android:id="@+id/txtSoTien"
-        android:hint="@string/nhapST"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="100dp"
+            android:text="@string/manv"
+            android:textColor="#05000B"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/tvMaNV"
+            style="@style/tv_noidung"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="100dp"
+            android:text="@string/tennv"
+            android:textColor="#05000B"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/tvHoTen"
+            style="@style/tv_noidung"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="123dp"
+            android:text="@string/sophieu"
+            android:textColor="#05000B"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtSoPhieu"
+            style="@style/edttext" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="148dp"
+            android:text="@string/ngaytamung"
+            android:textColor="#05000B"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/txtNgayUng"
+            style="@style/edttext" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="172dp"
+            android:text="@string/sotienung"
+            android:textColor="#05000B"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtSoTienUng"
+            style="@style/edttext" />
+    </LinearLayout>
     <Button
         android:id="@+id/btnthemTU"
         style="@style/button"

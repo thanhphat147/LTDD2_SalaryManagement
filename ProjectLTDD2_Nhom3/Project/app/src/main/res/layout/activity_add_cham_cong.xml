@@ -8,22 +8,24 @@
 
     <TextView
         style="@style/tv_title"
-        android:text="@string/themCC"/>
+        android:text="@string/themCC" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="10dp">
+
         <TextView
             style="@style/tv_noidung"
             android:layout_width="100dp"
             android:text="@string/manv"
             android:textColor="#05000B"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/tvMaNV"
-            style="@style/tv_noidung"/>
+            style="@style/tv_noidung" />
     </LinearLayout>
 
     <LinearLayout
@@ -31,30 +33,67 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="10dp">
+
         <TextView
             style="@style/tv_noidung"
             android:layout_width="130dp"
             android:text="@string/tennv"
             android:textColor="#05000B"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/tvHoTen"
-            style="@style/tv_noidung"/>
+            style="@style/tv_noidung" />
     </LinearLayout>
-    <EditText
-        style="@style/edttext"
-        android:id="@+id/txtNgayChamCong"
-        android:hint="@string/nhapNGS"/>
-    <EditText
-        style="@style/edttext"
-        android:id="@+id/txtSoNgayCong"
-        android:hint="@string/nhapSNC"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="147dp"
+            android:text="@string/ngaychamcong"
+            android:textColor="#05000B"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtSoNgayCong"
+            style="@style/edttext"
+            android:layout_width="172dp" />
+
+        <ImageButton
+            android:id="@+id/btnDatePicker"
+            style="@style/button_model_view"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/date" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="147dp"
+            android:text="@string/songaycong"
+            android:textColor="#05000B"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtNgayChamCong"
+            style="@style/edttext" />
+    </LinearLayout>
+
     <Button
         android:id="@+id/btnthemCC"
         style="@style/button"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:drawableLeft="@drawable/ic_baseline_room_24"
-        android:text="@string/them"/>
+        android:text="@string/them" />
 </LinearLayout>

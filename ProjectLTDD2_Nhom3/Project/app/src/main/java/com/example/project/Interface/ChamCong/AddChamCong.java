@@ -13,9 +13,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.project.Database.DBChamCong;
 import com.example.project.Database.DBNhanVien;
 import com.example.project.Interface.MainActivityChucNang;
 import com.example.project.Library.CheckError;
+import com.example.project.Model.ChamCong;
 import com.example.project.Model.NhanVien;
 import com.example.project.R;
 
@@ -25,7 +27,7 @@ import java.util.Calendar;
 public class AddChamCong extends AppCompatActivity {
     TextView tvMaNhanVien, tvTenNhanVien;
     EditText txtSoNgayCong, txtNgayChamCong;
-    Button btnLuu, btnThoat;
+    Button btnAdd;
     Calendar calendar;
     int year, month;
     ArrayList<NhanVien> dataNV = new ArrayList<>();
@@ -48,7 +50,7 @@ public class AddChamCong extends AppCompatActivity {
         dataNV = dbNhanVien.LayNhanVien(manv);
         tvMaNhanVien.setText(dataNV.get(0).getMaNV());
         tvTenNhanVien.setText(dataNV.get(0).getTenNV());
-        btnLuu.setOnClickListener(new View.OnClickListener() {
+        btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 DBChamCong dbChamCong = new DBChamCong(getApplicationContext());
@@ -61,7 +63,7 @@ public class AddChamCong extends AppCompatActivity {
                 } else {
                     themChamCong();
                     Toast.makeText(getApplicationContext(), "Thêm thành công", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(ThemChamCong.this, BangChamCong.class);
+                    Intent intent = new Intent(AddChamCong.this, MainActivityChamCong.class);
                     startActivity(intent);
                     finish();
                 }
@@ -74,12 +76,21 @@ public class AddChamCong extends AppCompatActivity {
         tvTenNhanVien = findViewById(R.id.tvHoTen);
         txtNgayChamCong = findViewById(R.id.txtNgayChamCong);
         txtSoNgayCong = findViewById(R.id.txtSoNgayCong);
-        btnLuu = findViewById(R.id.btnthemCC);
+        btnAdd = findViewById(R.id.btnthemCC);
 
 
         calendar = Calendar.getInstance();
         year = calendar.get(Calendar.YEAR);
         month = calendar.get(Calendar.MONTH);
+    }
+
+    private void themChamCong() {
+        ChamCong chamCong = new ChamCong();
+        chamCong.setMaNV(tvMaNhanVien.getText().toString());
+        chamCong.setThangChamCong(txtNgayChamCong.getText().toString());
+        chamCong.setSoNgayCong(txtSoNgayCong.getText().toString());
+        DBChamCong dbChamCong = new DBChamCong(getApplicationContext());
+        dbChamCong.themChamCong(chamCong);
     }
 
     private void showDate(int year, int month) {

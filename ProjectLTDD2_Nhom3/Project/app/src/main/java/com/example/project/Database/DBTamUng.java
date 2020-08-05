@@ -5,7 +5,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.quanlyluong.Model.TamUng;
+import com.example.project.Model.TamUng;
+
 
 import java.util.ArrayList;
 
@@ -19,9 +20,9 @@ public class DBTamUng {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("sophieu", tamUng.getSoPhieu());
-        values.put("ngay", tamUng.getNgayUng());
-        values.put("sotien", tamUng.getSoTien());
-        values.put("manv", tamUng.getMaNhanVien());
+        values.put("ngaytamung", tamUng.getNgayTamUng());
+        values.put("sotienung", tamUng.getSoTienUng());
+        values.put("manv", tamUng.getMaNV());
         db.insert("TamUng", null, values);
         db.close();
     }
@@ -30,9 +31,9 @@ public class DBTamUng {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("sophieu", tamUng.getSoPhieu());
-        values.put("ngay", tamUng.getNgayUng());
-        values.put("sotien", tamUng.getSoTien());
-        values.put("manv", tamUng.getMaNhanVien());
+        values.put("ngaytamung", tamUng.getNgayTamUng());
+        values.put("sotienung", tamUng.getSoTienUng());
+        values.put("manv", tamUng.getMaNV());
         db.update("TamUng", values, "sophieu ='" + tamUng.getSoPhieu() + "'", null);
         db.close();
     }
@@ -48,9 +49,9 @@ public class DBTamUng {
             do {
                 TamUng tamUng = new TamUng();
                 tamUng.setSoPhieu(cursor.getString(0));
-                tamUng.setNgayUng(cursor.getString(1));
-                tamUng.setSoTien(cursor.getString(2));
-                tamUng.setMaNhanVien(cursor.getString(3));
+                tamUng.setNgayTamUng(cursor.getString(1));
+                tamUng.setSoTienUng(cursor.getString(2));
+                tamUng.setMaNV(cursor.getString(3));
                 data.add(tamUng);
             }
             while (cursor.moveToNext());
@@ -77,9 +78,9 @@ public class DBTamUng {
             do {
                 TamUng tamUng = new TamUng();
                 tamUng.setSoPhieu(cursor.getString(0));
-                tamUng.setNgayUng(cursor.getString(1));
-                tamUng.setSoTien(cursor.getString(2));
-                tamUng.setMaNhanVien(cursor.getString(3));
+                tamUng.setNgayTamUng(cursor.getString(1));
+                tamUng.setSoTienUng(cursor.getString(2));
+                tamUng.setMaNV(cursor.getString(3));
                 data.add(tamUng);
             }
             while (cursor.moveToNext());

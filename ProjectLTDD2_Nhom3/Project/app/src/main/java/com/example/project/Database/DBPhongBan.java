@@ -55,7 +55,7 @@ public class DBPhongBan {
                 data.add(phongBan);
             } while (cursor.moveToNext());
         } catch (Exception ex){
-
+            ex.printStackTrace();
         }
         return data;
     }

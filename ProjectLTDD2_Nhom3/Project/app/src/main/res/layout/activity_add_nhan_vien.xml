@@ -4,12 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/linear_v"
     android:background="@drawable/backgrounding"
+    android:padding="10dp"
     tools:context=".Interface.NhanVien.AddNhanVien">
 
     <TextView
         style="@style/tv_title"
         android:text="@string/tieude_addnv" />
 
+    <LinearLayout
+        style="@style/linear_h"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/men"
+            android:id="@+id/imgHinhDaiDien" />
+        <Button
+            android:text="Chọn Hình"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnChonHinh"
+            android:background="@drawable/button_del"
+
+            />
+    </LinearLayout>
     <EditText
         android:id="@+id/txtMaNV"
         style="@style/edttext"
@@ -47,14 +67,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_horizontal"
         android:layout_marginTop="20dp"
+        android:padding="10dp"
         >
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:text="@string/gioitinh"/>
         <RadioButton
             android:id="@+id/radNam"
             style="@style/btn_radio"
             android:text="Nam"
             android:checked="true"
+            android:layout_marginLeft="50dp"
             />
 
         <RadioButton
@@ -67,27 +94,35 @@
 
     <LinearLayout
         style="@style/linear_h"
-        android:layout_marginTop="10dp">
+        android:padding="10dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/room"
-            android:layout_marginLeft="5dp"
             android:textSize="18sp"/>
 
         <Spinner
             android:id="@+id/spTenPB"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="20dp"/>
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/edtLuong"
-        style="@style/edttext"
-        android:hint="@string/luong"
-        android:inputType="number"
-        android:layout_marginTop="10dp"/>
+    <LinearLayout
+        style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="66dp"
+            android:text="@string/salary"/>
+        <EditText
+            android:id="@+id/edtLuong"
+            style="@style/edttext"
+            android:hint="@string/luong"
+            android:inputType="number"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
 
 
     <Button
