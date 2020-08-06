@@ -24,8 +24,8 @@ public class DBNhanVien {
         values.put("ngaysinh", nhanVien.getNgaySinh());
         values.put("gioitinh", nhanVien.getGioiTinh());
         values.put("tenphong", nhanVien.getTenPhong());
-        values.put("tienluong", nhanVien.getBacLuong());
-//        values.put("imagenv", nhanVien.getImageNV());
+        values.put("hesoluong", nhanVien.getBacLuong());
+        values.put("imagenv", nhanVien.getImage());
         db.insert("NhanVien", null, values);
         db.close();
     }
@@ -39,8 +39,8 @@ public class DBNhanVien {
         values.put("ngaysinh", nhanVien.getNgaySinh());
         values.put("gioitinh", nhanVien.getGioiTinh());
         values.put("tenphong", nhanVien.getTenPhong());
-        values.put("tienluong", nhanVien.getBacLuong());
-//        values.put("imagenv", nhanVien.getImageNV());
+        values.put("hesoluong", nhanVien.getBacLuong());
+        values.put("imagenv", nhanVien.getImage());
         db.update("NhanVien", values, "manv ='" + nhanVien.getMaNV() + "'", null);
         db.close();
     }
@@ -68,7 +68,7 @@ public class DBNhanVien {
                 nhanVien.setGioiTinh(cursor.getString(3));
                 nhanVien.setTenPhong(cursor.getString(4));
                 nhanVien.setBacLuong(cursor.getString(5));
-//                nhanVien.setImageNV(cursor.getString(6));
+                nhanVien.setImage(cursor.getBlob(6));
                 data.add(nhanVien);
             }
             while (cursor.moveToNext());
@@ -96,7 +96,7 @@ public class DBNhanVien {
                 nhanVien.setGioiTinh(cursor.getString(3));
                 nhanVien.setTenPhong(cursor.getString(4));
                 nhanVien.setBacLuong(cursor.getString(5));
-//                nhanVien.setImageNV(cursor.getString(6));
+                nhanVien.setImage(cursor.getBlob(6));
                 data.add(nhanVien);
             }
             while (cursor.moveToNext());
@@ -109,5 +109,18 @@ public class DBNhanVien {
         return data;
     }
 
+    //Kiểm tra mã nhân viên là duy nhất
+    public boolean checkMaNhanVien(String manv) {
+        boolean check = false;
+        String sql = "SELECT count(*) FROM NhanVien WHERE manv LIKE \""+manv+"\" ";
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery(sql, null);
+        cursor.moveToFirst();
+        int count  = cursor.getInt(0);
+        if(count > 0) {
+            check = true;
+        }
+        return check;
+    }
 
 }

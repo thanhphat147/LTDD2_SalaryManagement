@@ -57,4 +57,5 @@
     <string name="gioitinh">"Giới tính "</string>
     <string name="songaycong">Số ngày công</string>
     <string name="sophieu">ID Payment</string>
+    <string name="updateChamCong">Edit Checkout</string>
 </resources>

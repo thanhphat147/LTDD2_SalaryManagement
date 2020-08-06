@@ -25,6 +25,7 @@ public class DBPhongBan {
         values.put("mapb", phongBan.getMaPhong());
         values.put("tenpb", phongBan.getTenPhong());
         db.insert("PhongBan", null, values);
+        db.close();
     }
 
     public void Sua(PhongBan phongBan) {
@@ -33,12 +34,14 @@ public class DBPhongBan {
         values.put("mapb", phongBan.getMaPhong());
         values.put("tenpb", phongBan.getTenPhong());
         db.update("PhongBan", values, "mapb = '" + phongBan.getMaPhong() + "'", null);
+        db.close();
     }
 
     public void Xoa(PhongBan phongBan) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         String sql = "Delete from PhongBan where mapb = '" + phongBan.getMaPhong() + "'";
         db.execSQL(sql);
+        db.close();
     }
 
     public ArrayList<PhongBan> LayDL() {
@@ -57,6 +60,7 @@ public class DBPhongBan {
         } catch (Exception ex){
             ex.printStackTrace();
         }
+        db.close();
         return data;
     }
 

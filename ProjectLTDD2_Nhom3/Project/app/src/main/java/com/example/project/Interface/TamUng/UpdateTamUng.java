@@ -98,7 +98,7 @@ public class UpdateTamUng extends AppCompatActivity {
         tvMaNhanVien = findViewById(R.id.tvMaNV);
         tvTenNhanVien = findViewById(R.id.tvHoTen);
         tvNgayUng = findViewById(R.id.tvNgayTamUng);
-        btnTamUng = findViewById(R.id.btnTamUng);
+        btnTamUng = findViewById(R.id.btnSuaTU);
         calendar = Calendar.getInstance();
         year = calendar.get(Calendar.YEAR);
         month = calendar.get(Calendar.MONTH);

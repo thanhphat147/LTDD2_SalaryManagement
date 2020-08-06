@@ -8,7 +8,7 @@
 
     <TextView
         style="@style/tv_title"
-        android:text="@string/themCC"/>
+        android:text="@string/updateChamCong"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,16 +58,11 @@
             android:textColor="#05000B"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/txtSoNgayCong"
-            style="@style/edttext"
-            android:layout_width="172dp" />
+        <TextView
+            android:id="@+id/tvNgayChamCong"
+            style="@style/tv_noidung"
+            />
 
-        <ImageButton
-            android:id="@+id/btnDatePicker"
-            style="@style/button_model_view"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/date" />
     </LinearLayout>
 
     <LinearLayout
@@ -84,7 +79,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/txtNgayChamCong"
+            android:id="@+id/txtSoNgayCong"
             style="@style/edttext" />
     </LinearLayout>
     <Button

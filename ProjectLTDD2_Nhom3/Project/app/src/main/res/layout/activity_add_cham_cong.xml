@@ -60,15 +60,10 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/txtSoNgayCong"
+            android:id="@+id/txtNgayChamCong"
             style="@style/edttext"
-            android:layout_width="172dp" />
+            android:layout_width="244dp" />
 
-        <ImageButton
-            android:id="@+id/btnDatePicker"
-            style="@style/button_model_view"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/date" />
     </LinearLayout>
 
     <LinearLayout
@@ -85,7 +80,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/txtNgayChamCong"
+            android:id="@+id/txtSoNgayCong"
             style="@style/edttext" />
     </LinearLayout>
 

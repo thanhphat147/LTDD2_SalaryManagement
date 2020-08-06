@@ -72,9 +72,11 @@
             android:text="@string/ngaytamung"
             android:textColor="#05000B"
             android:textStyle="bold" />
+
         <EditText
             android:id="@+id/txtNgayUng"
-            style="@style/edttext" />
+            style="@style/edttext"
+            />
 
     </LinearLayout>
 

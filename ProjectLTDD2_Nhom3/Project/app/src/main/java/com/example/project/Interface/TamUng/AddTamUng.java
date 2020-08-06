@@ -26,7 +26,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class AddTamUng extends AppCompatActivity {
-
     EditText txtSophieu, txtSoTien, txtNgayUng;
     TextView tvMaNhanVien, tvTenNhanVien;
     Calendar calendar;
@@ -99,10 +98,10 @@ public class AddTamUng extends AppCompatActivity {
     private void setControl() {
         txtSophieu = findViewById(R.id.txtSoPhieu);
         txtSoTien = findViewById(R.id.txtSoTienUng);
+        txtNgayUng = findViewById(R.id.txtNgayUng);
         tvMaNhanVien = findViewById(R.id.tvMaNV);
         tvTenNhanVien = findViewById(R.id.tvHoTen);
-        txtNgayUng = findViewById(R.id.txtNgayUng);
-        btnTamUng = findViewById(R.id.btnTamUng);
+        btnTamUng = findViewById(R.id.btnthemTU);
         calendar = Calendar.getInstance();
         year = calendar.get(Calendar.YEAR);
         month = calendar.get(Calendar.MONTH);

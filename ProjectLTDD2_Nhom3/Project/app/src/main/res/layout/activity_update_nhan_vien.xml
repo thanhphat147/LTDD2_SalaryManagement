@@ -10,26 +10,72 @@
         style="@style/tv_title"
         android:text="@string/tieude_update" />
 
-    <TextView
-        style="@style/tv_noidung"
-        android:id="@+id/tvMa"/>
+    <LinearLayout
+        style="@style/linear_h"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/men"
+            android:id="@+id/imgHinhDaiDien" />
+        <Button
+            android:text="Chọn Hình"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnChonHinh"
+            android:background="@drawable/button_del"
 
-    <EditText
-        android:id="@+id/txtTenNV"
-        style="@style/edttext"
-        android:hint="@string/tennv"
-        android:inputType="text"
-        android:layout_marginTop="10dp"/>
+            />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="41dp"
+            android:text="@string/manv" />
+        <TextView
+            android:id="@+id/tvMaNV"
+            style="@style/tv_noidung"
+            android:hint="@string/manv"
+            />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="74dp"
+            android:text="@string/tennv" />
+
+        <EditText
+            android:id="@+id/txtTenNV"
+            style="@style/edttext"
+            android:hint="@string/tennv"
+            android:inputType="text"
+            />
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:padding="10dp"
+        >
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="93dp"
+            android:text="@string/ngaysinh" />
 
         <EditText
             android:id="@+id/txtNgaySinh"
             style="@style/edttext"
-            android:layout_width="300dp"
+            android:layout_width="239dp"
             android:hint="@string/birth"
             android:inputType="date" />
 
@@ -42,50 +88,65 @@
     </LinearLayout>
 
     <RadioGroup
-        android:id="@+id/rdiGioiTinh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_horizontal"
         android:layout_marginTop="20dp"
+        android:padding="10dp"
         >
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:text="@string/gioitinh"/>
         <RadioButton
             android:id="@+id/radNam"
             style="@style/btn_radio"
             android:text="Nam"
+            android:checked="true"
+            android:layout_marginLeft="50dp"
             />
 
         <RadioButton
             android:id="@+id/radNu"
             style="@style/btn_radio"
             android:text="Nữ"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="40dp"
             />
     </RadioGroup>
 
     <LinearLayout
         style="@style/linear_h"
-        android:layout_marginTop="10dp">
+        android:padding="10dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/room"
-            android:layout_marginLeft="5dp"
-            android:textSize="18sp"/>
+            />
 
         <Spinner
             android:id="@+id/spTenPB"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="20dp"/>
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/txtLuong"
-        style="@style/edttext"
-        android:hint="@string/luong"
-        android:inputType="number"
-        android:layout_marginTop="10dp"/>
+    <LinearLayout
+        style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="66dp"
+            android:text="@string/salary"/>
+        <EditText
+            android:id="@+id/edtLuong"
+            style="@style/edttext"
+            android:hint="@string/luong"
+            android:inputType="number"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
 
 
     <Button

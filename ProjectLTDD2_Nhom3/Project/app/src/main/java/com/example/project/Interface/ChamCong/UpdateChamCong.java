@@ -87,7 +87,7 @@ public class UpdateChamCong extends AppCompatActivity {
     private void setControl() {
         tvMaNhanVien = findViewById(R.id.tvMaNV);
         tvTenNhanVien = findViewById(R.id.tvHoTen);
-        tvNgayChamCong = findViewById(R.id.txtNgayChamCong);
+        tvNgayChamCong = findViewById(R.id.tvNgayChamCong);
         txtSoNgayCong = findViewById(R.id.txtSoNgayCong);
         btnLuu = findViewById(R.id.btnSuaCC);
 

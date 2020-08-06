@@ -59,7 +59,7 @@ public class CustomAdapterTU extends ArrayAdapter {
             view = LayoutInflater.from(context).inflate(resource, null);
             holder.tvSoPhieu = view.findViewById(R.id.tvSoPhieu);
             holder.tvMaNV = view.findViewById(R.id.tvMaNV);
-            holder.tvTenNV = view.findViewById(R.id.tvTenNV);
+            holder.tvTenNV = view.findViewById(R.id.tvHoTen);
             holder.tvNgayUng = view.findViewById(R.id.tvNgayTamUng);
             holder.tvSoTien = view.findViewById(R.id.tvTienTamUng);
             holder.btnXoa = view.findViewById(R.id.btnXoa);

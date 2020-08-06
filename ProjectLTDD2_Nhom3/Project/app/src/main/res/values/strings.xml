@@ -57,6 +57,7 @@
     <string name="ngaytamung">Payment Date</string>
     <string name="sotienung">Payment Amount</string>
     <string name="sophieu">ID Payment</string>
+    <string name="updateChamCong">Edit Checkout</string>
 
 
 </resources>

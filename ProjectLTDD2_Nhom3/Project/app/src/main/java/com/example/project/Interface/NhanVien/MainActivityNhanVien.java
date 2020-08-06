@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,6 +20,8 @@ import android.widget.ListView;
 import com.example.project.Adapter.CustomAdapterNV;
 import com.example.project.Database.DBNhanVien;
 import com.example.project.Interface.MainActivityChucNang;
+import com.example.project.Interface.TamUng.MainActivityTamUng;
+import com.example.project.Library.LoadingDialog;
 import com.example.project.Model.NhanVien;
 import com.example.project.R;
 
@@ -31,7 +34,7 @@ public class MainActivityNhanVien extends AppCompatActivity {
     CustomAdapterNV adapterNV;
     ArrayList<NhanVien> dataNV = new ArrayList<>();
     Locale myLocale;
-
+    LoadingDialog loadingDialog = new LoadingDialog(MainActivityNhanVien.this);
 
     @Override
 
@@ -45,15 +48,24 @@ public class MainActivityNhanVien extends AppCompatActivity {
     }
 
     private void setEvent() {
-        HienThiDL();
-        btnAdd.setOnClickListener(new View.OnClickListener() {
+        loadingDialog.startLoadingDialog();
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivityNhanVien.this, AddNhanVien.class);
-                startActivity(intent);
-
+            public void run() {
+                loadingDialog.dismissDialog();
+                HienThiDL();
+                btnAdd.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(MainActivityNhanVien.this, AddNhanVien.class);
+                        startActivity(intent);
+                    }
+                });
             }
-        });
+
+        }, 3000);
+
 
     }
 

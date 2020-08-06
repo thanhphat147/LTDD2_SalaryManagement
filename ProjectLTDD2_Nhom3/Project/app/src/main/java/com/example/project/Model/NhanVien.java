@@ -1,8 +1,10 @@
 package com.example.project.Model;
 
+import java.util.Arrays;
+
 public class NhanVien {
     String maNV, tenNV, ngaySinh, gioiTinh, tenPhong, bacLuong;
-
+    byte[] image;
 
     public String getMaNV() {
         return maNV;
@@ -44,20 +46,20 @@ public class NhanVien {
         this.tenPhong = tenPhong;
     }
 
-//    public String getImageNV() {
-//        return imageNV;
-//    }
-//
-//    public void setImageNV(String imageNV) {
-//        this.imageNV = imageNV;
-//    }
-
     public String getBacLuong() {
         return bacLuong;
     }
 
     public void setBacLuong(String bacLuong) {
         this.bacLuong = bacLuong;
+    }
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
     }
 
     @Override
@@ -68,7 +70,8 @@ public class NhanVien {
                 ", ngaySinh='" + ngaySinh + '\'' +
                 ", gioiTinh='" + gioiTinh + '\'' +
                 ", tenPhong='" + tenPhong + '\'' +
-                ", bacLuong=" + bacLuong +
+                ", bacLuong='" + bacLuong + '\'' +
+                ", image=" + Arrays.toString(image) +
                 '}';
     }
 }

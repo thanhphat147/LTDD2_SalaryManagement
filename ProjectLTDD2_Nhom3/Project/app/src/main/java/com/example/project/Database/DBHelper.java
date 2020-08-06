@@ -14,12 +14,17 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String sqlPhongBan = "Create table PhongBan (mapb text PRIMARY KEY UNIQUE NOT NULL , tenpb text) ";
         sqLiteDatabase.execSQL(sqlPhongBan);
-        String sqlNhanVien = "Create table NhanVien (manv text PRIMARY KEY UNIQUE NOT NULL, tennv text, ngaysinh text, gioitinh text,mapb text, hesoluong text, hinh Blob)";
+
+        String sqlNhanVien = "Create table NhanVien (manv text PRIMARY KEY UNIQUE NOT NULL, tennv text, ngaysinh text, gioitinh text,tenphong text, hesoluong text, imagenv Blob)";
         sqLiteDatabase.execSQL(sqlNhanVien);
-        String sqlTamUng = "Create table TamUng (sophieu text PRIMARY KEY UNIQUE NOT NULL, ngay text, sotien text, manv text)";
-        sqLiteDatabase.execSQL(sqlTamUng);
-        String sqlChamCong = "Create table ChamCong (manv text PRIMARY KEY UNIQUE NOT NULL, ngaycham text PRIMARY KEY NOT NULL, songaycong text)";
+
+        String sqlChamCong = "Create table ChamCong (manv text, ngaychamcong text PRIMARY KEY NOT NULL, songaycong text)";
         sqLiteDatabase.execSQL(sqlChamCong);
+
+        String sqlTamUng = "Create table TamUng (sophieu text PRIMARY KEY UNIQUE NOT NULL, ngaytamung text, sotienung text, manv text)";
+        sqLiteDatabase.execSQL(sqlTamUng);
+
+
     }
 
     @Override

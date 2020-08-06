@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/linear_v"
     android:background="@drawable/backgrounding"
-    android:padding="10dp"
     tools:context=".Interface.NhanVien.AddNhanVien">
 
     <TextView
@@ -30,28 +29,53 @@
 
             />
     </LinearLayout>
-    <EditText
-        android:id="@+id/txtMaNV"
-        style="@style/edttext"
-        android:hint="@string/manv"
-        android:inputType="text" />
+    <LinearLayout
+        style="@style/linear_h"
+        android:padding="10dp">
 
-    <EditText
-        android:id="@+id/txtTenNV"
-        style="@style/edttext"
-        android:hint="@string/tennv"
-        android:inputType="text"
-        android:layout_marginTop="10dp"/>
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="41dp"
+            android:text="@string/manv" />
+        <EditText
+            android:id="@+id/txtMaNV"
+            style="@style/edttext"
+            android:hint="@string/manv"
+            android:inputType="text" />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="74dp"
+            android:text="@string/tennv" />
+
+        <EditText
+            android:id="@+id/txtTenNV"
+            style="@style/edttext"
+            android:hint="@string/tennv"
+            android:inputType="text"
+            />
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:padding="10dp"
+        >
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="93dp"
+            android:text="@string/ngaysinh" />
 
         <EditText
             android:id="@+id/txtNgaySinh"
             style="@style/edttext"
-            android:layout_width="300dp"
+            android:layout_width="239dp"
             android:hint="@string/birth"
             android:inputType="date" />
 
@@ -99,7 +123,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/room"
-            android:textSize="18sp"/>
+            />
 
         <Spinner
             android:id="@+id/spTenPB"
