@@ -15,38 +15,96 @@
             android:src="@drawable/men" />
         <LinearLayout
             style="@style/linear_v">
-            <TextView
-                android:id="@+id/tvMaNV"
-                style="@style/tv_model"
-                android:text="@string/id" />
 
-            <TextView
-                android:id="@+id/tvTenNV"
-                style="@style/tv_model"
-                android:text="@string/name" />
+            <LinearLayout
+                style="@style/linear_h"
+                android:paddingLeft="5dp">
 
-            <TextView
-                android:id="@+id/tvNgaySinh"
-                style="@style/tv_model"
-                android:text="@string/birth" />
+                <TextView
+                    style="@style/tv_noidung"
+                    android:layout_width="96dp"
+                    android:text="@string/manv" />
+                <TextView
+                    android:id="@+id/tvMaNV"
+                    style="@style/tv_noidung" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/tvGioiTinh"
-                style="@style/tv_model"
-                android:text="@string/gioitinh" />
+            <LinearLayout
+                style="@style/linear_h"
+                android:paddingLeft="5dp">
 
-            <TextView
-                android:id="@+id/tvPhongBan"
-                style="@style/tv_model"
-                android:text="@string/room" />
+                <TextView
+                    style="@style/tv_noidung"
+                    android:layout_width="96dp"
+                    android:text="@string/tennv" />
 
-            <TextView
-                android:id="@+id/tvLuong"
-                style="@style/tv_model"
-                android:text="@string/salary" />
+                <TextView
+                    android:id="@+id/tvTenNV"
+                    style="@style/tv_noidung"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                style="@style/linear_h"
+                android:paddingLeft="5dp">
+
+                <TextView
+                    style="@style/tv_noidung"
+                    android:layout_width="96dp"
+                    android:text="@string/birth" />
+
+                <TextView
+                    android:id="@+id/tvNgaySinh"
+                    style="@style/tv_noidung"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linear_h"
+                android:paddingLeft="5dp">
+
+                <TextView
+                    style="@style/tv_noidung"
+                    android:layout_width="96dp"
+                    android:text="@string/gioitinh" />
+
+                <TextView
+                    android:id="@+id/tvGioiTinh"
+                    style="@style/tv_noidung"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linear_h"
+                android:paddingLeft="5dp">
+
+                <TextView
+                    style="@style/tv_noidung"
+                    android:layout_width="96dp"
+                    android:text="@string/department" />
+
+                <TextView
+                    android:id="@+id/tvPhongBan"
+                    style="@style/tv_noidung"
+                     />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linear_h"
+                android:paddingLeft="5dp">
+
+                <TextView
+                    style="@style/tv_noidung"
+                    android:layout_width="96dp"
+                    android:text="@string/hesoluong" />
+
+                <TextView
+                    android:id="@+id/tvLuong"
+                    style="@style/tv_noidung"/>
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
+
     <LinearLayout
         style="@style/linear_h"
         android:layout_width="match_parent"

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/linear_h"
-    android:padding="10dp">
+    >
 
     <LinearLayout
         style="@style/linear_v"
-        android:layout_width="320dp">
+        android:layout_width="365dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -14,13 +14,13 @@
 
             <TextView
                 style="@style/tv_noidung"
-                android:layout_width="40dp"
+                android:layout_width="23dp"
                 android:text="@string/manv" />
 
             <TextView
                 android:id="@+id/tvMaNV"
                 style="@style/tv_noidung"
-                android:layout_width="280dp" />
+                android:layout_width="341dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -30,13 +30,13 @@
 
             <TextView
                 style="@style/tv_noidung"
-                android:layout_width="101dp"
+                android:layout_width="73dp"
                 android:text="@string/tennv" />
 
             <TextView
                 android:id="@+id/tvHoTen"
                 style="@style/tv_noidung"
-                android:layout_width="219dp" />
+                android:layout_width="291dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -46,14 +46,15 @@
 
             <TextView
                 style="@style/tv_noidung"
-                android:layout_width="144dp"
+                android:layout_width="102dp"
                 android:text="@string/ngaychamcong" />
 
             <TextView
                 android:id="@+id/tvNgayChamCong"
                 style="@style/tv_noidung"
-                android:layout_width="176dp" />
+                android:layout_width="262dp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,13 +62,13 @@
 
             <TextView
                 style="@style/tv_noidung"
-                android:layout_width="99dp"
+                android:layout_width="72dp"
                 android:text="@string/songaycong" />
 
             <TextView
                 android:id="@+id/tvSoNgayCong"
                 style="@style/tv_noidung"
-                android:layout_width="222dp" />
+                android:layout_width="292dp" />
         </LinearLayout>
 
     </LinearLayout>
@@ -75,8 +76,6 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_gravity="right"
-        android:layout_marginLeft="15dp"
         android:orientation="vertical">
 
         <ImageButton

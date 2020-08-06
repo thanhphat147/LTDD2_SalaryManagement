@@ -1,6 +1,8 @@
 package com.example.project.Adapter;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.project.Database.DBNhanVien;
 import com.example.project.Interface.ChamCong.AddChamCong;
@@ -90,7 +93,7 @@ public class CustomAdapterNV extends ArrayAdapter {
         if (nhanVien.getGioiTinh().equals("Nữ")) {
             holder.tvGioiTinh.setText(nhanVien.getGioiTinh());
         }
-        holder.tvPhongBan.setText(nhanVien.getTenPhong());
+        holder.tvPhongBan.setText(nhanVien.getMaPhong());
         holder.tvLuong.setText(currencyVN.format(Integer.parseInt(nhanVien.getBacLuong())));
         if(nhanVien.getImage() == null){
             holder.imgAnhDaiDien.setImageResource(R.drawable.men);
@@ -112,10 +115,39 @@ public class CustomAdapterNV extends ArrayAdapter {
         holder.btnXoa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                XoaDL(nhanVien);
-                notifyDataSetChanged();
-                Intent intent = new Intent(context, MainActivityNhanVien.class);
-                context.startActivity(intent);
+                boolean checkChamCong = false;
+                boolean checkTamUng = false;
+                checkChamCong = dbNhanVien.checkXoaNhanVienChamCong(nhanVien.getMaNV());
+                checkTamUng = dbNhanVien.checkXoaNhanVienTamUng(nhanVien.getMaNV());
+                if (checkChamCong == true && checkTamUng == false) {
+                    Toast.makeText(context, "Cần xóa dữ liệu chấm công của Nhân viên trước", Toast.LENGTH_LONG).show();
+                }
+                if (checkTamUng == true && checkChamCong == false) {
+                    Toast.makeText(context, "Cần xóa dữ liệu tạm ứng của Nhân viên trước", Toast.LENGTH_LONG).show();
+                }
+                if (checkTamUng == true && checkChamCong == true) {
+                    Toast.makeText(context, "Cần xóa dữ liệu chấm công và tạm ứng của Nhân viên trước", Toast.LENGTH_LONG).show();
+                }
+                if (checkTamUng == false && checkChamCong == false) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                    builder.setTitle("Thông báo");
+                    builder.setMessage("Bạn có muốn xóa không");
+                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dbNhanVien.Xoa(nhanVien);
+                            Intent intent = new Intent(getContext(), MainActivityNhanVien.class);
+                            context.startActivity(intent);
+                        }
+                    });
+                    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+                    builder.show();
+                }
             }
         });
         holder.btnChamCong.setOnClickListener(new View.OnClickListener() {
@@ -163,4 +195,6 @@ public class CustomAdapterNV extends ArrayAdapter {
         dbNhanVien.Xoa(nhanVien);
         dbNhanVien.LayDSNhanVien();
     }
+
+
 }

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Interface.ThongKe.ChiTietThongKe">>
+
+    <TextView
+        style="@style/tv_title"
+        android:text="@string/thongke" />
+
+    <LinearLayout
+        style="@style/linear_h"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/men"
+            android:id="@+id/imgHinhDaiDien" />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="121dp"
+            android:text="@string/tv_manv" />
+
+        <TextView
+            android:id="@+id/tvMaNhanVien"
+            style="@style/tv_noidung"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="123dp"
+            android:text="@string/tennv" />
+
+        <TextView
+            android:id="@+id/tvTenNV"
+            style="@style/tv_noidung"
+            />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="123dp"
+            android:text="@string/department" />
+
+        <TextView
+            android:id="@+id/tvTenPhongBan"
+            style="@style/tv_noidung"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="124dp"
+            android:text="@string/hesoluong" />
+
+        <TextView
+            android:id="@+id/tvHeSoLuong"
+            style="@style/tv_noidung"
+           />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="125dp"
+            android:text="@string/songaycong" />
+
+        <TextView
+            android:id="@+id/tvSoNgayCong"
+            style="@style/tv_noidung"
+            />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:text="@string/sotienung" />
+
+        <TextView
+            android:id="@+id/tvTamUng"
+            style="@style/tv_noidung"
+            />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="126dp"
+            android:text="@string/ngaychamcong" />
+
+        <TextView
+            android:id="@+id/tvNgayChamCong"
+            style="@style/tv_noidung"
+             />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="125dp"
+            android:text="@string/luongcoban" />
+
+        <TextView
+            android:id="@+id/tvLuongCB"
+            style="@style/tv_noidung"
+            />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="126dp"
+            android:text="@string/thuclanh" />
+
+        <TextView
+            android:id="@+id/tvThucLanh"
+            style="@style/tv_noidung"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -14,6 +14,7 @@
         android:id="@+id/lvPhongBan"
         style="@style/lv"
         android:layout_weight="1"
+        android:padding="10dp"
         />
 
     <LinearLayout

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +13,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.project.Database.DBPhongBan;
+import com.example.project.Library.CheckError;
+import com.example.project.Library.LoadingDialog;
 import com.example.project.Model.PhongBan;
 import com.example.project.R;
 
@@ -19,6 +22,9 @@ public class AddPhongBan extends AppCompatActivity {
 
     EditText txtMaPB, txtTenPB;
     Button btnThem;
+    LoadingDialog loadingDialog = new LoadingDialog(AddPhongBan.this);
+    CheckError checkError = new CheckError(AddPhongBan.this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,11 +48,21 @@ public class AddPhongBan extends AppCompatActivity {
     }
 
     private void ThemDL() {
-        PhongBan phongBan = new PhongBan();
-        phongBan.setMaPhong(txtMaPB.getText().toString());
-        phongBan.setTenPhong(txtTenPB.getText().toString());
-        DBPhongBan dbPhongBan = new DBPhongBan(this);
-        dbPhongBan.Them(phongBan);
+        DBPhongBan dbPhongBan = new DBPhongBan(getApplicationContext());
+        boolean check = dbPhongBan.checkMaPhong(txtMaPB.getText().toString());
+        if (txtMaPB.getText().toString().isEmpty() || txtTenPB.getText().toString().isEmpty()) {
+            checkError.checkEmpty(txtMaPB, "Vui lòng nhập mã phòng");
+            checkError.checkEmpty(txtTenPB, "Vui lòng nhập tên phòng");
+
+        } else if (check == true) {
+            txtMaPB.setError("Mã phòng đã tồn tại");
+            txtMaPB.isFocused();
+        } else {
+            PhongBan phongBan = new PhongBan();
+            phongBan.setMaPhong(txtMaPB.getText().toString());
+            phongBan.setTenPhong(txtTenPB.getText().toString());
+            dbPhongBan.Them(phongBan);
+        }
     }
 
     private void setControl() {

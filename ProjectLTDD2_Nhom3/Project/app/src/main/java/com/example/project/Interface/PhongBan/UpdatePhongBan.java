@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.project.Database.DBPhongBan;
+import com.example.project.Library.CheckError;
 import com.example.project.Model.PhongBan;
 import com.example.project.R;
 
@@ -24,6 +25,7 @@ public class UpdatePhongBan extends AppCompatActivity {
     TextView tvMaPB;
     Button btnSua;
     ArrayList<PhongBan> data = new ArrayList<>();
+    CheckError checkError = new CheckError(UpdatePhongBan.this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,16 +50,21 @@ public class UpdatePhongBan extends AppCompatActivity {
                 Toast.makeText(UpdatePhongBan.this, "Sửa thành công", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(UpdatePhongBan.this, MainActivityPhongBan.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
 
     private void SuaDL() {
-        PhongBan phongBan = new PhongBan();
-        phongBan.setMaPhong(tvMaPB.getText().toString());
-        phongBan.setTenPhong(txtTenPB.getText().toString());
-        DBPhongBan dbPhongBan = new DBPhongBan(this);
-        dbPhongBan.Sua(phongBan);
+        if (txtTenPB.getText().toString().isEmpty()) {
+            checkError.checkEmpty(txtTenPB, "Vui lòng nhập tên phòng");
+        } else {
+            PhongBan phongBan = new PhongBan();
+            phongBan.setMaPhong(tvMaPB.getText().toString());
+            phongBan.setTenPhong(txtTenPB.getText().toString());
+            DBPhongBan dbPhongBan = new DBPhongBan(getApplicationContext());
+            dbPhongBan.Sua(phongBan);
+        }
     }
 
     private void setControl() {

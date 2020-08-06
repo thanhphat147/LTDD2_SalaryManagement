@@ -1,36 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/linear_h">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/linear_v">
 
-    <ImageView
-        android:id="@+id/imgGioiTinh"
-        android:layout_width="84dp"
-        android:layout_height="100dp"
-        android:src="@drawable/men"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <TextView
+        android:id="@+id/tvTenNV"
+        style="@style/tv_title"
+        android:textColor="#070110"
+        android:textStyle="bold"/>
+
+    <LinearLayout style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="101dp"
+            android:text="@string/manv" />
+
         <TextView
             android:id="@+id/tvMaNV"
-            style="@style/tv_model"
-            android:text="Mã nhân viên: " />
+            style="@style/tv_noidung"
+            />
+    </LinearLayout>
+
+    <LinearLayout style="@style/linear_h"
+        android:padding="10dp">
+
         <TextView
-            android:id="@+id/tvHoTen"
-            style="@style/tv_model"
-            android:text="Họ tên: " />
+            style="@style/tv_noidung"
+            android:layout_width="101dp"
+            android:text="@string/tenpb" />
+
         <TextView
-            android:id="@+id/tvSoNgayCong"
-            style="@style/tv_model"
-            android:text="Số ngày công: " />
+            android:id="@+id/tvTenPhongBan"
+            style="@style/tv_noidung"
+            android:layout_width="290dp" />
+    </LinearLayout>
+
+
+    <LinearLayout style="@style/linear_h"
+        android:padding="10dp">
+
         <TextView
-            android:id="@+id/tvTienTamUng"
-            style="@style/tv_model"
-            android:text="Tiền tạm ứng: " />
+            style="@style/tv_noidung"
+            android:layout_width="101dp"
+            android:text="@string/ngaychamcong" />
+
         <TextView
-            android:id="@+id/tvTienLuong"
-            style="@style/tv_model"
-            android:text="Tiền lương: " />
+            android:id="@+id/tvNgayChamCong"
+            style="@style/tv_noidung"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="102dp"
+            android:text="@string/thuclanh" />
+
+        <TextView
+            android:id="@+id/tvThucLanh"
+            style="@style/tv_noidung"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnChiTiet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button3"
+            android:text="@string/chitiet" />
+
+        <Button
+            android:id="@+id/btnBieuDo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button3"
+            android:text="@string/bieudo" />
     </LinearLayout>
 </LinearLayout>

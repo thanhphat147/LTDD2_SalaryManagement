@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.example.project.Database.DBChamCong;
 import com.example.project.Database.DBNhanVien;
 import com.example.project.Interface.MainActivityChucNang;
+import com.example.project.Interface.NhanVien.MainActivityNhanVien;
 import com.example.project.Library.CheckError;
 import com.example.project.Model.ChamCong;
 import com.example.project.Model.NhanVien;
@@ -60,6 +61,9 @@ public class AddChamCong extends AppCompatActivity {
                     checkError.checkEmpty(txtSoNgayCong, "Vui lòng nhập số ngày công");
                 } else if (check == true) {
                     Toast.makeText(getApplicationContext(), "Nhân viên đã chấm công rồi", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(AddChamCong.this, MainActivityNhanVien.class);
+                    startActivity(intent);
+                    finish();
                 } else {
                     themChamCong();
                     Toast.makeText(getApplicationContext(), "Thêm thành công", Toast.LENGTH_SHORT).show();

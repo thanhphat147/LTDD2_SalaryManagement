@@ -15,7 +15,7 @@
         <activity android:name=".Interface.TamUng.AddTamUng"></activity>
         <activity android:name=".Interface.ChamCong.AddChamCong" />
         <activity android:name=".Interface.MainActivityLogin" />
-        <activity android:name=".Interface.MainActivityThongKe" />
+        <activity android:name=".Interface.ThongKe.MainActivityThongKe" />
         <activity android:name=".Interface.TamUng.UpdateTamUng" />
         <activity android:name=".Interface.TamUng.MainActivityTamUng" />
         <activity android:name=".Interface.ChamCong.UpdateChamCong" />

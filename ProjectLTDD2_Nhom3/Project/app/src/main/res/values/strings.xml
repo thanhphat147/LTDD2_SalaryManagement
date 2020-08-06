@@ -13,7 +13,7 @@
     <string name="ngaysinh">Date of Birth</string>
     <string name="mapb">ID Room</string>
     <string name="tenpb">Department</string>
-    <string name="luong">Level of salary</string>
+    <string name="luongcoban">Basic Earning</string>
     <string name="tieude_nv">Employee List</string>
     <string name="tieude_addnv">Add Employee</string>
     <string name="tieude_update">Edit Employee</string>
@@ -58,6 +58,13 @@
     <string name="sotienung">Payment Amount</string>
     <string name="sophieu">ID Payment</string>
     <string name="updateChamCong">Edit Checkout</string>
+    <string name="thuclanh">Real Earning</string>
+    <string name="chitiet">Detail</string>
+    <string name="bieudo">Chart</string>
+    <string name="filter">Filter</string>
+    <string name="tongluong">Total</string>
+    <string name="department">Department</string>
+    <string name="hesoluong">Pay rate</string>
 
 
 </resources>

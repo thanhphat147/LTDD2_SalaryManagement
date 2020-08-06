@@ -13,7 +13,7 @@
     <string name="ngaysinh">Nhập ngày sinh</string>
     <string name="mapb">Nhập phòng làm việc</string>
     <string name="tenpb">Phòng ban</string>
-    <string name="luong">Nhập Hệ số lương</string>
+    <string name="luongcoban">Lương cơ bản</string>
     <string name="tieude_nv">Danh Sách Nhân Viên</string>
     <string name="tieude_addnv">Thêm Nhân Viên</string>
     <string name="tieude_update">Sửa thông tin Nhân Viên</string>
@@ -58,4 +58,11 @@
     <string name="songaycong">Số ngày công</string>
     <string name="sophieu">ID Payment</string>
     <string name="updateChamCong">Edit Checkout</string>
+    <string name="thuclanh">Real Earning</string>
+    <string name="chitiet">Detail</string>
+    <string name="bieudo">Chart</string>
+    <string name="filter">Filter</string>
+    <string name="tongluong">Total</string>
+    <string name="department">Department</string>
+    <string name="hesoluong">Hệ số lương</string>
 </resources>

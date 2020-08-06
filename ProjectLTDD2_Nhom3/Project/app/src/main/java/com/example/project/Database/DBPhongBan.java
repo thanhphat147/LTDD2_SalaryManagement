@@ -78,10 +78,12 @@ public class DBPhongBan {
                 data.add(phongBan);
             } while (cursor.moveToNext());
         } catch (Exception ex){
-
+            ex.printStackTrace();
         }
         return data;
     }
+
+
     public ArrayList<String> LayDSPhong() {
         ArrayList<String> ds = new ArrayList<>();
         String sql = "select tenpb from PhongBan";
@@ -97,8 +99,57 @@ public class DBPhongBan {
                 ds.add(phong);
             } while (cursor.moveToNext());
         } catch (Exception ex){
-
+            ex.printStackTrace();
         }
         return ds;
+    }
+
+    //lấy tên phòng từ mã phòng
+    public String layTenPhong(String maPhong) {
+        String tenPhong = "";
+        String sql = "SELECT tenpb FROM PhongBan WHERE mapb LIKE \"%" + maPhong + "%\" ";
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery(sql, null);
+
+        try {
+            cursor.moveToFirst();
+            do {
+                PhongBan phongBan = new PhongBan();
+                phongBan.setMaPhong(cursor.getString(0));
+                tenPhong = phongBan.getMaPhong();
+            }
+            while (cursor.moveToNext());
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return tenPhong;
+    }
+
+    //Kiểm tra ràng buộc giữa PhongBan và NhanVien khi xóa phòng
+    public boolean checkXoaPhong(String maPhong) {
+        boolean check = false;
+        String sql = "SELECT count(*) FROM NhanVien WHERE mapb LIKE \"" + maPhong + "\" ";
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery(sql, null);
+        cursor.moveToFirst();
+        int count = cursor.getInt(0);
+        if (count > 0) {
+            check = true;
+        }
+        return check;
+    }
+
+    //Kiểm tra Mã phòng là duy nhất
+    public boolean checkMaPhong(String maPhong) {
+        boolean check = false;
+        String sql = "SELECT count(*) FROM PhongBan WHERE mapb LIKE \"" + maPhong + "\" ";
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery(sql, null);
+        cursor.moveToFirst();
+        int count = cursor.getInt(0);
+        if (count > 0) {
+            check = true;
+        }
+        return check;
     }
 }

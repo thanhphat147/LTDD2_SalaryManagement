@@ -86,7 +86,7 @@ public class DBChamCong {
 
     public ArrayList<String> layDSNgayCham() {
         ArrayList<String> data = new ArrayList<>();
-        String sql = "SELECT DISTINCT ngaychamcong FROM ChamCong INNER JOIN TamUng on TamUng.manv = ChamCong.manv  WHERE ChamCong.ngaychamcong = SUBSTR(TamUng.ngay, 4, 10)";
+        String sql = "SELECT DISTINCT ngaychamcong FROM ChamCong INNER JOIN TamUng on TamUng.manv = ChamCong.manv  WHERE ChamCong.ngaychamcong = SUBSTR(TamUng.ngaytamung, 4, 10)";
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery(sql, null);
         try {
@@ -105,7 +105,7 @@ public class DBChamCong {
         return data;
     }
 
-    //Kiểm tra Số phiếu là duy nhất
+    //Kiểm tra ngày chấm công là duy nhất
     public boolean checkChamCong(String timeCham, String manv) {
         boolean check = false;
         String sql = "SELECT count(*) FROM ChamCong WHERE ngaychamcong LIKE \""+timeCham+"\" and manv LIKE \""+manv+"\" ";

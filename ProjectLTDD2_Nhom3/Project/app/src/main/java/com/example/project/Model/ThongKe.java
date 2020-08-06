@@ -1,8 +1,6 @@
 package com.example.project.Model;
-
 public class ThongKe {
-    String maNV, hoTen, gioiTinh;
-    int soNgayCong, tienTamUng, tienLuong;
+    String maNV, tenNV, tenPhong, heSoLuong, luongCoBan, ngayChamCong, soNgayCong, tienTamUng, luongThucLanh;
 
     public String getMaNV() {
         return maNV;
@@ -12,55 +10,82 @@ public class ThongKe {
         this.maNV = maNV;
     }
 
-    public String getHoTen() {
-        return hoTen;
+    public String getTenNV() {
+        return tenNV;
     }
 
-    public void setHoTen(String hoTen) {
-        this.hoTen = hoTen;
+    public void setTenNV(String tenNV) {
+        this.tenNV = tenNV;
     }
 
-    public String getGioiTinh() {
-        return gioiTinh;
+    public String getTenPhong() {
+        return tenPhong;
     }
 
-    public void setGioiTinh(String gioiTinh) {
-        this.gioiTinh = gioiTinh;
+    public void setTenPhong(String tenPhong) {
+        this.tenPhong = tenPhong;
     }
 
-    public int getSoNgayCong() {
+    public String getHeSoLuong() {
+        return heSoLuong;
+    }
+
+    public void setHeSoLuong(String heSoLuong) {
+        this.heSoLuong = heSoLuong;
+    }
+
+    public String getLuongCoBan() {
+        return luongCoBan;
+    }
+
+    public void setLuongCoBan(String luongCoBan) {
+        this.luongCoBan = luongCoBan;
+    }
+
+    public String getNgayChamCong() {
+        return ngayChamCong;
+    }
+
+    public void setNgayChamCong(String ngayChamCong) {
+        this.ngayChamCong = ngayChamCong;
+    }
+
+    public String getSoNgayCong() {
         return soNgayCong;
     }
 
-    public void setSoNgayCong(int soNgayCong) {
+    public void setSoNgayCong(String soNgayCong) {
         this.soNgayCong = soNgayCong;
     }
 
-    public int getTienTamUng() {
+    public String getTienTamUng() {
         return tienTamUng;
     }
 
-    public void setTienTamUng(int tienTamUng) {
+    public void setTienTamUng(String tienTamUng) {
         this.tienTamUng = tienTamUng;
     }
 
-    public int getTienLuong() {
-        return tienLuong;
+    public String getLuongThucLanh() {
+        return luongThucLanh;
     }
 
-    public void setTienLuong(int tienLuong) {
-        this.tienLuong = tienLuong;
+    public void setLuongThucLanh(String luongThucLanh) {
+        this.luongThucLanh = luongThucLanh;
     }
 
     @Override
     public String toString() {
         return "ThongKe{" +
                 "maNV='" + maNV + '\'' +
-                ", hoTen='" + hoTen + '\'' +
-                ", gioiTinh='" + gioiTinh + '\'' +
-                ", soNgayCong=" + soNgayCong +
-                ", tienTamUng=" + tienTamUng +
-                ", tienLuong=" + tienLuong +
+                ", tenNV='" + tenNV + '\'' +
+                ", tenPhong='" + tenPhong + '\'' +
+                ", heSoLuong='" + heSoLuong + '\'' +
+                ", luongCoBan='" + luongCoBan + '\'' +
+                ", ngayChamCong='" + ngayChamCong + '\'' +
+                ", soNgayCong='" + soNgayCong + '\'' +
+                ", tienTamUng='" + tienTamUng + '\'' +
+                ", luongThucLanh='" + luongThucLanh + '\'' +
                 '}';
     }
 }

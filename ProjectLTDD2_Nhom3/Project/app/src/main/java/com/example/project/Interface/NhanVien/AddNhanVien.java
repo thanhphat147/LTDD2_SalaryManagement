@@ -76,6 +76,18 @@ public class AddNhanVien extends AppCompatActivity {
                 showDialog(1);
             }
         });
+        imgAnhDaiDien.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                takePicture();
+            }
+        });
+        btnChonHinh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                choosePhoto();
+            }
+        });
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,18 +107,6 @@ public class AddNhanVien extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }
-                imgAnhDaiDien.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        takePicture();
-                    }
-                });
-                btnChonHinh.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        choosePhoto();
-                    }
-                });
             }
         });
 
@@ -127,6 +127,7 @@ public class AddNhanVien extends AppCompatActivity {
     }
 
     private void ThemDL() {
+        DBNhanVien dbNhanVien = new DBNhanVien(getApplicationContext());
         NhanVien nhanVien = new NhanVien();
         nhanVien.setMaNV(edtMaNV.getText().toString());
         nhanVien.setTenNV(edtTenNV.getText().toString());
@@ -138,11 +139,11 @@ public class AddNhanVien extends AppCompatActivity {
         if (radNam.isChecked() == true) {
             nhanVien.setGioiTinh("Nam");
         }
-        nhanVien.setTenPhong(spPhongBan.getSelectedItem().toString());
+        String maPhong = dbNhanVien.layMaPhong(spPhongBan.getSelectedItem().toString());
+        nhanVien.setMaPhong(maPhong);
         nhanVien.setBacLuong(edtLuong.getText().toString());
-        byte[] anh = getByteArrayFromImageView(imgAnhDaiDien);
-        nhanVien.setImage(anh);
-        DBNhanVien dbNhanVien = new DBNhanVien(this);
+        byte[] image = getByteArrayFromImageView(imgAnhDaiDien);
+        nhanVien.setImage(image);
         dbNhanVien.Them(nhanVien);
     }
 
@@ -186,14 +187,14 @@ public class AddNhanVien extends AppCompatActivity {
                     Uri imageUri = data.getData();
                     InputStream is = getContentResolver().openInputStream(imageUri);
                     Bitmap bitmap = BitmapFactory.decodeStream(is);
-                    bitmap = Bitmap.createScaledBitmap(bitmap, 80, 80, true);
+                    bitmap = Bitmap.createScaledBitmap(bitmap, 80, 100, true);
                     imgAnhDaiDien.setImageBitmap(bitmap);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
             } else if (requestCode == RESQUEST_TAKE_PHOTO) {
                 Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-                bitmap = Bitmap.createScaledBitmap(bitmap, 80, 80, true);
+                bitmap = Bitmap.createScaledBitmap(bitmap, 80, 100, true);
                 imgAnhDaiDien.setImageBitmap(bitmap);
             }
         }

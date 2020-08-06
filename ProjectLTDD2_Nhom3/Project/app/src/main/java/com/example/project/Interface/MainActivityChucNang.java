@@ -18,6 +18,7 @@ import com.example.project.Interface.ChamCong.MainActivityChamCong;
 import com.example.project.Interface.NhanVien.MainActivityNhanVien;
 import com.example.project.Interface.PhongBan.MainActivityPhongBan;
 import com.example.project.Interface.TamUng.MainActivityTamUng;
+import com.example.project.Interface.ThongKe.MainActivityThongKe;
 import com.example.project.R;
 
 import java.util.Locale;

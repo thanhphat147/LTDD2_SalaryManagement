@@ -3,7 +3,7 @@ package com.example.project.Model;
 import java.util.Arrays;
 
 public class NhanVien {
-    String maNV, tenNV, ngaySinh, gioiTinh, tenPhong, bacLuong;
+    String maNV, tenNV, ngaySinh, gioiTinh, maPhong, bacLuong;
     byte[] image;
 
     public String getMaNV() {
@@ -38,12 +38,12 @@ public class NhanVien {
         this.gioiTinh = gioiTinh;
     }
 
-    public String getTenPhong() {
-        return tenPhong;
+    public String getMaPhong() {
+        return maPhong;
     }
 
-    public void setTenPhong(String tenPhong) {
-        this.tenPhong = tenPhong;
+    public void setMaPhong(String maPhong) {
+        this.maPhong = maPhong;
     }
 
     public String getBacLuong() {
@@ -69,7 +69,7 @@ public class NhanVien {
                 ", tenNV='" + tenNV + '\'' +
                 ", ngaySinh='" + ngaySinh + '\'' +
                 ", gioiTinh='" + gioiTinh + '\'' +
-                ", tenPhong='" + tenPhong + '\'' +
+                ", maPhong='" + maPhong + '\'' +
                 ", bacLuong='" + bacLuong + '\'' +
                 ", image=" + Arrays.toString(image) +
                 '}';

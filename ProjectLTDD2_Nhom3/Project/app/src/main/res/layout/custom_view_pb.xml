@@ -6,21 +6,37 @@
 
     <LinearLayout
         style="@style/linear_v"
-        android:layout_width="330dp">
+        android:layout_width="360dp">
 
-        <TextView
-            android:id="@+id/tvMaPhong"
-            style="@style/tv_model"
-            android:textSize="20dp"
-            android:layout_height="50dp"
-            />
+        <LinearLayout
+           style="@style/linear_h">
 
-        <TextView
-            android:id="@+id/tvTenPhong"
-            style="@style/tv_model"
-            android:textSize="20dp"
-            android:layout_height="50dp"
-            />
+            <TextView
+                style="@style/tv_noidung"
+                android:layout_width="92dp"
+                android:layout_height="40dp"
+                android:text="@string/mapb" />
+            <TextView
+                android:id="@+id/tvMaPhong"
+                style="@style/tv_noidung"
+                android:layout_height="40dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/linear_h">
+
+            <TextView
+                style="@style/tv_noidung"
+                android:layout_width="92dp"
+                android:layout_height="40dp"
+                android:text="@string/tenpb" />
+            <TextView
+                android:id="@+id/tvTenPhong"
+                style="@style/tv_noidung"
+                android:layout_height="40dp"
+                />
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout

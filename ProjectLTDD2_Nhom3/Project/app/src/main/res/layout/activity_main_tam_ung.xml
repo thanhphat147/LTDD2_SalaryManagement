@@ -13,5 +13,6 @@
     <ListView
         android:id="@+id/lvTamUng"
         style="@style/lv"
+        android:padding="10dp"
         />
 </LinearLayout>

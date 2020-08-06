@@ -4,14 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/linear_v"
     android:background="@drawable/backgrounding"
-    tools:context=".Interface.MainActivityThongKe">
+    tools:context=".Interface.ThongKe.MainActivityThongKe">
 
     <TextView
         android:text="@string/thongke"
         style="@style/tv_title"/>
 
+    <LinearLayout
+        style="@style/linear_h"
+        android:padding="15dp"
+        >
+        <Spinner
+            android:id="@+id/spThangChamCong"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <Button
+            style="@style/btn_radio"
+            android:id="@+id/btnFilter"
+            android:text="@string/filter"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/custom_button2"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/linear_h"
+        android:gravity="center_horizontal"
+        >
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="62dp"
+            android:text="@string/tongluong" />
+
+        <TextView
+            android:id="@+id/tvTongLuong"
+            style="@style/tv_noidung"
+            android:layout_width="178dp" />
+    </LinearLayout>
     <ListView
         android:id="@+id/lvThongKe"
         style="@style/lv"
-        />
+        android:padding="10dp"/>
 </LinearLayout>

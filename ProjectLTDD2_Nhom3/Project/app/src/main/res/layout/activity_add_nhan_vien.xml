@@ -119,11 +119,11 @@
     <LinearLayout
         style="@style/linear_h"
         android:padding="10dp">
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/room"
-            />
+            style="@style/tv_noidung"
+            android:layout_width="58dp"
+            android:text="@string/room" />
 
         <Spinner
             android:id="@+id/spTenPB"
@@ -139,11 +139,10 @@
         <TextView
             style="@style/tv_noidung"
             android:layout_width="66dp"
-            android:text="@string/salary"/>
+            android:text="@string/hesoluong"/>
         <EditText
             android:id="@+id/edtLuong"
             style="@style/edttext"
-            android:hint="@string/luong"
             android:inputType="number"
             android:layout_marginLeft="10dp"/>
     </LinearLayout>

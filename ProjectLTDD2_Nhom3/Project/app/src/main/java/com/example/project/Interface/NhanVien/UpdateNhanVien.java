@@ -85,13 +85,31 @@ public class UpdateNhanVien extends AppCompatActivity {
             radNu.setChecked(true);
         }
 
-        phongBan = dataNV.get(0).getTenPhong();
+        phongBan = dataNV.get(0).getMaPhong();
         if(phongBan != null) {
             spPhongBan.setSelection(getIndex(spPhongBan, phongBan));
         }
         edtLuong.setText(dataNV.get(0).getBacLuong());
         Bitmap bmHinhDaiDien = BitmapFactory.decodeByteArray(dataNV.get(0).getImage(), 0, dataNV.get(0).getImage().length);
         imgAnhDaiDien.setImageBitmap(bmHinhDaiDien);
+        btnDatePicker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(1);
+            }
+        });
+        imgAnhDaiDien.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                takePicture();
+            }
+        });
+        btnChonHinh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                choosePhoto();
+            }
+        });
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,25 +125,6 @@ public class UpdateNhanVien extends AppCompatActivity {
                 }
             }
         });
-        btnDatePicker.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showDialog(1);
-            }
-        });
-
-        imgAnhDaiDien.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                takePicture();
-            }
-        });
-        btnChonHinh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                choosePhoto();
-            }
-        });
     }
 
     private void setControl() {
@@ -139,6 +138,7 @@ public class UpdateNhanVien extends AppCompatActivity {
         btnDatePicker = findViewById(R.id.btnDatePicker);
         btnUpdate = findViewById(R.id.btnUpdate);
         btnChonHinh = findViewById(R.id.btnChonHinh);
+        imgAnhDaiDien = findViewById(R.id.imgHinhDaiDien);
     }
 
     private void UpdateDL() {
@@ -154,7 +154,7 @@ public class UpdateNhanVien extends AppCompatActivity {
         }
         byte[] image = getByteArrayFromImageView(imgAnhDaiDien);
         nhanVien.setImage(image);
-        nhanVien.setTenPhong(spPhongBan.getSelectedItem().toString());
+        nhanVien.setMaPhong(spPhongBan.getSelectedItem().toString());
         nhanVien.setBacLuong(edtLuong.getText().toString());
         DBNhanVien dbNhanVien = new DBNhanVien(this);
         dbNhanVien.Sua(nhanVien);
