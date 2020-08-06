@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Department manager</string>
+    <string name="danhsachPB">List of departments</string>
+    <string name="themPB">Add departments</string>
+    <string name="suaPB">Update departments</string>
+    <string name="them">Add</string>
+    <string name="xoa">Delete</string>
+    <string name="sua">Update</string>
+    <string name="nhapMP">Enter the room code</string>
+    <string name="nhapTP">Enter the room name</string>
+    <string name="thoat">Exit</string>
+</resources>
