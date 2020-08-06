@@ -140,7 +140,7 @@ public class DBNhanVien {
                 thongKe.setMaNV(cursor.getString(0));
                 thongKe.setTenNV(cursor.getString(1));
                 thongKe.setTenPhong(cursor.getString(2));
-                thongKe.setLuongCoBan(cursor.getString(3));
+                thongKe.setHeSoLuong(cursor.getString(3));
                 thongKe.setNgayChamCong(cursor.getString(4));
                 thongKe.setSoNgayCong(cursor.getString(5));
                 thongKe.setTienTamUng(cursor.getString(6));
@@ -169,7 +169,7 @@ public class DBNhanVien {
                 thongKe.setMaNV(cursor.getString(0));
                 thongKe.setTenNV(cursor.getString(1));
                 thongKe.setTenPhong(cursor.getString(2));
-                thongKe.setLuongCoBan(cursor.getString(3));
+                thongKe.setHeSoLuong(cursor.getString(3));
                 thongKe.setNgayChamCong(cursor.getString(4));
                 thongKe.setSoNgayCong(cursor.getString(5));
                 thongKe.setTienTamUng(cursor.getString(6));
@@ -226,7 +226,7 @@ public class DBNhanVien {
                 thongKe.setMaNV(cursor.getString(0));
                 thongKe.setTenNV(cursor.getString(1));
                 thongKe.setTenPhong(cursor.getString(2));
-                thongKe.setLuongCoBan(cursor.getString(3));
+                thongKe.setHeSoLuong(cursor.getString(3));
                 thongKe.setNgayChamCong(cursor.getString(4));
                 thongKe.setSoNgayCong(cursor.getString(5));
                 thongKe.setTienTamUng(cursor.getString(6));

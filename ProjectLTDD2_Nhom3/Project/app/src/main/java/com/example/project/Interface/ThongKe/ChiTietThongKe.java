@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 public class ChiTietThongKe extends AppCompatActivity {
-    TextView tvMaNV, tvTenNV, tvNgayChamCong, tvTenPhongBan, tvHeSoLuong, tvNgayCong, tvTamUng, tvLuongCoBan, tvThucLanh;
+    TextView tvMaNV, tvTenNV, tvNgayChamCong, tvTenPhongBan, tvHeSoLuong, tvSoNgayCong, tvTamUng, tvLuongCoBan, tvThucLanh;
     ImageView imgAnhDaiDien;
     ArrayList<ThongKe> thongKe;
     ArrayList<NhanVien> dataNV = new ArrayList<>();
@@ -45,7 +45,7 @@ public class ChiTietThongKe extends AppCompatActivity {
         tvNgayChamCong.setText(thongKe.get(0).getNgayChamCong());
         tvTenPhongBan.setText(thongKe.get(0).getTenPhong());
         tvHeSoLuong.setText(currencyVN.format(Integer.parseInt(thongKe.get(0).getHeSoLuong())));
-        tvNgayCong.setText(thongKe.get(0).getSoNgayCong());
+        tvSoNgayCong.setText(thongKe.get(0).getSoNgayCong());
         tvTamUng.setText(currencyVN.format(Integer.parseInt(thongKe.get(0).getTienTamUng())));
         Bitmap bmHinhDaiDien = BitmapFactory.decodeByteArray(dataNV.get(0).getImage(), 0, dataNV.get(0).getImage().length);
         imgAnhDaiDien.setImageBitmap(bmHinhDaiDien);
@@ -69,10 +69,11 @@ public class ChiTietThongKe extends AppCompatActivity {
         tvNgayChamCong = findViewById(R.id.tvNgayChamCong);
         tvTenPhongBan = findViewById(R.id.tvTenPhongBan);
         tvHeSoLuong = findViewById(R.id.tvHeSoLuong);
-        tvNgayCong = findViewById(R.id.tvSoNgayCong);
+        tvSoNgayCong = findViewById(R.id.tvSoNgayCong);
         tvTamUng = findViewById(R.id.tvTamUng);
         tvLuongCoBan = findViewById(R.id.tvLuong);
         tvThucLanh = findViewById(R.id.tvThucLanh);
+        imgAnhDaiDien = findViewById(R.id.imgHinhDaiDien);
     }
 
     @Override

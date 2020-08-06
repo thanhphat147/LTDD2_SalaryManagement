@@ -41,7 +41,7 @@ public class BieuDoThongKe extends AppCompatActivity {
         thongKe = dbNhanVien.layThongKeBieuDo(manv);
         ArrayList<BarEntry> entries = new ArrayList<>();
         for (int i = 0; i < thongKe.size(); i++) {
-            tvTenNV.setText(thongKe.get(i).getTenNV());
+           // tvTenNV.setText(thongKe.get(i).getTenNV());
             int luong = 0;
             int soNgayCong = Integer.parseInt(thongKe.get(i).getSoNgayCong());
             int heSoLuong = Integer.parseInt(thongKe.get(i).getHeSoLuong());
