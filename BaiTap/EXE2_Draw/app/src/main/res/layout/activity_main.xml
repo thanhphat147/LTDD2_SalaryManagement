@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btnNew"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:src="@drawable/new_pic" />
+
+        <ImageButton
+            android:id="@+id/btnDraw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/brush" />
+
+        <ImageButton
+            android:id="@+id/btnErase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/eraser" />
+
+        <ImageButton
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/save" />
+    </LinearLayout>
+
+    <tdc.edu.vn.drawingfun.PacmanDraw1
+        android:id="@+id/drawing"
+        android:layout_width="wrap_content"
+        android:layout_height="200sp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200sp"
+            >
+            <tdc.edu.vn.drawingfun.DrawView
+                android:id="@+id/drawing1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="#FBFBFB"
+                />
+        </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/btnred"
+            android:background="#F50556"
+            android:layout_height="wrap_content"
+            android:tag="#F50556"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/btngreen"
+            android:background="#4AE91E"
+            android:layout_height="wrap_content"
+            android:tag="#4AE91E"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/btnblue"
+            android:background="#1E51E9"
+            android:layout_height="wrap_content"
+            android:tag="#1E51E9"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/btnyellow"
+            android:background="#FFEB3B"
+            android:layout_height="wrap_content"
+            android:tag="#FFEB3B"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/btnRadian"
+            android:background="#00BCD4"
+            android:layout_height="wrap_content"
+            android:tag="#00BCD4"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/btnBlack"
+            android:background="#111411"
+            android:layout_height="wrap_content"
+            android:tag="#111411"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/btnPurple"
+            android:background="#9C27B0"
+            android:layout_height="wrap_content"
+            android:tag="#9C27B0" />
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/btnOrange"
+            android:background="#FF5722"
+            android:layout_height="wrap_content"
+            android:tag="#FF5722"/>
+    </LinearLayout>
+</LinearLayout>

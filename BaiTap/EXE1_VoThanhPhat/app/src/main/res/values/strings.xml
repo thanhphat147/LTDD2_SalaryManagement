@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Salary Management</string>
+    <string name="luu">Save</string>
+    <string name="mo">Load</string>
+    <string name="thoat">Close</string>
+    <string name="them">Add</string>
+    <string name="xoa">Delete</string>
+    <string name="sua">Edit</string>
+    <string name="clear">Clear</string>
+    <string name="manv">Enter your ID</string>
+    <string name="tennv">Enter your Name</string>
+    <string name="ngaysinh">Enter your Date of Birth</string>
+    <string name="mapb">Enter your ID Room</string>
+    <string name="luong">Enter your Base Salary</string>
+    <string name="tieude_nv">Employee List</string>
+    <string name="tieude_addnv">Add Employee</string>
+    <string name="tieude_update">Edit Employee</string>
+    <string name="id">ID: </string>
+    <string name="name">Name: </string>
+    <string name="birth">Date of birth: </string>
+    <string name="room_id">ID Room: </string>
+    <string name="salary">Salary: </string>
+    <string name="employee_list">Employee</string>
+    <string name="checkout">Checkout</string>
+    <string name="advance_payment">Advance Payment</string>
+    <string name="summary">Summary</string>
+    <string name="aboutus">About Us</string>
+    <string name="lang_en" translatable="false">English</string>
+    <string name="lang_vi" translatable="false">Tiếng Việt</string>
+
+</resources>

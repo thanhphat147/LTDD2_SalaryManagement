@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quản Lý Lương</string>
+    <string name="luu">Lưu</string>
+    <string name="mo">Mở</string>
+    <string name="thoat">Đóng ứng dụng</string>
+    <string name="them">Thêm</string>
+    <string name="xoa">Xóa</string>
+    <string name="sua">Sửa</string>
+    <string name="clear">Làm mới</string>
+    <string name="manv">Nhập mã Nhân viên</string>
+    <string name="tennv">Nhập họ tên</string>
+    <string name="ngaysinh">Nhập ngày sinh</string>
+    <string name="mapb">Nhập phòng làm việc</string>
+    <string name="luong">Nhập Hệ số lương</string>
+    <string name="tieude_nv">Danh Sách Sinh Viên</string>
+    <string name="tieude_addnv">Thêm Sinh Viên</string>
+    <string name="tieude_update">Sửa thông tin Sinh Viên</string>
+    <string name="id">Mã NV:</string>
+    <string name="name">Họ tên:</string>
+    <string name="birth">Ngày sinh:</string>
+    <string name="room_id">Mã phòng</string>
+    <string name="salary">Lương:</string>
+    <string name="employee_list">Nhân Viên</string>
+    <string name="checkout">Chấm Công</string>
+    <string name="advance_payment">Tạm Ứng</string>
+    <string name="summary">Thống Kê</string>
+    <string name="aboutus">Thông tin Ứng dụng</string>
+    <string name="lang_en" translatable="false">English</string>
+    <string name="lang_vi" translatable="false">Tiếng Việt</string>
+</resources>

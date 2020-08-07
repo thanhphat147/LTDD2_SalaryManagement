@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/linear_v"
+    tools:context=".Interface.UpdateNhanVien">
+
+    <TextView
+        style="@style/tv_title"
+        android:text="@string/tieude_update" />
+
+    <TextView
+        style="@style/tv_noidung"
+        android:id="@+id/tvMa"/>
+
+    <EditText
+        android:id="@+id/txtTenNV"
+        style="@style/edttext"
+        android:hint="@string/tennv"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/txtNgaySinh"
+        style="@style/edttext"
+        android:hint="@string/ngaysinh"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/txtMaPB"
+        style="@style/edttext"
+        android:hint="@string/mapb"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/txtLuong"
+        style="@style/edttext"
+        android:hint="@string/luong"
+        android:inputType="number" />
+
+
+    <Button
+        android:id="@+id/btnUpdate"
+        style="@style/button"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:drawableLeft="@drawable/ic_baseline_edit_24"
+        android:text="@string/sua"/>
+</LinearLayout>

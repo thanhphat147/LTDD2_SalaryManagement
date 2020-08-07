@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/linear_v"
+    tools:context=".Interface.EmployeeActivity">
+
+    <TextView
+        android:id="@+id/tieude"
+        android:text="@string/tieude_nv"
+        style="@style/tv_title"/>
+
+    <ListView
+        android:id="@+id/lvNhanVien"
+        style="@style/lv"
+        android:layout_weight="1"
+        />
+
+    <LinearLayout
+        style="@style/linear_h">
+
+        <Button
+            android:id="@+id/btnThem"
+            style="@style/button"
+            android:layout_marginLeft="100dp"
+            android:background="@drawable/add" />
+
+
+        <Button
+            android:id="@+id/thoat"
+            style="@style/button"
+            android:layout_marginLeft="20dp"
+            android:text="@string/thoat"
+            android:background="@drawable/thoat"
+            />
+
+
+
+
+    </LinearLayout>
+</LinearLayout>
