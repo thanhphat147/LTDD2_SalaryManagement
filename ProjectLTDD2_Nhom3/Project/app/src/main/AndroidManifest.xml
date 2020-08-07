@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.project">
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -12,18 +20,25 @@
         android:roundIcon="@mipmap/logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Interface.TamUng.AddTamUng"></activity>
-        <activity android:name=".Interface.ChamCong.AddChamCong" />
-        <activity android:name=".Interface.MainActivityLogin" />
-        <activity android:name=".Interface.ThongKe.MainActivityThongKe" />
-        <activity android:name=".Interface.TamUng.UpdateTamUng" />
-        <activity android:name=".Interface.TamUng.MainActivityTamUng" />
-        <activity android:name=".Interface.ChamCong.UpdateChamCong" />
-        <activity android:name=".Interface.ChamCong.MainActivityChamCong" />
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".Interface.ActivityLienHe"
+            android:label="@string/title_activity_lien_he"></activity>
         <activity android:name=".Interface.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -34,6 +49,16 @@
         <activity android:name=".Interface.NhanVien.UpdateNhanVien" />
         <activity android:name=".Interface.NhanVien.AddNhanVien" />
         <activity android:name=".Interface.NhanVien.MainActivityNhanVien" />
+        <activity android:name=".Interface.ThongKe.ChiTietThongKe" />
+        <activity android:name=".Interface.ThongKe.BieuDoThongKe" />
+        <activity android:name=".Interface.TamUng.AddTamUng" />
+        <activity android:name=".Interface.ChamCong.AddChamCong" />
+        <activity android:name=".Interface.MainActivityLogin" />
+        <activity android:name=".Interface.ThongKe.MainActivityThongKe" />
+        <activity android:name=".Interface.TamUng.UpdateTamUng" />
+        <activity android:name=".Interface.TamUng.MainActivityTamUng" />
+        <activity android:name=".Interface.ChamCong.UpdateChamCong" />
+        <activity android:name=".Interface.ChamCong.MainActivityChamCong" />
     </application>
 
 </manifest>

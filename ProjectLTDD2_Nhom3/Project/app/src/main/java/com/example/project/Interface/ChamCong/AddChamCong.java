@@ -81,8 +81,6 @@ public class AddChamCong extends AppCompatActivity {
         txtNgayChamCong = findViewById(R.id.txtNgayChamCong);
         txtSoNgayCong = findViewById(R.id.txtSoNgayCong);
         btnAdd = findViewById(R.id.btnthemCC);
-
-
         calendar = Calendar.getInstance();
         year = calendar.get(Calendar.YEAR);
         month = calendar.get(Calendar.MONTH);
@@ -96,6 +94,7 @@ public class AddChamCong extends AppCompatActivity {
         DBChamCong dbChamCong = new DBChamCong(getApplicationContext());
         dbChamCong.themChamCong(chamCong);
     }
+
 
     private void showDate(int year, int month) {
         txtNgayChamCong.setText(new StringBuilder().append(month > 9 ?

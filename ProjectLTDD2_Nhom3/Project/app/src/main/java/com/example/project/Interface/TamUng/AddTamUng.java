@@ -64,7 +64,7 @@ public class AddTamUng extends AppCompatActivity {
                     txtSophieu.setError("Số phiếu đã tồn tại");
                     txtSophieu.isFocused();
                 } else if (check1 == true) {
-                    Toast.makeText(getApplicationContext(), "Nhân viên đã tạm ứng", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Nhân viên đã tạm ứng trong tháng này rồi", Toast.LENGTH_SHORT).show();
                 } else {
                     themTamUng();
                     Toast.makeText(getApplicationContext(), "Thêm thành công", Toast.LENGTH_SHORT).show();

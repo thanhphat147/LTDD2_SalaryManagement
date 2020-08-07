@@ -154,7 +154,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:paddingLeft="10dp"
-        android:background="@drawable/add12"
+        android:background="@drawable/custom_button4"
         android:drawableLeft="@drawable/ic_baseline_edit_24"
         android:text="@string/sua"/>
 </LinearLayout>

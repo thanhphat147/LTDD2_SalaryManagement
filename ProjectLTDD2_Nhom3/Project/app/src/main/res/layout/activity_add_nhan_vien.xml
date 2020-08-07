@@ -12,20 +12,23 @@
 
     <LinearLayout
         style="@style/linear_h"
+        android:layout_height="85dp"
         android:gravity="center_horizontal">
+
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/men"
-            android:id="@+id/imgHinhDaiDien" />
+            android:id="@+id/imgHinhDaiDien"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/men" />
+
         <Button
-            android:text="Chọn Hình"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="30dp"
+            android:id="@+id/btnChonHinh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnChonHinh"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/button_del"
+            android:text="Chọn Hình"
 
             />
     </LinearLayout>
@@ -82,16 +85,17 @@
         <ImageButton
             android:id="@+id/btnDatePicker"
             style="@style/button_model_view"
-            android:src="@drawable/date"
+            android:layout_width="50dp"
+            android:layout_height="47dp"
             android:layout_marginLeft="10dp"
-            />
+            android:src="@drawable/date" />
     </LinearLayout>
 
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:padding="10dp"
         >
 
@@ -138,8 +142,8 @@
 
         <TextView
             style="@style/tv_noidung"
-            android:layout_width="66dp"
-            android:text="@string/hesoluong"/>
+            android:layout_width="94dp"
+            android:text="@string/hesoluong" />
         <EditText
             android:id="@+id/edtLuong"
             style="@style/edttext"
@@ -154,7 +158,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:paddingLeft="10dp"
-        android:background="@drawable/add12"
+        android:background="@drawable/custom_button4"
         android:drawableLeft="@drawable/ic_baseline_person_add_24"
         android:text="@string/them"/>
 </LinearLayout>

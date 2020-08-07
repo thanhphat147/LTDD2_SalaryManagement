@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:gravity="center"
     android:background="@drawable/city2"
-
     tools:context=".Interface.SplashScreen">
 
     <LinearLayout
@@ -26,11 +24,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <ImageView
                 android:id="@+id/imgMNLeftMax"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:background="@drawable/dongxu2" />
+
             <ImageView
                 android:id="@+id/imgMNLeftMin2"
                 android:layout_width="30dp"
@@ -49,10 +49,10 @@
 
         <ImageView
             android:id="@+id/imgNV"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="250dp"
+            android:layout_height="340dp"
             android:layout_marginTop="210dp"
-            android:layout_gravity="center"
+            android:gravity="center_horizontal"
             android:src="@drawable/employer" />
     </LinearLayout>
 

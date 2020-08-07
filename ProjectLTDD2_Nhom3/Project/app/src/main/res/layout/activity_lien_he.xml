@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/backgrounding"
+    style="@style/linear_v"
+    tools:context=".Interface.ActivityLienHe">
+
+    <TextView
+        style="@style/tv_title"
+        android:text="@string/lienhe"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="120dp"
+            android:text="@string/nhom"
+            android:textColor="#05000B"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/tv_noidung"
+            android:text="3" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="120dp"
+            android:text="@string/member"
+            android:textColor="#05000B"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/tv_noidung"
+            android:text="Võ Thành Phát, Đỗ Trung Hiếu" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="120dp"
+            android:text="@string/tenud"
+            android:textColor="#05000B"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/tv_noidung"
+            android:text="Emsama - Employee's Salary Management" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="120dp"
+            android:text="@string/version"
+            android:textColor="#05000B"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/tv_noidung"
+            android:text="1.0" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/tv_noidung"
+        android:layout_width="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Ứng dụng đang trong quá trình hoàn thiện. Nếu có góp ý hay phản hồi báo lỗi vui lòng liên hệ đến những thông tin dưới đây"
+        android:textColor="#05000B"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="120dp"
+            android:text="@string/email"
+            android:textColor="#05000B"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/tv_noidung"
+            android:text="thanhphat147@gmail.com" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/linear_h"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/tv_noidung"
+            android:layout_width="120dp"
+            android:text="@string/dt"
+            android:textColor="#05000B"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/tv_noidung"
+            android:text="0971174293" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/linear_h"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tvChonMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chọn kiểu map"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spin_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

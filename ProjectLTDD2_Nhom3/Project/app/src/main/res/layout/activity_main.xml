@@ -15,7 +15,7 @@
         android:id="@+id/lvNhanVien"
         style="@style/lv"
         android:layout_weight="1"
-        android:padding="10dp"
+        android:padding="5dp"
         />
 
     <LinearLayout
@@ -24,6 +24,7 @@
         <Button
             android:id="@+id/btnThem"
             style="@style/button"
-            android:background="@drawable/add" />
+            android:background="@drawable/add"
+            android:backgroundTint="@color/colorPrimary"/>
     </LinearLayout>
 </LinearLayout>

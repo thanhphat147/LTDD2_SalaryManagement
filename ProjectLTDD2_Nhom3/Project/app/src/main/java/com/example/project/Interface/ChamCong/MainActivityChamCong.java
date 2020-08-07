@@ -62,11 +62,7 @@ public class MainActivityChamCong extends AppCompatActivity {
         adapter_chamcong.notifyDataSetChanged();
         lvChamCong.setAdapter(adapter_chamcong);
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_actionbar, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
+
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

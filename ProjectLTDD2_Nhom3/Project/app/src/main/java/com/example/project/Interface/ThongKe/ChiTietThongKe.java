@@ -71,7 +71,7 @@ public class ChiTietThongKe extends AppCompatActivity {
         tvHeSoLuong = findViewById(R.id.tvHeSoLuong);
         tvSoNgayCong = findViewById(R.id.tvSoNgayCong);
         tvTamUng = findViewById(R.id.tvTamUng);
-        tvLuongCoBan = findViewById(R.id.tvLuong);
+        tvLuongCoBan = findViewById(R.id.tvLuongCB);
         tvThucLanh = findViewById(R.id.tvThucLanh);
         imgAnhDaiDien = findViewById(R.id.imgHinhDaiDien);
     }

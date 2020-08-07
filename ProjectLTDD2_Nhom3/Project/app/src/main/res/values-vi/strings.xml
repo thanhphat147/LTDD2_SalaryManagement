@@ -8,9 +8,9 @@
     <string name="xoa">Xóa</string>
     <string name="sua">Sửa</string>
     <string name="clear">Làm mới</string>
-    <string name="manv">Nhập mã Nhân viên</string>
-    <string name="tennv">Nhập họ tên</string>
-    <string name="ngaysinh">Nhập ngày sinh</string>
+    <string name="manv">Mã Nhân viên</string>
+    <string name="tennv">Họ tên</string>
+    <string name="ngaysinh">Ngày sinh</string>
     <string name="mapb">Nhập phòng làm việc</string>
     <string name="tenpb">Phòng ban</string>
     <string name="luongcoban">Lương cơ bản</string>
@@ -31,21 +31,21 @@
     <string name="lang_vi" translatable="false">Tiếng Việt</string>
     <string name="themPB">Thêm phòng ban</string>
     <string name="suaPB">Sửa phòng ban</string>
-    <string name="nhapMP">Nhập mã phòng</string>
-    <string name="nhapTP">Nhập tên phòng</string>
+    <string name="nhapMP">Mã phòng</string>
+    <string name="nhapTP">Tên phòng</string>
     <string name="danhsachPB">Danh sách phòng ban</string>
     <string name="danhsachCC">Danh sách chấm công</string>
     <string name="suaCC">Sửa chấm công</string>
     <string name="danhsachTU">Danh sách tạm ứng</string>
     <string name="suaTU">Sửa tạm ứng</string>
     <string name="thongke">Thống kê</string>
-    <string name="themCC">Thêm chấm công</string>
-    <string name="themTU">Thêm tạm ứng</string>
-    <string name="nhapNGS">Nhập ngày ghi số</string>
-    <string name="nhapSNC">Nhập số ngày công</string>
-    <string name="nhapNgay">Nhập ngày</string>
-    <string name="nhapSP">Nhập số phiếu</string>
-    <string name="nhapST">Nhập số tiền</string>
+    <string name="themCC">Chấm công</string>
+    <string name="themTU">Tạm ứng</string>
+    <string name="nhapNGS">Ngày chấm công</string>
+    <string name="nhapSNC">Số ngày công</string>
+    <string name="nhapNgay">Ngày</string>
+    <string name="nhapSP">Số phiếu</string>
+    <string name="nhapST">Số tiền</string>
     <string name="tv_manv">Mã Nhân Viên</string>
     <string name="logo_name">EMSAMA</string>
     <string name="user">Tên Đăng Nhập</string>
@@ -65,4 +65,19 @@
     <string name="tongluong">Total</string>
     <string name="department">Department</string>
     <string name="hesoluong">Hệ số lương</string>
+    <string name="lienhe">About Us</string>
+    <string name="member">"Thành viên: "</string>
+    <string name="tenud">"Tên Ứng dụng: "</string>
+    <string name="version">Version</string>
+    <string name="email">"Email: "</string>
+    <string name="dt">Số điện thoại</string>
+    <string name="title_activity_lien_he">Map</string>
+    <string name="nhom">Nhóm</string>
+    <string-array name="map_type">
+        <item>MAP_TYPE_NONE</item>
+        <item>MAP_TYPE_NORMAL</item>
+        <item>MAP_TYPE_SATELLITE</item>
+        <item>MAP_TYPE_HYBRID</item>
+        <item>MAP_TYPE_TERRAIN</item>
+    </string-array>
 </resources>

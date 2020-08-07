@@ -11,9 +11,7 @@
         android:text="@string/themCC" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        style="@style/linear_h"
         android:padding="10dp">
 
         <TextView
@@ -29,9 +27,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        style="@style/linear_h"
         android:padding="10dp">
 
         <TextView
@@ -47,9 +43,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        style="@style/linear_h"
         android:padding="10dp">
 
         <TextView
@@ -67,9 +61,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        style="@style/linear_h"
         android:padding="10dp">
 
         <TextView
@@ -89,6 +81,7 @@
         style="@style/button"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:drawableLeft="@drawable/ic_baseline_room_24"
+        android:background="@drawable/custom_button4"
+        android:padding="10dp"
         android:text="@string/them" />
 </LinearLayout>

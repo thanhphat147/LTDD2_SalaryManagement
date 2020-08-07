@@ -21,7 +21,7 @@
 
     <LinearLayout
         style="@style/linear_v"
-        android:layout_width="wrap_content"
+        android:layout_width="258dp"
         android:layout_height="85dp"
         android:layout_marginLeft="10dp">
 
@@ -32,14 +32,14 @@
 
             <TextView
                 style="@style/tv_noidung"
-                android:layout_width="31dp"
+                android:layout_width="107dp"
                 android:paddingLeft="5dp"
                 android:text="@string/manv" />
 
             <TextView
                 android:id="@+id/tvMaNV"
                 style="@style/tv_noidung"
-                android:layout_width="225dp" />
+                android:layout_width="160dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -49,13 +49,14 @@
 
             <TextView
                 style="@style/tv_noidung"
-                android:layout_width="wrap_content"
+                android:layout_width="106dp"
                 android:text="@string/tennv" />
 
             <TextView
                 android:id="@+id/tvHoTen"
                 style="@style/tv_noidung"
-                android:layout_width="193dp" />
+                android:layout_width="162dp"
+                android:layout_height="match_parent" />
         </LinearLayout>
 
         <LinearLayout
@@ -65,13 +66,13 @@
 
             <TextView
                 style="@style/tv_noidung"
-                android:layout_width="wrap_content"
+                android:layout_width="108dp"
                 android:text="@string/ngaytamung" />
 
             <TextView
                 android:id="@+id/tvNgayTamUng"
                 style="@style/tv_noidung"
-                android:layout_width="168dp" />
+                android:layout_width="159dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -81,13 +82,13 @@
 
             <TextView
                 style="@style/tv_noidung"
-                android:layout_width="wrap_content"
+                android:layout_width="125dp"
                 android:text="@string/sotienung" />
 
             <TextView
                 android:id="@+id/tvTienTamUng"
                 style="@style/tv_noidung"
-                android:layout_width="148dp" />
+                android:layout_width="157dp" />
         </LinearLayout>
 
     </LinearLayout>
@@ -95,21 +96,21 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="10dp"
         android:orientation="vertical">
 
         <ImageButton
             android:id="@+id/btnXoa"
             style="@style/button_model_view"
             android:layout_marginBottom="5dp"
-            android:background="@drawable/button_del"
+            android:background="@drawable/custom_button3"
             android:src="@drawable/ic_baseline_delete_24" />
 
         <ImageButton
             android:id="@+id/btnSua"
             style="@style/button_model_view"
 
-            android:background="@drawable/button_del"
+            android:background="@drawable/custom_button3"
             android:src="@drawable/ic_baseline_edit_24" />
     </LinearLayout>
 </LinearLayout>

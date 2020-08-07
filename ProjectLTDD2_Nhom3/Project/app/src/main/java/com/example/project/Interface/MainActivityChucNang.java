@@ -71,6 +71,13 @@ public class MainActivityChucNang extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btnAboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivityChucNang.this, ActivityLienHe.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void setControl() {

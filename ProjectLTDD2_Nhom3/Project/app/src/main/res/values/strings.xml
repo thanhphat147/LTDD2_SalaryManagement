@@ -65,6 +65,20 @@
     <string name="tongluong">Total</string>
     <string name="department">Department</string>
     <string name="hesoluong">Pay rate</string>
-
+    <string name="title_activity_lien_he">Map</string>
+    <string name="lienhe">About Us</string>
+    <string name="nhom">Nhóm</string>
+    <string name="member">"Thành viên: "</string>
+    <string name="tenud">"Tên Ứng dụng: "</string>
+    <string name="version">Version</string>
+    <string name="email">"Email: "</string>
+    <string name="dt">Số điện thoại</string>
+    <string-array name="map_type">
+        <item>MAP_TYPE_NONE</item>
+        <item>MAP_TYPE_NORMAL</item>
+        <item>MAP_TYPE_SATELLITE</item>
+        <item>MAP_TYPE_HYBRID</item>
+        <item>MAP_TYPE_TERRAIN</item>
+    </string-array>
 
 </resources>
