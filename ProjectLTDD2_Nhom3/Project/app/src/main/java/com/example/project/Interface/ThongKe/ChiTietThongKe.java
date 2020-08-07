@@ -20,9 +20,7 @@ import java.util.Locale;
 
 public class ChiTietThongKe extends AppCompatActivity {
     TextView tvMaNV, tvTenNV, tvNgayChamCong, tvTenPhongBan, tvHeSoLuong, tvSoNgayCong, tvTamUng, tvLuongCoBan, tvThucLanh;
-    ImageView imgAnhDaiDien;
     ArrayList<ThongKe> thongKe;
-    ArrayList<NhanVien> dataNV = new ArrayList<>();
     Locale localeVN = new Locale("vi", "VN");
     NumberFormat currencyVN = NumberFormat.getCurrencyInstance(localeVN);
 
@@ -47,8 +45,6 @@ public class ChiTietThongKe extends AppCompatActivity {
         tvHeSoLuong.setText(currencyVN.format(Integer.parseInt(thongKe.get(0).getHeSoLuong())));
         tvSoNgayCong.setText(thongKe.get(0).getSoNgayCong());
         tvTamUng.setText(currencyVN.format(Integer.parseInt(thongKe.get(0).getTienTamUng())));
-        Bitmap bmHinhDaiDien = BitmapFactory.decodeByteArray(dataNV.get(0).getImage(), 0, dataNV.get(0).getImage().length);
-        imgAnhDaiDien.setImageBitmap(bmHinhDaiDien);
         int luong = 0;
         int ngayCong = Integer.parseInt(thongKe.get(0).getSoNgayCong());
         int heSoLuong = Integer.parseInt(thongKe.get(0).getHeSoLuong());
@@ -60,7 +56,6 @@ public class ChiTietThongKe extends AppCompatActivity {
         thucLanh = luong - tamUng;
         thongKe.get(0).setLuongThucLanh(currencyVN.format(thucLanh));
         tvThucLanh.setText(thongKe.get(0).getLuongThucLanh());
-
     }
 
     private void setControl() {
@@ -73,7 +68,6 @@ public class ChiTietThongKe extends AppCompatActivity {
         tvTamUng = findViewById(R.id.tvTamUng);
         tvLuongCoBan = findViewById(R.id.tvLuongCB);
         tvThucLanh = findViewById(R.id.tvThucLanh);
-        imgAnhDaiDien = findViewById(R.id.imgHinhDaiDien);
     }
 
     @Override

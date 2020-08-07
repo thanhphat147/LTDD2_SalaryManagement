@@ -41,7 +41,7 @@ public class BieuDoThongKe extends AppCompatActivity {
         thongKe = dbNhanVien.layThongKeBieuDo(manv);
         ArrayList<BarEntry> entries = new ArrayList<>();
         for (int i = 0; i < thongKe.size(); i++) {
-           // tvTenNV.setText(thongKe.get(i).getTenNV());
+            tvTenNV.setText(thongKe.get(i).getTenNV());
             int luong = 0;
             int soNgayCong = Integer.parseInt(thongKe.get(i).getSoNgayCong());
             int heSoLuong = Integer.parseInt(thongKe.get(i).getHeSoLuong());
@@ -69,7 +69,6 @@ public class BieuDoThongKe extends AppCompatActivity {
         dataSet.setBarShadowColor(Color.WHITE);
         dataSet.setValueTextSize(15);
         chart.setDrawBarShadow(true);
-        chart.setDescription("Biểu đồ lương nhân viên theo tháng");  // set the description
         dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
         chart.animateY(3000, Easing.EasingOption.EaseInOutBounce);
 
