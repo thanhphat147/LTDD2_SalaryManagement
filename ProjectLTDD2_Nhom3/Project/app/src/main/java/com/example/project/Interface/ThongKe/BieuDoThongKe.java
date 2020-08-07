@@ -52,10 +52,7 @@ public class BieuDoThongKe extends AppCompatActivity {
             thucLanh = luong - tamUng;
             thongKe.get(i).setLuongThucLanh(thucLanh + "");
             entries.add(new BarEntry(Integer.parseInt(thongKe.get(i).getLuongThucLanh()), i));
-
         }
-
-
         BarDataSet dataSet = new BarDataSet(entries, "Dữ liệu Lương");
         DBChamCong dbChamCong = new DBChamCong(getApplicationContext());
         ArrayList<String> labels = new ArrayList<String>();
@@ -80,6 +77,7 @@ public class BieuDoThongKe extends AppCompatActivity {
         chart = findViewById(R.id.barchart);
         tvTenNV = findViewById(R.id.tvTenNV);
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
