@@ -26,8 +26,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class UpdateTamUng extends AppCompatActivity {
-    EditText txtSoTien;
-    TextView tvMaNhanVien, tvTenNhanVien, tvNgayUng, tvSophieu;
+    EditText txtSoTien, txtNgayUng;
+    TextView tvMaNhanVien, tvTenNhanVien, tvSophieu;
     Calendar calendar;
     int year, month, day;
     Button btnTamUng;
@@ -78,7 +78,7 @@ public class UpdateTamUng extends AppCompatActivity {
     private void suaTamUng() {
         TamUng tamUng = new TamUng();
         tamUng.setSoPhieu(tvSophieu.getText().toString());
-        tamUng.setNgayTamUng(tvNgayUng.getText().toString());
+        tamUng.setNgayTamUng(txtNgayUng.getText().toString());
         tamUng.setMaNV(tvMaNhanVien.getText().toString());
         tamUng.setSoTienUng(txtSoTien.getText().toString());
         DBTamUng dbTamUng = new DBTamUng(getApplicationContext());
@@ -86,7 +86,7 @@ public class UpdateTamUng extends AppCompatActivity {
     }
 
     private void showDate(int year, int month, int day) {
-        tvNgayUng.setText(new StringBuilder().append(day > 9 ? day : "0" + day).append("/").append(month > 9 ?
+        txtNgayUng.setText(new StringBuilder().append(day > 9 ? day : "0" + day).append("/").append(month > 9 ?
                 month : "0" + month).append("/").append(year));
     }
 
@@ -97,7 +97,7 @@ public class UpdateTamUng extends AppCompatActivity {
 
         tvMaNhanVien = findViewById(R.id.tvMaNV);
         tvTenNhanVien = findViewById(R.id.tvHoTen);
-        tvNgayUng = findViewById(R.id.tvNgayTamUng);
+        txtNgayUng = findViewById(R.id.txtNgayTamUng);
         btnTamUng = findViewById(R.id.btnSuaTU);
         calendar = Calendar.getInstance();
         year = calendar.get(Calendar.YEAR);

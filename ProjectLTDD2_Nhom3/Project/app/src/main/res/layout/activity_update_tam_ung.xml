@@ -73,10 +73,9 @@
             android:textColor="#05000B"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvNgayTamUng"
-            style="@style/tv_noidung"
-            android:layout_width="243dp" />
+        <EditText
+            android:id="@+id/txtNgayTamUng"
+            style="@style/edttext" />
     </LinearLayout>
 
     <LinearLayout
