@@ -51,7 +51,7 @@
     <string name="user">User</string>
     <string name="pw">Password</string>
     <string name="login">Login</string>
-    <string name="gioitinh">"Sex: "</string>
+    <string name="gioitinh">Gender</string>
     <string name="ngaychamcong">Checkout Date</string>
     <string name="songaycong">Workdays</string>
     <string name="ngaytamung">Payment Date</string>
